@@ -21,7 +21,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body>  
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "102230392638740");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- Navigation Bar -->
     <header>
         <div class="nav-container">
@@ -133,14 +163,14 @@
         </section>
         <!-- Pricing Section End -->
 
-        <!-- Contact Section -->
+        <!-- Contact Form Section -->
         <section class="contact-section" id="contact">
             <div class="container">
                 <div class="contact-content">
                     <h2 data-aos="fade-in">Contact Us</h2>
                     <div class="contact-us" data-aos="zoom-in">
                         <div class="contact-us-form">
-                            <form action="" id="contact-form">
+                            <form id="contact-form">
                                 <div class="row">
                                     <input type="text" placeholder="*First Name" name="firstname" required />
                                     <input type="text" placeholder="*Last Name" name="lastname" required />
@@ -255,6 +285,7 @@
 
         window.addEventListener("scroll", scrollBackground);
         scrollBackground();
+
     </script>
 </body>
 
