@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-    --primaryColor: #01b4bb;
-    --secondaryColor: #ed5540;
+    --primaryColor: #01B4BB;
+    --secondaryColor: #ED5540;
 }
 
 /* General Styles */
@@ -276,6 +276,7 @@ header.open .hamburger span:nth-child(4) {
 }
 
 .hero-content {
+    text-align: center;
     position: relative;
     z-index: 1;
 }
@@ -297,25 +298,23 @@ header.open .hamburger span:nth-child(4) {
 
 .service {
     width: 300px;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.25s ease;
-    will-change: transform;
+    transition: transform 0.1s ease;
 }
 
 .service:hover {
-    transform: scale(1.015);
+    transform: scale(1.02);
 }
 
 .service h5 {
     padding: 1rem;
     color: #6b717c;
     background-color: #fff;
-    will-change: transform;
 }
 
 /* Pricing Section */
@@ -350,6 +349,14 @@ header.open .hamburger span:nth-child(4) {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+}
+
+.pricing-plan {
+    text-align: center;
+}
+
+.price {
+    text-align: center;
 }
 
 .price .paytime {
@@ -583,6 +590,8 @@ footer {
     .logo {
         width: 120px;
     }
+
+
 
     .nav-list {
         flex-direction: column;
