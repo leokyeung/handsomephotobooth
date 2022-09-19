@@ -2,7 +2,7 @@
 
 // Email address that you want the form to be submitted to.
 
-$recieve_mails_at = "youremail@email.com";
+$recieve_mails_at = "leo@handsomephotobooth.com";
 
 $homePage = "/";
    
