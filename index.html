@@ -15,13 +15,10 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
 
-<body>  
+<body>
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
 
@@ -30,34 +27,35 @@
     </div>
 
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "102230392638740");
-      chatbox.setAttribute("attribution", "biz_inbox");
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "102230392638740");
+        chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- SDK code -->
     <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v15.0'
-        });
-      };
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v15.0'
+            });
+        };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- Navigation Bar -->
     <header>
         <div class="nav-container">
             <div class="container">
                 <nav>
-                    <a href="http://www.handsomephotobooth.com" class="logo">
+                    <a href="www.handsomephotobooth.com" class="logo">
                         <img src="./assets/images/logo.png" alt="Logo" />
                     </a>
 
@@ -140,13 +138,14 @@
         <section class="pricing-section" id="pricing">
             <div class="container">
                 <div class="pricing-content">
+
                     <h2>Pricing</h2>
 
                     <div class="pricing-container">
                         <div data-aos="fade-up" data-aos-delay="150" class="pricing-card lite">
                             <h3 class="pricing-plan">Package</h3>
                             <h4 class="price">
-                                $50</span><span class="paytime"> /month</span>
+                                $<span class="amount">50</span><span class="paytime"> /month</span>
                             </h4>
                             <ul class="pricing-benefit-list">
                                 <li>Lorem ipsum dolor</li>
@@ -163,14 +162,14 @@
         </section>
         <!-- Pricing Section End -->
 
-        <!-- Contact Form Section -->
+        <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="container">
                 <div class="contact-content">
                     <h2 data-aos="fade-in">Contact Us</h2>
                     <div class="contact-us" data-aos="zoom-in">
                         <div class="contact-us-form">
-                            <form id="contact-form">
+                            <form action="" id="contact-form">
                                 <div class="row">
                                     <input type="text" placeholder="*First Name" name="firstname" required />
                                     <input type="text" placeholder="*Last Name" name="lastname" required />
@@ -226,7 +225,7 @@
                         <h5>Contact</h5>
                         <ul class="footer-list">
                             <li>
-                                <a href="mailto:leo@handsomephotobooth.com">leo@handsomephotobooth.com</a>
+                                <a href="leo@handsomephotobooth.com">leo@handsomephotobooth.com</a>
                             </li>
                         </ul>
                     </div>
@@ -238,21 +237,21 @@
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                                         <path
                                             d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z" />
-                                        </svg></a>
+                                    </svg></a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/handsomephotobooth/" target="_blank" rel="noopener noreferrer"><svg
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                                         <path
                                             d="M9.9980469 3C6.1390469 3 3 6.1419531 3 10.001953L3 20.001953C3 23.860953 6.1419531 27 10.001953 27L20.001953 27C23.860953 27 27 23.858047 27 19.998047L27 9.9980469C27 6.1390469 23.858047 3 19.998047 3L9.9980469 3 z M 22 7C22.552 7 23 7.448 23 8C23 8.552 22.552 9 22 9C21.448 9 21 8.552 21 8C21 7.448 21.448 7 22 7 z M 15 9C18.309 9 21 11.691 21 15C21 18.309 18.309 21 15 21C11.691 21 9 18.309 9 15C9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z" />
-                                        </svg></a>
+                                    </svg></a>
                             </li>
                             <li>
                                 <a href="#" target="_blank" rel="noopener noreferrer"><svg
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                                         <path
                                             d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
-                                        </svg></a>
+                                    </svg></a>
                             </li>
                         </ul>
                     </div>
@@ -285,7 +284,6 @@
 
         window.addEventListener("scroll", scrollBackground);
         scrollBackground();
-
     </script>
 </body>
 
