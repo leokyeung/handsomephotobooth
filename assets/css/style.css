@@ -83,7 +83,7 @@ h4,
 h5,
 h6 {
     color: #292929;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h1 {
@@ -378,7 +378,13 @@ header.open .hamburger span:nth-child(4) {
 /* Pricing Section */
 
 .pricing-section {
-    background-color: var(--secondaryColor);
+    background-image: linear-gradient(to right bottom, rgba(142, 57, 153, 0.75), rgba(30, 115, 172, 0.75)), url(../images/isle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
 }
 
 .pricing-section h2 {
@@ -396,6 +402,7 @@ header.open .hamburger span:nth-child(4) {
 }
 
 .pricing-plan{
+    line-height: 100%;
     text-align: center;
 }
 
@@ -405,7 +412,7 @@ header.open .hamburger span:nth-child(4) {
 
 .pricing-card {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     min-width: 260px;
     padding: 2rem 1.25rem;
     margin: 10px;
@@ -422,11 +429,7 @@ header.open .hamburger span:nth-child(4) {
     -o-border-radius: 25px;
 }
 
-.price .paytime {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #78748f;
-}
+
 
 .pricing-benefit-list {
     margin-top: 1rem;
