@@ -6,8 +6,8 @@ html,body {
 }
 /* Variables */
 :root {
-    --primaryColor: #01b4bb;
-    --secondaryColor: #ed5540;
+    --primaryColor: #07b1bc;
+    --secondaryColor: #fa6d6f;
 }
 
 /* General Styles */
@@ -88,9 +88,16 @@ h6 {
 
 h1 {
     color: #fff;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    transition: 0.5s;
+}
+
+h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
 }
 
 h2 {
@@ -168,7 +175,7 @@ nav {
 }
 
 .logo {
-    width: 160px;
+    width: 200px;
     overflow: hidden;
 }
 
@@ -183,7 +190,7 @@ nav {
     -ms-flex-align: center;
     align-items: center;
     gap: 3rem;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
 }
 
 .nav-list li {
@@ -288,8 +295,30 @@ header.open .hamburger span:nth-child(4) {
     left: 50%;
 }
 
-/* Hero Section */
 
+
+/* Backgorund Video */
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+/* Hero Section */
 .hero-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -300,10 +329,10 @@ header.open .hamburger span:nth-child(4) {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: url(../images/hero-img.jpg);
+   
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    min-height: 100vh;
     padding: 0;
 }
 
@@ -321,6 +350,14 @@ header.open .hamburger span:nth-child(4) {
     position: relative;
     z-index: 1;
 }
+
+/* Button for Learn more that needs to fix for mobile */
+/* .hero-content .btn {
+    width: 20%;
+} */
+
+
+
 
 /* About Section */
 
