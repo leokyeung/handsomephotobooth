@@ -336,11 +336,6 @@ header.open .hamburger span:nth-child(4) {
     
 }
 
-#home {
-    /* background-color: black; */
-    background-color: rgba(0, 0, 0, 0.25);
-    min-height: 105.4vh;
-}
 
 .hero-content {
     position: relative;
