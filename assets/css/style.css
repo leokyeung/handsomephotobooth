@@ -88,7 +88,7 @@ h6 {
 
 h1 {
     color: #fff;
-    text-shadow: 4px 4px 2px rgba(0,0,0,0.5);
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.1);
     font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -334,9 +334,11 @@ header.open .hamburger span:nth-child(4) {
     background-repeat: no-repeat;
     min-height: 100vh;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.1);
 }
 
+video {
+    filter: brightness(70%);
+}
 
 .hero-content {
     position: relative;
@@ -347,9 +349,6 @@ header.open .hamburger span:nth-child(4) {
 /* .hero-content .btn {
     width: 20%;
 } */
-
-
-
 
 /* About Section */
 
