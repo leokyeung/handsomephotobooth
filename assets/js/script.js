@@ -4,7 +4,7 @@
     const hamburger = document.querySelector(".hamburger");
     const navList = document.querySelector(".nav-list");
 
-    // Add/Remove Classes On Scroll
+    // Add/Remove Classes On Scroll, duration it takes to show the black bar
     window.addEventListener("scroll", () => {
         if (!hamburger.classList.contains("open")) {
             if (window.pageYOffset > 50) {

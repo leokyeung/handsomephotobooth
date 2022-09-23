@@ -144,6 +144,7 @@ header {
 
 header.scroll {
     background-color: #000;
+    background: rgba(0,0,0,0.6);
     -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
