@@ -522,7 +522,7 @@ video {
     padding: 0 1.25rem;
     background-color: #fff;
     border: 2px solid var(--primaryColor);
-    outline-color: var(--secondaryColor);
+    outline-color: #003366;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
