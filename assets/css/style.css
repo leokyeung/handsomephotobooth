@@ -426,7 +426,7 @@ video {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .pricing-plan{
