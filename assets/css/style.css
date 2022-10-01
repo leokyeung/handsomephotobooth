@@ -108,6 +108,10 @@ h2 {
     text-align: center;
 }
 
+.about-text h2 {
+    margin-bottom: 0.5em;
+}
+
 h3 {
     font-size: 2rem;
     margin-bottom: 1em;
