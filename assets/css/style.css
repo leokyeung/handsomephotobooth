@@ -108,7 +108,12 @@ h2 {
     text-align: center;
 }
 
-.about-text h2 {
+.about-text h4 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.about-text h4 {
     margin-bottom: 0.5em;
 }
 
