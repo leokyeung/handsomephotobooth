@@ -438,9 +438,14 @@ video {
     text-align: center;
 }
 
+.card1 {
+    font-weight: 200;
+    text-align: center;
+}
+
 .pricing-card {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     min-width: 260px;
     padding: 2rem 1.25rem;
     margin: 10px;
