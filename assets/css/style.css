@@ -108,6 +108,10 @@ h2 {
     text-align: center;
 }
 
+.about-text h2 {
+    margin-bottom: 0.2em;
+}
+
 .about-text h4 {
     font-size: 1.5rem;
     font-style: italic;
@@ -116,6 +120,15 @@ h2 {
 .about-text h4 {
     margin-bottom: 0.5em;
 }
+
+.about-text p{
+    font-size: 1.1rem;
+    color: #182030;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+
 
 h3 {
     font-size: 2rem;
