@@ -694,6 +694,10 @@ footer {
     h2 {
         font-size: 2.25rem;
     }
+
+    .about-text h4 {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -721,6 +725,10 @@ footer {
 
     h4 {
         font-size: 1.5rem;
+    }
+
+    .about-text h4 {
+        font-size: 1.25rem;
     }
 
     p {
@@ -800,6 +808,10 @@ footer {
 
     h4 {
         font-size: 1.25rem;
+    }
+
+    .about-text h4 {
+        font-size: 1.1rem;
     }
 
     p {
