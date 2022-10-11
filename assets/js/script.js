@@ -23,4 +23,27 @@
     // Event Listeners
     hamburger.addEventListener("click", toggleMobileNav);
     navList.addEventListener("click", toggleMobileNav);
+
+    // Gallery Handler
+    const galleryTabs = document.querySelectorAll(".gallery-tabs > .tab");
+    const galleryTabIndicator = document.querySelector(
+        ".gallery-tabs > .tab-indicator"
+    );
+    const galleries = document.querySelectorAll(".gallery");
+
+    galleryTabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+            galleryTabs.forEach((tab) => {
+                tab.classList.remove("active");
+            });
+
+            galleries.forEach((gallery) => {
+                gallery.classList.remove("active");
+            });
+
+            galleryTabIndicator.style.left = `${index * 140}px`;
+            tab.classList.add("active");
+            galleries[index].classList.add("active");
+        });
+    });
 })();
