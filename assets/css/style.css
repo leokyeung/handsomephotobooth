@@ -428,6 +428,7 @@ video {
 
 .gallery-section {
     background-color: #f4f2f2;
+    padding-bottom: 200px;
 }
 
 .gallery-tabs {
@@ -477,25 +478,32 @@ video {
 
 .gallery {
     display: none;
-    column-count: 4;
-    column-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 .gallery.active {
-    display: block;
+    display: grid;
 }
 
 .gallery-item {
     display: block;
     width: 100%;
-    height: auto;
-    padding: 8px 0;
+    filter: drop-shadow(1px 1px 2px #222);
+    aspect-ratio: 0.9;
+    overflow: hidden;
 }
 
 .gallery-item img {
     width: 100%;
+    height: 100%;
     margin: auto;
-    height: auto;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
 }
 
 /* Pricing Section */
@@ -755,7 +763,7 @@ footer {
     /* Gallery Section */
 
     .gallery {
-        column-count: 3;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -825,7 +833,7 @@ footer {
     /* Gallery Section */
 
     .gallery {
-        column-count: 2;
+        grid-template-columns: 1fr 1fr;
     }
 
     /* Navigation Bar */
@@ -924,16 +932,16 @@ footer {
     }
 
     .gallery-tabs > .tab {
+        padding: 0.35rem 0;
         width: auto;
-        padding: 5px 0;
         border-bottom: 2px solid transparent;
     }
 
     .gallery-tabs > .tab.active {
-        border-color: var(--primaryColor);
+        border-bottom: 2px solid var(--primaryColor);
     }
 
-    .gallery-tabs > .tab-indicator {
+    .tab-indicator {
         display: none;
     }
 
@@ -978,9 +986,13 @@ footer {
         font-size: 1.5rem;
     }
 
+    .services {
+        display: none;
+    }
+
     /* Gallery Section */
 
     .gallery {
-        column-count: 1;
+        grid-template-columns: 1fr 1fr;
     }
 }
