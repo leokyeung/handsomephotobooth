@@ -490,7 +490,7 @@ video {
     display: block;
     width: 100%;
     -webkit-appearance: none;
-    filter: drop-shadow(1px 1px 2px #222);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     aspect-ratio: 0.9;
     overflow: hidden;
 }
