@@ -428,7 +428,7 @@ video {
 
 .gallery-section {
     background-color: #f4f2f2;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
 .gallery-tabs {
@@ -763,7 +763,7 @@ footer {
     /* Gallery Section */
 
     .gallery {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
