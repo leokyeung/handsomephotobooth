@@ -133,6 +133,13 @@ h2 {
 
 .gradient {
     background-clip: text;
+    background: linear-gradient(90deg, #fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient1 {
+    background-clip: text;
     background: linear-gradient(90deg,#00dbde,#fc00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
