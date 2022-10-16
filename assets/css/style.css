@@ -132,6 +132,7 @@ h2 {
 }
 
 .gradient {
+    background-clip: text;
     background: linear-gradient(90deg,#00dbde,#fc00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -495,6 +496,8 @@ video {
 .gallery-item {
     display: block;
     width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     aspect-ratio: 0.9;
     overflow: hidden;
