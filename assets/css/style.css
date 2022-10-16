@@ -131,6 +131,12 @@ h2 {
     font-weight: 300;
 }
 
+.gradient {
+    background: linear-gradient(90deg,#00dbde,#fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 h3 {
     font-size: 2rem;
     margin-bottom: 1em;
@@ -489,7 +495,6 @@ video {
 .gallery-item {
     display: block;
     width: 100%;
-    -webkit-appearance: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     aspect-ratio: 0.9;
     overflow: hidden;
