@@ -20,6 +20,19 @@
         header.classList.toggle("open");
     };
 
+    // Rotate Package Card
+
+    const equipmentBtns = document.querySelectorAll(".equipment-btn");
+    const flipCard = document.querySelector(".flip-card");
+
+    const flipCardHandler = () => {
+        flipCard.classList.toggle("rotate");
+    };
+
+    equipmentBtns.forEach((btn) => {
+        btn.addEventListener("click", flipCardHandler);
+    });
+
     // Event Listeners
     hamburger.addEventListener("click", toggleMobileNav);
     navList.addEventListener("click", toggleMobileNav);
@@ -45,5 +58,30 @@
             tab.classList.add("active");
             galleries[index].classList.add("active");
         });
+    });
+
+    // Previous Event Slider
+
+    let eventSlider = new Swiper(".event-slider", {
+        slidesPerView: 1,
+        spaceBetween: 130,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".next-event",
+            prevEl: ".prev-event",
+        },
+        pagination: {
+            el: ".event-slider-pagination",
+            clickable: true,
+        },
+        // breakpoints: {
+        //     992: {
+        //         slidesPerView: 2,
+        //     },
+        // },
     });
 })();
