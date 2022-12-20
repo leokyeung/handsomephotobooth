@@ -76,29 +76,6 @@ section {
     color: var(--primaryColor);
 }
 
-.btn1 {
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
-    color:white;
-    border: none;
-    text-align: center;
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin: 0.5rem 0;
-    border: 1px solid #f4f2f2;
-    border-radius: 10px;
-    -webkit-transition: 0.25s ease;
-    -o-transition: 0.25s ease;
-    transition: 0.25s ease;
-}
-
-
-.btn1:hover {
-    background-color: transparent; 
-    color: var(--secondaryColor);
-}
-
-
 /* Typography */
 
 h1,
@@ -550,7 +527,9 @@ video {
 
 .event-slider-container {
     position: relative;
-    padding: 25px 70px !important;
+    max-width: 992px; /* Change Previous Slider Width*/
+    margin: 0 auto;
+    padding: 0 70px !important;
 }
 
 .event-slider-pagination {
@@ -1057,8 +1036,7 @@ footer {
     /* Previous Event Section */
 
     .event-slider-container {
-        padding: 0!important;
-
+        padding: 0 !important;
     }
 
     .event-slider-nav {
