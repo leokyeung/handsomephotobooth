@@ -76,29 +76,6 @@ section {
     color: var(--primaryColor);
 }
 
-.btn1 {
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
-    color:white;
-    border: none;
-    text-align: center;
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin: 0.5rem 0;
-    border: 1px solid #f4f2f2;
-    border-radius: 10px;
-    -webkit-transition: 0.25s ease;
-    -o-transition: 0.25s ease;
-    transition: 0.25s ease;
-}
-
-
-.btn1:hover {
-    background-color: transparent; 
-    color: var(--secondaryColor);
-}
-
-
 /* Typography */
 
 h1,
@@ -154,9 +131,10 @@ h2 {
     font-weight: 300;
 }
 
+
 .gradient {
     background-clip: text;
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    background: linear-gradient(90deg,#00dbde,#fc00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -387,6 +365,7 @@ header.open .hamburger span:nth-child(4) {
     padding: 0;
 }
 
+
 video {
     filter: brightness(70%);
 }
@@ -508,20 +487,12 @@ video {
 
 .gallery {
     display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 .gallery.active {
-    display: block;
-}
-
-.gallery > a {
-    margin-top: 4rem;
-}
-
-.gallery > div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
 }
 
 .gallery-item {
@@ -544,42 +515,6 @@ video {
 
 .gallery-item:hover img {
     transform: scale(1.04);
-}
-
-/* Previous Event */
-
-.event-slider-container {
-    position: relative;
-    padding: 25px 70px !important;
-}
-
-.event-slider-pagination {
-    margin-top: 1.5rem;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: var(--primaryColor) !important;
-}
-
-.event-slider-nav {
-    position: absolute;
-    top: 50%;
-    width: 60px;
-    transform: translateY(-60%);
-    cursor: pointer;
-}
-
-.prev-event {
-    left: 0;
-}
-
-.next-event {
-    right: 0;
-}
-
-.event-slider-nav svg {
-    width: 100%;
-    height: auto;
 }
 
 /* Pricing Section */
@@ -611,39 +546,6 @@ video {
     -ms-flex-pack: center;
     justify-content: center;
     margin-top: 20px;
-}
-
-.flip-card {
-    width: 100%;
-    max-width: 400px;
-    height: 712px;
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flip-card.rotate .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
 }
 
 .pricing-plan {
@@ -871,7 +773,7 @@ footer {
 
     /* Gallery Section */
 
-    .gallery > div {
+    .gallery {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
@@ -941,7 +843,7 @@ footer {
 
     /* Gallery Section */
 
-    .gallery > div {
+    .gallery {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -1054,17 +956,6 @@ footer {
         display: none;
     }
 
-    /* Previous Event Section */
-
-    .event-slider-container {
-        padding: 0!important;
-
-    }
-
-    .event-slider-nav {
-        display: none;
-    }
-
     /* Contact Section */
 
     .contact-us-form .row {
@@ -1112,7 +1003,7 @@ footer {
 
     /* Gallery Section */
 
-    .gallery > div {
+    .gallery {
         grid-template-columns: 1fr 1fr;
     }
 }
