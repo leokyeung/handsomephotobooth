@@ -129,6 +129,11 @@ section {
     color: var(--secondaryColor);
 }
 
+.btn_top:focus {
+    background-color: transparent; 
+    color: var(--secondaryColor);
+}
+
 
 /* Typography */
 
