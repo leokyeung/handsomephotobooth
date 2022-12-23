@@ -98,6 +98,37 @@ section {
     color: var(--secondaryColor);
 }
 
+/* Top CTA Button */
+
+.btn_top{
+    display: none;
+}
+
+.btn_top {
+    position: relative;
+    margin-right: -70px;
+    min-height: 30px;
+    min-width: auto;
+    padding: 0.5rem 0.65rem;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    color:white;
+    border: none;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 550;
+    border: 1px solid black;
+    border-radius: 7px;
+    -webkit-transition: 0.25s ease;
+    -o-transition: 0.25s ease;
+    transition: 0.25s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn_top:hover {
+    background-color: transparent; 
+    color: var(--secondaryColor);
+}
+
 
 /* Typography */
 
@@ -947,6 +978,10 @@ footer {
     }
 
     /* Navigation Bar */
+
+    .btn_top {
+        display: block;
+    }
 
     .hamburger {
         display: block;
