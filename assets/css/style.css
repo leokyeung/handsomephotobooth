@@ -124,15 +124,14 @@ section {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.btn_top:hover {
-    background-color: transparent; 
-    color: var(--secondaryColor);
+.btn_top:active {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
 }
 
-.btn_top:focus {
-    background-color: transparent; 
-    color: var(--secondaryColor);
-}
 
 
 /* Typography */
@@ -987,6 +986,7 @@ footer {
     .btn_top {
         display: block;
     }
+
 
     .hamburger {
         display: block;
