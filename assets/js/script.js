@@ -15,6 +15,11 @@
         }
     });
 
+    // Handles Mobile Navigation Bar
+    const toggleMobileNav = () => {
+        header.classList.toggle("open");
+    };
+
     // Rotate Package Card
 
     const equipmentBtns = document.querySelectorAll(".equipment-btn");
