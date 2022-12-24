@@ -393,6 +393,7 @@ header.open .hamburger span:nth-child(4) {
     position: absolute;
     right: 0;
     z-index: -1;
+    filter: brightness(70%);
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -425,9 +426,6 @@ header.open .hamburger span:nth-child(4) {
     padding: 0;
 }
 
-video {
-    filter: brightness(70%);
-}
 
 .hero-content {
     position: relative;
