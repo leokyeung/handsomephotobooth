@@ -635,6 +635,8 @@ header.open .hamburger span:nth-child(4) {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
+    padding-bottom: 150px;
+
 }
 
 .pricing-section h2 {
