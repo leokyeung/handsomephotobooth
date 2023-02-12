@@ -570,6 +570,10 @@ header.open .hamburger span:nth-child(4) {
     overflow: hidden;
 }
 
+.event-img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .gallery-item img {
     width: 100%;
     height: 100%;
