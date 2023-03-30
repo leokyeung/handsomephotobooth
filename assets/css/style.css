@@ -725,11 +725,22 @@ header.open .hamburger span:nth-child(4) {
 
 .pricing-benefit-list {
     margin-top: 1rem;
+   
 }
 
 .pricing-benefit-list li {
     position: relative;
     margin: 20px 0 20px 40px;
+}
+
+.p1 {
+    text-align: center;
+    font-weight: 600;
+}
+.p2 {
+    line-height: 150%;
+    text-align: center;
+    font-weight: 400;
 }
 
 .pricing-benefit-list li::before {
@@ -761,6 +772,9 @@ header.open .hamburger span:nth-child(4) {
     width: 100%;
 }
 
+.equipment-btn {
+    margin-top: 15px;
+}
 /* Contact Section */
 
 .contact-us-form {
