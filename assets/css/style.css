@@ -842,7 +842,6 @@ header.open .hamburger span:nth-child(4) {
 
 .blogs-section {
     min-height: 100vh;
-    padding-top: 200px;
     background: linear-gradient(90deg, #00dbde, #fc00ff);;
 }
 
@@ -863,6 +862,7 @@ header.open .hamburger span:nth-child(4) {
 
 .blog-cards {
     display: grid;
+    padding-top: 70px;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
 }
