@@ -838,7 +838,147 @@ header.open .hamburger span:nth-child(4) {
     width: 25px;
     vertical-align: middle;
 }
+/* Blogs Section */
 
+.blogs-section {
+    min-height: 100vh;
+    padding-top: 200px;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);;
+}
+
+.blog-title {
+    text-align: center;
+}
+
+.blogs-page .hero-section {
+    min-height: 640px;
+    background-image: url("../images/gallery/sample/5.jpeg");
+    opacity: 0.7;
+}
+
+.blogs-page .hero-content h4 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.blog-card {
+    text-align: left;
+    max-width: 460px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: transform 0.25s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.015);
+}
+
+.blog-img {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.blog-date {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #424242;
+    margin: 0.35rem 0 0.05rem;
+    text-align: center;
+}
+
+.blog-text {
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: center;
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+.blog-author img {
+    border-radius: 50%;
+    width: 40px;
+    border: 2px solid var(--primaryColor);
+}
+
+.blog-author h6 {
+    font-size: 0.875rem;
+}
+
+/* Articles Section */
+
+.article-page .hero-section {
+    min-height: 480px;
+    background-color: #1a1e21;
+}
+
+.article-page .hero-content h2 {
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.article-page .hero-content a {
+    color: var(--primaryColor);
+    margin-bottom: 1rem;
+}
+
+.article-img {
+    max-width: 840px;
+    margin: -220px auto 2rem;
+}
+
+.article-section article {
+    margin: 1.5rem 0;
+}
+
+.article-section article h5 {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.article-section article p {
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.share-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.share-list li button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.share-list li svg {
+    width: auto;
+    height: 22px;
+    fill: #292929;
+}
 /* Footer */
 
 footer {
