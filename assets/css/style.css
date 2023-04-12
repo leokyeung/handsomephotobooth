@@ -842,7 +842,7 @@ header.open .hamburger span:nth-child(4) {
 
 .blogs-section {
     min-height: 100vh;
-    background: linear-gradient(90deg, #00dbde, #fc00ff);;
+    background: linear-gradient(to right bottom, #d16ba5, #bd8ad2, #9fa8ee, #89c2f8, #8ad7f6, #95d9f4, #a0dcf2, #aadef0, #aed1eb, #b4c4e2, #bab8d4, #bcacc3);
 }
 
 .blog-title {
