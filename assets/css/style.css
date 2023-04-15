@@ -79,7 +79,7 @@ section {
 .btn1 {
     padding: 0.75rem 1.5rem;
     background: linear-gradient(90deg, #00dbde, #fc00ff);
-    color: white;
+    color:white;
     border: none;
     text-align: center;
     font-size: 1.125rem;
@@ -92,28 +92,29 @@ section {
     transition: 0.25s ease;
 }
 
+
 .btn1:active {
     background: #e5e5e5;
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-    box-shadow: inset 0px 0px 5px #c1c1c1;
-    outline: none;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
 }
 
 /* Top CTA Button */
 
-.btn_top {
+.btn_top{
     display: none;
 }
 
 .btn_top {
     position: relative;
-    margin-right: -40px;
+    margin-right: -70px;
     min-height: 30px;
     min-width: auto;
     padding: 0.5rem 0.65rem;
     background: linear-gradient(90deg, #00dbde, #fc00ff);
-    color: white;
+    color:white;
     border: none;
     text-align: center;
     font-size: 0.85rem;
@@ -129,10 +130,12 @@ section {
 .btn_top:active {
     background: #e5e5e5;
     -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-    box-shadow: inset 0px 0px 5px #c1c1c1;
-    outline: none;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
 }
+
+
 
 /* Typography */
 
@@ -261,7 +264,7 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 1rem;
+    gap: 5rem;
 }
 
 .logo {
@@ -422,6 +425,7 @@ header.open .hamburger span:nth-child(4) {
     min-height: 100vh;
     padding: 0;
 }
+
 
 .hero-content {
     position: relative;
@@ -636,6 +640,7 @@ header.open .hamburger span:nth-child(4) {
     -webkit-background-size: cover;
     -o-background-size: cover;
     padding-bottom: 200px;
+
 }
 
 .pricing-section h2 {
@@ -720,6 +725,7 @@ header.open .hamburger span:nth-child(4) {
 
 .pricing-benefit-list {
     margin-top: 1rem;
+   
 }
 
 .pricing-benefit-list li {
@@ -836,21 +842,7 @@ header.open .hamburger span:nth-child(4) {
 
 .blogs-section {
     min-height: 100vh;
-    background: linear-gradient(
-        to right bottom,
-        #d16ba5,
-        #bd8ad2,
-        #9fa8ee,
-        #89c2f8,
-        #8ad7f6,
-        #95d9f4,
-        #a0dcf2,
-        #aadef0,
-        #aed1eb,
-        #b4c4e2,
-        #bab8d4,
-        #bcacc3
-    );
+    background: linear-gradient(to right bottom, #d16ba5, #bd8ad2, #9fa8ee, #89c2f8, #8ad7f6, #95d9f4, #a0dcf2, #aadef0, #aed1eb, #b4c4e2, #bab8d4, #bcacc3);
 }
 
 .blog-title {
@@ -872,7 +864,6 @@ header.open .hamburger span:nth-child(4) {
     display: grid;
     padding-top: 70px;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
     gap: 1.5rem;
 }
 
@@ -1104,7 +1095,10 @@ footer {
     .about-text h4 {
         font-size: 1.25rem;
     }
+
 }
+
+
 
 @media (max-width: 992px) {
     .container {
@@ -1157,6 +1151,7 @@ footer {
         display: block;
     }
 
+
     .hamburger {
         display: block;
     }
@@ -1204,12 +1199,6 @@ footer {
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
-    }
-
-    /* Blog */
-
-    .blog-cards {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1273,7 +1262,8 @@ footer {
     /* Previous Event Section */
 
     .event-slider-container {
-        padding: 0 !important;
+        padding: 0!important;
+
     }
 
     .event-slider-nav {
@@ -1287,12 +1277,6 @@ footer {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-    }
-
-    /* Blog */
-
-    .blog-cards {
-        grid-template-columns: 1fr;
     }
 
     /* Footer  */
