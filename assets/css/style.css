@@ -1338,3 +1338,9 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
