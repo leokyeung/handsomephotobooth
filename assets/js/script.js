@@ -90,7 +90,7 @@
     const backVideo = document.querySelector(".back-video");
 
     const setVideoSrc = () => {
-        if (window.innerWidth <= 680) {
+        if (window.innerWidth <= 699) {
             if (backVideo.getAttribute("src") !== "./assets/videos/mobile.mp4")
                 backVideo.src = "./assets/videos/mobile.mp4";
         } else if (
