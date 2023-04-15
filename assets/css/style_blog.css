@@ -873,6 +873,10 @@ header.open .hamburger span:nth-child(4) {
     transform: scale(1.015);
 }
 
+.blog-link {
+    text-decoration: underline;
+}
+
 .blog-img {
     border-radius: 10px;
     overflow: hidden;
@@ -1305,6 +1309,7 @@ footer {
     .services {
         display: none;
     }
+
 
     /* Gallery Section */
 
