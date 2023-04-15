@@ -4,6 +4,7 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    /* overflow-x: hidden;  */
 }
 
 /* Variables */
@@ -1337,3 +1338,9 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
