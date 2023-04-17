@@ -809,11 +809,6 @@ textarea::-webkit-input-placeholder {
 
 .contact-us-form form select { 
     color: lightslategray;
-
-}
-
-.blackText {
-    background-color: red;
 }
 
 .contact-us-form form textarea {
