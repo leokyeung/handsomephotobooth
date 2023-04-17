@@ -786,6 +786,7 @@ header.open .hamburger span:nth-child(4) {
 }
 
 .contact-us-form form input,
+.contact-us-form form select,
 .contact-us-form form textarea {
     display: block;
     font: inherit;
@@ -798,6 +799,21 @@ header.open .hamburger span:nth-child(4) {
     outline-color: #003366;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    
+}
+
+input::placeholder,
+textarea::-webkit-input-placeholder {
+    color: lightslategray;
+}
+
+.contact-us-form form select { 
+    color: lightslategray;
+
+}
+
+.blackText {
+    background-color: red;
 }
 
 .contact-us-form form textarea {
