@@ -401,12 +401,20 @@ header.open .hamburger span:nth-child(4) {
     }
 }
 
-@media (max-aspect-ratio: 16/9) {
+/* Fixing issue with IOS */
+
+/*@media (max-aspect-ratio: 16/9) {
     .back-video {
         width: auto;
         height: 100%;
     }
+}*/
+.back-video{    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 /* Hero Section */
 .hero-section {
     display: -webkit-box;
