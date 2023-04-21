@@ -102,6 +102,17 @@
 
     window.addEventListener("resize", setVideoSrc);
     setVideoSrc();
+    
+    //height fix
+    function heightFix(){
+        if(window.matchMedia("(max-width:768px)").matches){
+            let heroSection = document.querySelector(".hero-section");
+            heroSection.style.minHeight = window.innerHeight+"px";
+            heroSection.style.width = window.innerWidth+"px";
+        }
+    }
+    heightFix();
+    window.addEventListener('resize',function(){ heightFix(); });
 })();
 
 $('#mySelect').change(
