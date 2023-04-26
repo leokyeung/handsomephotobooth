@@ -401,20 +401,12 @@ header.open .hamburger span:nth-child(4) {
     }
 }
 
-/* Fixing issue with IOS */
-
-/*@media (max-aspect-ratio: 16/9) {
+@media (max-aspect-ratio: 16/9) {
     .back-video {
         width: auto;
         height: 100%;
     }
-}*/
-.back-video{    
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
-
 /* Hero Section */
 .hero-section {
     display: -webkit-box;
@@ -448,12 +440,6 @@ header.open .hamburger span:nth-child(4) {
     text-align: center;
 }
 
-/* fixing the width of yelp logo */
-@media (max-width:390px){
-    .about-content > a:nth-of-type(2) img {
-        width: 100% !important;
-    }
-}
 .services {
     display: -webkit-box;
     display: -ms-flexbox;
