@@ -828,8 +828,13 @@ footer {
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px 50px;
+
+}
+
+.footer-nav h5 {
+    font-size: 1.5rem;
 }
 .footer-list {
     display: -webkit-box;
@@ -854,6 +859,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
     gap: 10px;
     margin: 1rem 0;
 }
