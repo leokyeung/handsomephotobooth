@@ -1066,6 +1066,10 @@ footer {
         -ms-flex-align: center;
         align-items: center;
     }
+
+    .contact-content h5 {
+        font-size: 1rem;
+    }
 }
 @media (max-width: 576px) {
     .container {
