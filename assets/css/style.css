@@ -568,7 +568,14 @@ header.open .hamburger span:nth-child(4) {
 .pricing-plan {
     line-height: 100%;
     text-align: center;
+    margin-bottom: 10px;
 }
+.pricing-plan1 {
+    font-weight: 100;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 .price {
     text-align: center;
     font-weight: 400;
