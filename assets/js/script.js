@@ -45,7 +45,7 @@
         spaceBetween: 130,
         loop: !0,
         autoplay: {
-            delay: 5000,
+            delay: 1500,
             disableOnInteraction: !1,
         },
         navigation: {
