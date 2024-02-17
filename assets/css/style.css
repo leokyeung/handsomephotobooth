@@ -345,6 +345,14 @@ header.open .hamburger span:nth-child(4) {
         height: 100%;
     }
 }
+
+@media (max-width: 480px) {
+    .back-video {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 .hero-section {
     display: -webkit-box;
     display: -ms-flexbox;
