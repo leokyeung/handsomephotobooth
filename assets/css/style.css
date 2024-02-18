@@ -348,8 +348,20 @@ header.open .hamburger span:nth-child(4) {
 
 @media (max-width: 480px) {
     .back-video {
+        position: static;
         width: 100%;
         object-fit: cover;
+    }
+    .hero-section {
+    min-height: 100%;
+    }
+    header {
+    position: sticky;
+    }
+    .hero-section .container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     }
 }
 
