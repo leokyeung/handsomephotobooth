@@ -143,12 +143,19 @@ h2 {
     margin-bottom: 0.75em;
     text-align: center;
 }
+
+.about-text {
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+}
+
 .about-text h2 {
     margin-bottom: 0.2em;
 }
 .about-text h3 {
     font-size: 1.3rem;
-    font-style: italic;
+    /* font-style: italic; */
 }
 .about-text h4 {
     font-size: 1.5rem;
@@ -156,11 +163,14 @@ h2 {
     margin-bottom: 0.5em;
 }
 .about-text p {
-    font-size: 1.1rem;
+    text-align: left;
+    font-size: 1.2rem;
     color: #182030;
     line-height: 1.8;
     font-weight: 300;
 }
+
+
 .gradient {
     background-clip: text;
     background: linear-gradient(90deg, #00dbde, #fc00ff);
@@ -575,6 +585,13 @@ header.open .hamburger span:nth-child(4) {
 .flip-card-back {
     transform: rotateY(180deg);
 }
+
+/* .introduction {
+    text-align: left;
+} */
+
+
+
 .pricing-plan {
     line-height: 100%;
     text-align: center;
@@ -656,6 +673,10 @@ header.open .hamburger span:nth-child(4) {
 }
 .equipment-btn {
     margin-top: 15px;
+}
+
+.contact-section {
+    background-color: #f4f2f2;
 }
 .contact-us-form {
     max-width: 920px;
@@ -837,7 +858,7 @@ textarea::-webkit-input-placeholder {
 footer {
     padding: 50px 0;
     color: #292929;
-    background-color: #f4f2f2;
+
 }
 .footer-nav {
     display: -webkit-box;
@@ -924,6 +945,9 @@ footer {
     h2 {
         font-size: 2.25rem;
     }
+    .about-text {
+        padding: 50px;
+    }
     .about-text h3 {
         font-size: 1.2rem;
     }
@@ -949,6 +973,9 @@ footer {
     }
     h4 {
         font-size: 1.5rem;
+    }
+    .about-text {
+        padding: 20px;
     }
     .about-text h3 {
         font-size: 1.2rem;
@@ -1027,8 +1054,11 @@ footer {
     h4 {
         font-size: 1.25rem;
     }
+    .about-text {
+        padding: 0px;
+    }
     .about-text h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .about-text h4 {
         font-size: 1.1rem;
