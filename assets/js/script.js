@@ -80,8 +80,8 @@
         });
       });
 })();
-$('#mySelect').change(function () {
-    $('#mySelect').css("background", $("select option:selected").css("background-color"))
-})
+// $('#mySelect').change(function () {
+//     $('#mySelect').css("background", $("select option:selected").css("background-color"))
+// })
 
   
