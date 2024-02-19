@@ -145,8 +145,8 @@ h2 {
 }
 
 .about-text {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 250px;
+    padding-right: 250px;
     text-align: left;
 }
 
@@ -163,7 +163,7 @@ h2 {
     margin-bottom: 0.5em;
 }
 .about-text p {
-    text-align: left;
+
     font-size: 1.2rem;
     color: #182030;
     line-height: 1.8;
@@ -588,9 +588,9 @@ header.open .hamburger span:nth-child(4) {
     transform: rotateY(180deg);
 }
 
-/* .introduction {
+.introduction {
     text-align: left;
-} */
+}
 
 
 
@@ -1067,7 +1067,7 @@ footer {
     .about-text p {
         font-size: 1rem;
     }
-    
+
     p {
         font-size: 1rem;
     }
