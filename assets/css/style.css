@@ -383,7 +383,6 @@ header.open .hamburger span:nth-child(4) {
     z-index: 1;
 }
 .about-section {
-    background-color: #f4f2f2;
     text-align: center;
 
 }
@@ -429,7 +428,6 @@ header.open .hamburger span:nth-child(4) {
     will-change: transform;
 }
 .gallery-section {
-    background-color: #f4f2f2;
     padding-bottom: 100px;
 }
 .gallery-tabs {
@@ -505,6 +503,10 @@ header.open .hamburger span:nth-child(4) {
 }
 .gallery-item:hover img {
     transform: scale(1.04);
+}
+
+.previous-event-section {
+    background-color: #f4f2f2;
 }
 .event-slider-container {
     position: relative;
@@ -675,9 +677,6 @@ header.open .hamburger span:nth-child(4) {
     margin-top: 15px;
 }
 
-.contact-section {
-    background-color: #f4f2f2;
-}
 .contact-us-form {
     max-width: 920px;
     margin: 0 auto;
@@ -857,6 +856,7 @@ textarea::-webkit-input-placeholder {
 }
 footer {
     padding: 50px 0;
+    background-color: #f4f2f2;
     color: #292929;
 
 }
