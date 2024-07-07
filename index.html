@@ -677,8 +677,7 @@
                         <div class="contact-us-form">
                             <form action="https://formspree.io/f/mgeqkkny" method="POST" id="contact-form">
                                 <div class="row">
-                                    <input type="text" placeholder="First Name*" name="FirstName" required />
-                                    <input type="text" placeholder="Last Name*" name="LastName" required />
+                                    <input type="text" placeholder="First & Last Name*" name="Name" required />
                                 </div>
                                 <input type="email" placeholder="E-Mail*" name="Email" required />
                                 <select name="Source" required>
@@ -689,9 +688,18 @@
                                     <option class="blackText" value="Yelp">Yelp</option>
                                     <option class="blackText" value="Referral">Referral</option>
                                 </select>
-                                <input type="text" placeholder="Subject*" name="Subject" required />
+                                <input type="text" placeholder="Event Type & Location*" name="Event Type & Location" required />
+                                <input type="text" placeholder="Event Date*" name="Event Date" required />
+                                <select name="Number of Guest" required>
+                                    <option selected disabled hidden>Number of Guests?*</option>
+                                    <option class="blackText" value="50 - 100">50 - 100</option>
+                                    <option class="blackText" value="100 - 150">100 - 150</option>
+                                    <option class="blackText" value="150 - 200">150 - 200</option>
+                                    <option class="blackText" value="200 - 250">200 - 250</option>
+                                    <option class="blackText" value="> 250">> 250</option>
+                                </select>
                                 <textarea name="message" id="message"
-                                    placeholder="Please provide the date, time, location, and number of guests for booking inquiry."
+                                    placeholder="Please provide estimate start time and any questions"
                                     required></textarea>
                                 <button type="submit" class="btn">
                                     Submit
