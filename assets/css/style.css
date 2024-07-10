@@ -512,7 +512,7 @@ header.open .hamburger span:nth-child(4) {
 }
 .event-slider-container {
     position: relative;
-    max-width: 950px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 20px 70px !important;
 }
