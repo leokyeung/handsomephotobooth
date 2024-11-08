@@ -165,7 +165,6 @@ h2 {
     margin-bottom: 0.5em;
 }
 .about-text p {
-
     font-size: 1.2rem;
     color: #182030;
     line-height: 1.8;
@@ -925,10 +924,21 @@ footer {
     border-top: 1px solid #a0a0a0;
     text-align: center;
 }
+
+@media (max-width: 2850px) {
+    .container {
+        max-width: 1200px;
+    }
+    .about-text {
+        padding: 40px;
+    }
+}
+
 @media (max-width: 1550px) {
     .container {
         max-width: 1200px;
     }
+
 }
 @media (max-width: 1400px) {
     .container {
@@ -938,6 +948,7 @@ footer {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
