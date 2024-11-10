@@ -946,17 +946,20 @@ footer {
         padding: 0px;
     }
     .about-content {
-        padding-top: 0px;
+        padding-top: 40px;
     }
 
 }
 
 @media (max-width: 1400px) {
     .container {
-        max-width: 1140px;
+        max-width: 1000px;
     }
     .gallery > div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .about-content {
+        padding-top: 0px;
     }
 }
 
