@@ -940,7 +940,7 @@ footer {
 
 @media (max-width: 1800px) {
     .container {
-        max-width: 1200px;
+        max-width: 1100px;
     }
     .about-text {
         padding: 0px;
