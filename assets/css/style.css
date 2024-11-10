@@ -938,35 +938,18 @@ footer {
     }
 }
 
-
-
 @media (max-width: 1800px) {
     .container {
         max-width: 1200px;
     }
     .about-text {
-        padding: 50px;
+        padding: 0px;
     }
     .about-content {
         padding-top: 0px;
     }
 
 }
-
-@media (max-width: 1800px) {
-    .container {
-        max-width: 1200px;
-    }
-    .about-text {
-        padding: 50px;
-    }
-    .about-content {
-        padding-top: 0px;
-    }
-
-}
-
-
 
 @media (max-width: 1400px) {
     .container {
