@@ -508,7 +508,7 @@ header.open .hamburger span:nth-child(4) {
 }
 
 .previous-event-section {
-    background-color: #f4f2f2;
+    background-color: white;
 }
 .event-slider-container {
     position: relative;
@@ -593,7 +593,6 @@ header.open .hamburger span:nth-child(4) {
 .introduction {
     text-align: left;
 }
-
 
 
 .pricing-plan {
@@ -1164,5 +1163,86 @@ footer {
     }
     .gallery > div {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Testimonial Section */
+.testimonial{
+    text-align: center;
+    background-color: #F4F2F2;
+    padding-bottom: 1px;
+}
+.slider-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+.slider-card{
+    background-color: white;
+    padding: 20px 20px 30px 20px;
+    border-radius: 10px;
+    height: 100%;
+    margin-inline: 15px;
+}
+.slick-slide {
+    margin: 50px 0;
+}
+.slick-dots{
+    display: none !important;
+}
+.slider-card img{
+    width: 200px;
+    height: 200px; 
+    object-fit: cover; 
+    margin: -60px auto 0;
+    border-radius: 50%;
+    position: relative;
+    z-index: 9999999;
+}
+.slider-card p{
+    font-size: 18px;
+    padding-top: 15px;
+    font-style: italic;
+}
+.slider-card p span{
+    font-weight: bold;
+}
+.slider-card ul{
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+.slider-card h5{
+    padding-block: 10px;
+}
+.slider-card ul li i{
+    color: #FCC73B;
+}
+.slick-prev::before {
+    color: black !important;
+}
+
+.slick-next::before {
+    color: black !important;
+}
+
+@media screen and (max-width: 767px) {
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+    .slider-card p{
+        font-size: 16px;
+    }
+    .slider-card img{
+        width: 150px; /* Adjust for smaller screens */
+        height: 150px; /* Ensure it remains a square */
+        object-fit: cover; /* Maintain content within the circle */
+        border-radius: 50%; /* Keeps the circular shape */
+        margin: -40px auto 0; /* Adjust margin for smaller size */
+    }
+    .testimonial{
+        padding-bottom: 1px;
     }
 }
