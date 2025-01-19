@@ -1232,6 +1232,10 @@ footer {
     .slick-next {
         display: none !important;
     }
+
+    .slider-row {
+        margin-top: 0px;
+    }
     .slider-card p{
         font-size: 16px;
     }
