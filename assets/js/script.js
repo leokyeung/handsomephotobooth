@@ -79,6 +79,45 @@
           behavior: "smooth"
         });
       });
+
+    // Slick Slider for Testimonal  
+      $(document).ready(function () {
+        $('.slider-row').slick({
+            dots: true,
+            infinite: true,
+            speed: 1500,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+     
 })();
 // $('#mySelect').change(function () {
 //     $('#mySelect').css("background", $("select option:selected").css("background-color"))
