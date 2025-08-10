@@ -1329,6 +1329,10 @@ footer {
     .contact-content h5 {
         font-size: 1rem;
     }
+    
+    .pricing-benefit-list li {
+        font-size: 0.95rem;
+    }
 }
 @media (max-width: 576px) {
     .container {
@@ -1342,6 +1346,10 @@ footer {
     }
     .gallery > div {
         grid-template-columns: 1fr 1fr;
+    }
+    
+    .pricing-benefit-list li {
+        font-size: 0.95rem;
     }
 }
 
