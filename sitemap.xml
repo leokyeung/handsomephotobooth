@@ -8,44 +8,65 @@
 
 <url>
   <loc>https://handsomephotobooth.com/</loc>
-  <lastmod>2025-01-18T12:00:00+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>1.0</priority>
 </url>
 
 <url>
   <loc>https://handsomephotobooth.com/about</loc>
-  <lastmod>2025-01-18T12:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
   <loc>https://handsomephotobooth.com/contact</loc>
-  <lastmod>2025-01-18T12:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
   <loc>https://handsomephotobooth.com/services</loc>
-  <lastmod>2025-01-18T12:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.9</priority>
 </url>
 
 <url>
   <loc>https://handsomephotobooth.com/gallery</loc>
-  <lastmod>2025-01-18T12:00:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://handsomephotobooth.com/blog</loc>
-  <lastmod>2025-01-18T12:00:00+00:00</lastmod>
+  <loc>https://handsomephotobooth.com/blog/blog.html</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://handsomephotobooth.com/blog/blog_1.html</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https://handsomephotobooth.com/blog/blog_2.html</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https://handsomephotobooth.com/blog/blog_3.html</loc>
+  <lastmod>2025-08-10T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
 
 </urlset>
