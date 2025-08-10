@@ -117,6 +117,48 @@
             ]
         });
     });
+
+    // Typing effect for hero subtitle
+    const typingText = document.getElementById('typing-text');
+    const textToType = "Studio Quality Photos, 70+ Fun Props, and Expert Attendant for unforgettable moments";
+    let charIndex = 0;
+    
+    function typeText() {
+        if (charIndex < textToType.length) {
+            typingText.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, 50); // Adjust speed here (milliseconds between characters)
+        } else {
+            // Remove cursor when typing is complete
+            typingText.classList.remove('typing-cursor');
+        }
+    }
+    
+    // Start typing effect when page loads
+    window.addEventListener('load', () => {
+        typingText.classList.add('typing-cursor');
+        setTimeout(typeText, 1000); // Delay before starting typing
+    });
+
+    // FAQ Functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach((question) => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach((item) => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle current FAQ item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        });
+    });
      
 })();
 // $('#mySelect').change(function () {
