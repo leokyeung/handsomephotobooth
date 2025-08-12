@@ -14,14 +14,6 @@
     const toggleMobileNav = () => {
         header.classList.toggle("open")
     };
-    const equipmentBtns = document.querySelectorAll(".equipment-btn");
-    const flipCard = document.querySelector(".flip-card");
-    const flipCardHandler = () => {
-        flipCard.classList.toggle("rotate")
-    };
-    equipmentBtns.forEach((btn) => {
-        btn.addEventListener("click", flipCardHandler)
-    });
     hamburger.addEventListener("click", toggleMobileNav);
     navList.addEventListener("click", toggleMobileNav);
     const galleryTabs = document.querySelectorAll(".gallery-tabs > .tab");
@@ -161,8 +153,29 @@
     });
      
 })();
-// $('#mySelect').change(function () {
-//     $('#mySelect').css("background", $("select option:selected").css("background-color"))
-// })
 
-  
+document.addEventListener('DOMContentLoaded', function () {
+    const flipCards = document.querySelectorAll('.flip-card');
+
+    flipCards.forEach((card) => {
+        const flipCardInner = card.querySelector('.flip-card-inner');
+        const frontButton = card.querySelector('.flip-card-front .equipment-btn');
+        const backButton = card.querySelector('.flip-card-back .equipment-btn');
+
+        // Handle front button click (View Props & Equipment)
+        frontButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            card.classList.add('rotate');
+        });
+
+        // Handle back button click (Back to Package Details)
+        backButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            card.classList.remove('rotate');
+        });
+
+        // Remove any card click handlers to prevent conflicts
+    });
+});
+
+
