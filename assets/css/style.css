@@ -510,6 +510,7 @@ header.open .hamburger span:nth-child(4) {
 
 .about-section {
     text-align: center;
+    background-color: #FFFFFF; 
 
 }
 .services {
