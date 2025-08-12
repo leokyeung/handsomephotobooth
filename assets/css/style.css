@@ -279,6 +279,9 @@ nav {
     height: 32px;
     margin-top: 10px;
     position: relative;
+    background: transparent;
+    border: none;
+    padding: 0;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -712,6 +715,16 @@ header.open .hamburger span:nth-child(4) {
     transform: rotateY(180deg);
 }
 
+/* Ensure front is not interactive when flipped */
+.flip-card.rotate .flip-card-front {
+    pointer-events: none;
+}
+
+/* Ensure back is not interactive when not flipped */
+.flip-card:not(.rotate) .flip-card-back {
+    pointer-events: none;
+}
+
 .introduction {
     text-align: left;
 }
@@ -811,11 +824,12 @@ header.open .hamburger span:nth-child(4) {
 }
 
 .equipment-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
     background: linear-gradient(45deg, #764ba2, #667eea);
-    color: #ffffff !important;
+    color: #ffffff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: none;
 }
 
 .equipment-btn::before {
@@ -838,7 +852,7 @@ header.open .hamburger span:nth-child(4) {
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
     }
     50% {
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.8);
+        box-shadow: 0 4px 20px rgba(102, 126, 234, 0.8);
     }
     100% {
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
