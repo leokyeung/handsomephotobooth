@@ -152,30 +152,14 @@
         });
     });
      
+    // Slow down video playback speed
+    const boothVideo = document.getElementById('myVideo');
+    if (boothVideo) {
+        boothVideo.playbackRate = 0.8;
+    }
+     
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
-    const flipCards = document.querySelectorAll('.flip-card');
 
-    flipCards.forEach((card) => {
-        const flipCardInner = card.querySelector('.flip-card-inner');
-        const frontButton = card.querySelector('.flip-card-front .equipment-btn');
-        const backButton = card.querySelector('.flip-card-back .equipment-btn');
-
-        // Handle front button click (View Props & Equipment)
-        frontButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            card.classList.add('rotate');
-        });
-
-        // Handle back button click (Back to Package Details)
-        backButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            card.classList.remove('rotate');
-        });
-
-        // Remove any card click handlers to prevent conflicts
-    });
-});
 
 
