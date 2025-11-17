@@ -1711,6 +1711,10 @@ footer {
     }
     
     /* Add-ons responsive */
+    .addons-title {
+        text-align: left;
+    }
+    
     .addons-list {
         max-width: 100%;
     }
@@ -1724,6 +1728,7 @@ footer {
     .addon-name {
         font-size: 0.9rem;
         flex: 1;
+        text-align: left;
     }
     
     .addon-price {
@@ -1786,17 +1791,33 @@ footer {
     }
     
     .pricing-column {
-        padding: 30px 20px;
+        padding: 15px 20px;
+    }
+    
+    .pricing-equipment {
+        padding-bottom: 10px;
+    }
+    
+    .pricing-details {
+        padding-top: 10px;
     }
     
     .equipment-video-container {
         padding-top: 100%;
-        margin: 15px 0;
+        margin: 10px 0;
     }
 }
 
 @media screen and (max-width: 480px) {
     .pricing-column {
-        padding: 25px 15px;
+        padding: 10px 15px;
+    }
+    
+    .pricing-equipment {
+        padding-bottom: 5px;
+    }
+    
+    .pricing-details {
+        padding-top: 5px;
     }
 }
