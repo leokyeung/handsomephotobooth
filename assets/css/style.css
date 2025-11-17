@@ -81,12 +81,11 @@ section {
     -o-transition: 0.25s ease;
     transition: 0.25s ease;
 }
+.btn1:hover {
+    transform: translateY(-5px);
+}
 .btn1:active {
-    background: #e5e5e5;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-    box-shadow: inset 0px 0px 5px #c1c1c1;
-    outline: none;
+    transform: translateY(-5px);
 }
 .btn_top {
     display: none;
@@ -338,19 +337,24 @@ header.open .hamburger span:nth-child(4) {
 }
 .back-video {
     position: absolute;
-    right: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: -1;
     filter: brightness(70%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 @media (min-aspect-ratio: 16/9) {
     .back-video {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 @media (max-aspect-ratio: 16/9) {
     .back-video {
-        width: auto;
+        width: 100%;
         height: 100%;
     }
 }
@@ -358,6 +362,7 @@ header.open .hamburger span:nth-child(4) {
 @media (max-width: 480px) {
     .back-video {
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 }
@@ -759,6 +764,7 @@ header.open .hamburger span:nth-child(4) {
     line-height: 100%;
     text-align: center;
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 .pricing-plan1 {
     font-weight: 100;
@@ -769,6 +775,7 @@ header.open .hamburger span:nth-child(4) {
 .price {
     text-align: center;
     font-weight: 400;
+    padding-top: 10px;
 }
 .card1 {
     font-weight: 200;
@@ -793,11 +800,66 @@ header.open .hamburger span:nth-child(4) {
 }
 .pricing-benefit-list {
     margin-top: 1rem;
+    text-align: left;
 }
 .pricing-benefit-list li {
     position: relative;
     margin: 20px 0 20px 40px;
     font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+/* Add-ons Section - Minimalist Layout */
+.addons-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.addons-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.addons-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.addon-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.addon-item:last-child {
+    border-bottom: none;
+}
+
+.addon-name {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.addon-price {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    margin-left: 15px;
 }
 
 .p1 {
@@ -1067,7 +1129,7 @@ textarea::-webkit-input-placeholder {
     fill: #292929;
 }
 footer {
-    padding: 50px 0;
+    padding: 0px 0 50px 0;
     background-color: #f4f2f2;
     color: #292929;
 
@@ -1144,7 +1206,7 @@ footer {
         padding: 30px;
     }
     .about-content {
-        padding-top: 50px;
+        padding-top: 15px;
     }
 }
 
@@ -1156,7 +1218,7 @@ footer {
         padding: 0px;
     }
     .about-content {
-        padding-top: 40px;
+        padding-top: 10px;
     }
 
 }
@@ -1646,5 +1708,95 @@ footer {
     .faq-item.active .faq-answer {
         max-height: 140px;
         padding: 0 1rem 0.75rem;
+    }
+    
+    /* Add-ons responsive */
+    .addons-list {
+        max-width: 100%;
+    }
+    
+    .addon-item {
+        padding: 10px 0;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .addon-name {
+        font-size: 0.9rem;
+        flex: 1;
+    }
+    
+    .addon-price {
+        font-size: 1rem;
+    }
+}
+
+/* Two-column pricing card layout */
+.pricing-card-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-two-column {
+    display: flex;
+    gap: 0;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.pricing-column {
+    flex: 1;
+    padding: 40px 30px;
+}
+
+.pricing-equipment {
+    background: #fff;
+}
+
+.pricing-details {
+    background: #fff;
+}
+
+.equipment-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 170%;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.equipment-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Mobile responsive - stack columns vertically */
+@media screen and (max-width: 768px) {
+    .pricing-two-column {
+        flex-direction: column;
+    }
+    
+    .pricing-column {
+        padding: 30px 20px;
+    }
+    
+    .equipment-video-container {
+        padding-top: 100%;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pricing-column {
+        padding: 25px 15px;
     }
 }
