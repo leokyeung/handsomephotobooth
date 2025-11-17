@@ -1434,6 +1434,10 @@ footer {
     .pricing-benefit-list li {
         font-size: 0.95rem;
     }
+    
+    .pricing-benefit-list li::before {
+        color: var(--primaryColor) !important;
+    }
 }
 @media (max-width: 576px) {
     .container {
@@ -1451,6 +1455,10 @@ footer {
     
     .pricing-benefit-list li {
         font-size: 0.95rem;
+    }
+    
+    .pricing-benefit-list li::before {
+        color: var(--primaryColor) !important;
     }
 }
 
@@ -1712,7 +1720,7 @@ footer {
     
     /* Add-ons responsive */
     .addons-title {
-        text-align: left;
+        text-align: center;
     }
     
     .addons-list {
