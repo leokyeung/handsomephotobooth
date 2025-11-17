@@ -56,15 +56,17 @@ section {
     font-weight: 600;
     margin: 0.5rem 0;
     background-color: var(--primaryColor);
-    border: 2px solid var(--primaryColor);
-    border-radius: 30px;
-    -webkit-transition: 0.25s ease;
-    -o-transition: 0.25s ease;
-    transition: 0.25s ease;
+    border: 1px solid var(--primaryColor);
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .btn:hover {
     background-color: transparent;
     color: var(--primaryColor);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(7, 177, 188, 0.3);
 }
 .btn1 {
     padding: 0.75rem 1.5rem;
@@ -76,7 +78,7 @@ section {
     font-weight: 600;
     margin: 0.5rem 0;
     border: 1px solid #f4f2f2;
-    border-radius: 10px;
+    border-radius: 5px;
     -webkit-transition: 0.25s ease;
     -o-transition: 0.25s ease;
     transition: 0.25s ease;
@@ -881,19 +883,23 @@ header.open .hamburger span:nth-child(4) {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     content: "\2714";
     position: absolute;
-    top: -5px;
+    top: 1px; 
     left: -40px;
-    color: var(--primaryColor);
-    background-color: #edecf9;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8b9dff 0%, #a78bfa 100%);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 .pricing-container .btn {
     width: 100%;
@@ -971,10 +977,21 @@ header.open .hamburger span:nth-child(4) {
     margin: 0 0 1rem;
     padding: 0 1.25rem;
     background-color: #fff;
-    border: 2px solid var(--primaryColor);
-    outline-color: #003366;
+    border: 1.8px solid transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #07b1bc 0%, #13929d 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    outline: none;
+    transition: all 0.3s ease;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+.contact-us-form form input:focus,
+.contact-us-form form select:focus,
+.contact-us-form form textarea:focus {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #07b1bc 0%, #13929d 100%);
+    box-shadow: 0 4px 15px rgba(7, 177, 188, 0.3);
 }
 input::placeholder,
 textarea::-webkit-input-placeholder {
