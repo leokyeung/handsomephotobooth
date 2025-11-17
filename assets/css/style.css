@@ -891,6 +891,8 @@ header.open .hamburger span:nth-child(4) {
     left: -40px;
     background: linear-gradient(135deg, #8b9dff 0%, #a78bfa 100%);
     color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Arial Unicode MS", sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -902,6 +904,8 @@ header.open .hamburger span:nth-child(4) {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .pricing-container .btn {
     width: 100%;
