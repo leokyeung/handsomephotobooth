@@ -807,11 +807,23 @@ header.open .hamburger span:nth-child(4) {
 }
 .pricing-benefit-list li {
     position: relative;
-    margin: 20px 0 20px 40px;
+    margin: 20px 0 20px 0;
+    padding-left: 35px;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #333;
     text-align: left;
+}
+
+.pricing-benefit-list li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    top: -14px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #667eea;
+    line-height: 1.2;
 }
 
 /* Add-ons Section - Minimalist Layout */
@@ -873,36 +885,6 @@ header.open .hamburger span:nth-child(4) {
     line-height: 150%;
     text-align: center;
     font-weight: 200;
-}
-.pricing-benefit-list li::before {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    content: "✔";
-    position: absolute;
-    top: 1px; 
-    left: -40px;
-    background: linear-gradient(135deg, #8b9dff 0%, #a78bfa 100%);
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-    transition: all 0.3s ease;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
 }
 .pricing-container .btn {
     width: 100%;
