@@ -157,6 +157,30 @@
     if (boothVideo) {
         boothVideo.playbackRate = 0.8;
     }
+    
+    // Instagram icon bounce animation on scroll - only once
+    const instagramIcon = document.querySelector('.social-list a[href*="instagram"]');
+    if (instagramIcon) {
+        let hasAnimated = false;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    instagramIcon.classList.add('animate__animated', 'animate__bounce');
+                    hasAnimated = true;
+                    
+                    // Disconnect observer after first animation
+                    instagramIcon.addEventListener('animationend', () => {
+                        observer.disconnect();
+                    }, { once: true });
+                }
+            });
+        }, {
+            threshold: 0.8 // Trigger when 50% of the icon is visible
+        });
+        
+        observer.observe(instagramIcon);
+    }
      
 })();
 
