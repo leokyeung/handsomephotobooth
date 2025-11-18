@@ -176,7 +176,7 @@
                 }
             });
         }, {
-            threshold: 0.8 // Trigger when 50% of the icon is visible
+            threshold: 0.1 // Trigger when 10% of the icon is visible
         });
         
         observer.observe(instagramIcon);
