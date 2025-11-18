@@ -163,44 +163,29 @@
     if (instagramIcon) {
         let hasAnimated = false;
         
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !hasAnimated) {
-                    // Add animation classes
-                    instagramIcon.classList.add('animate__animated', 'animate__bounce');
-                    hasAnimated = true;
-                    
-                    // Disconnect observer after first animation
-                    instagramIcon.addEventListener('animationend', () => {
-                        observer.disconnect();
-                    }, { once: true });
-                }
-            });
-        }, {
-            threshold: 0.01, // Trigger when just 1% of the icon is visible
-            rootMargin: '0px 0px -50px 0px' // Trigger a bit before the icon is fully in view
-        });
-        
-        observer.observe(instagramIcon);
-        
-        // Fallback: If user scrolls to bottom quickly, ensure animation plays
-        const checkFooterVisibility = () => {
-            const rect = instagramIcon.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        const triggerAnimation = () => {
+            if (hasAnimated) return;
             
-            if (isVisible && !hasAnimated) {
+            const rect = instagramIcon.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            
+            // Check if icon is in viewport
+            if (rect.top <= windowHeight && rect.bottom >= 0) {
                 instagramIcon.classList.add('animate__animated', 'animate__bounce');
                 hasAnimated = true;
-                observer.disconnect();
+                
+                // Remove scroll listener after animation
+                window.removeEventListener('scroll', triggerAnimation);
+                window.removeEventListener('touchmove', triggerAnimation);
             }
         };
         
-        // Check on scroll as backup
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(checkFooterVisibility, 100);
-        });
+        // Listen to both scroll and touchmove for mobile
+        window.addEventListener('scroll', triggerAnimation, { passive: true });
+        window.addEventListener('touchmove', triggerAnimation, { passive: true });
+        
+        // Also check on page load in case footer is already visible
+        setTimeout(triggerAnimation, 500);
     }
      
 })();
