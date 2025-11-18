@@ -166,6 +166,7 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !hasAnimated) {
+                    // Add animation classes
                     instagramIcon.classList.add('animate__animated', 'animate__bounce');
                     hasAnimated = true;
                     
@@ -176,10 +177,30 @@
                 }
             });
         }, {
-            threshold: 0.1 // Trigger when 10% of the icon is visible
+            threshold: 0.01, // Trigger when just 1% of the icon is visible
+            rootMargin: '0px 0px -50px 0px' // Trigger a bit before the icon is fully in view
         });
         
         observer.observe(instagramIcon);
+        
+        // Fallback: If user scrolls to bottom quickly, ensure animation plays
+        const checkFooterVisibility = () => {
+            const rect = instagramIcon.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+            
+            if (isVisible && !hasAnimated) {
+                instagramIcon.classList.add('animate__animated', 'animate__bounce');
+                hasAnimated = true;
+                observer.disconnect();
+            }
+        };
+        
+        // Check on scroll as backup
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(checkFooterVisibility, 100);
+        });
     }
      
 })();
