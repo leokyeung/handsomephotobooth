@@ -157,36 +157,6 @@
     if (boothVideo) {
         boothVideo.playbackRate = 0.8;
     }
-    
-    // Instagram icon bounce animation on scroll - only once
-    const instagramIcon = document.querySelector('.social-list a[href*="instagram"]');
-    if (instagramIcon) {
-        let hasAnimated = false;
-        
-        const triggerAnimation = () => {
-            if (hasAnimated) return;
-            
-            const rect = instagramIcon.getBoundingClientRect();
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-            
-            // Check if icon is in viewport
-            if (rect.top <= windowHeight && rect.bottom >= 0) {
-                instagramIcon.classList.add('animate__animated', 'animate__bounce');
-                hasAnimated = true;
-                
-                // Remove scroll listener after animation
-                window.removeEventListener('scroll', triggerAnimation);
-                window.removeEventListener('touchmove', triggerAnimation);
-            }
-        };
-        
-        // Listen to both scroll and touchmove for mobile
-        window.addEventListener('scroll', triggerAnimation, { passive: true });
-        window.addEventListener('touchmove', triggerAnimation, { passive: true });
-        
-        // Also check on page load in case footer is already visible
-        setTimeout(triggerAnimation, 500);
-    }
      
 })();
 
