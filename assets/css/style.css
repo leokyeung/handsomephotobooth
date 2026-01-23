@@ -188,14 +188,6 @@ h2 {
     overflow: hidden;
 }
 
-.award-text {
-  font-weight: 600;
-  color: #667eea;
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 .award-shimmer::before {
     content: '';
     position: absolute;
@@ -1885,7 +1877,7 @@ footer {
 
 @media screen and (max-width: 480px) {
     .award-text {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .pricing-column {
         padding: 10px 15px;
@@ -1898,10 +1890,8 @@ footer {
     .pricing-details {
         padding-top: 5px;
     }
+    
+    .about-text p[style*="font-size: 1.1rem"] {
+        font-size: 1rem !important;
+    }
 }
-
-
-
-
-
-
