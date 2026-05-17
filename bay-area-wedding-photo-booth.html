@@ -1050,6 +1050,27 @@
       form {
         display: grid;
         gap: 14px;
+        transition: opacity 0.28s ease, transform 0.28s ease;
+      }
+
+      form[hidden] {
+        display: none;
+      }
+
+      .form-is-leaving {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+      }
+
+      .form-column {
+        display: grid;
+        align-content: start;
+      }
+
+      .form-column.form-success-active {
+        position: relative;
+        min-height: var(--success-area-height, 430px);
       }
 
       input,
@@ -1075,12 +1096,102 @@
         box-shadow: 0 4px 15px rgba(7, 177, 188, 0.3);
       }
 
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus,
+      select:-webkit-autofill,
+      select:-webkit-autofill:hover,
+      select:-webkit-autofill:focus {
+        -webkit-text-fill-color: var(--ink);
+        box-shadow: 0 0 0 1000px #fff inset;
+        transition: background-color 9999s ease-out;
+      }
+
       select:required:invalid {
         color: #6d6d6d;
       }
 
       select option {
         color: var(--ink);
+      }
+
+      .form-status {
+        display: none;
+        margin-bottom: 14px;
+        padding: 16px 18px;
+        border-radius: 12px;
+        font-weight: 600;
+        line-height: 1.5;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+      }
+
+      .form-status.is-visible {
+        display: block;
+      }
+
+      .form-status.is-entered {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .form-status-success {
+        color: #0f766e;
+        background: #ecfdf5;
+        border: 1px solid rgba(7, 177, 188, 0.25);
+      }
+
+      .form-status-error {
+        color: #9f1239;
+        background: #fff1f2;
+        border: 1px solid rgba(159, 18, 57, 0.2);
+      }
+
+      .form-status:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(7, 177, 188, 0.18);
+      }
+
+      .form-column .form-status-success.is-visible {
+        display: flex;
+        position: relative;
+        min-height: 430px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 38px 32px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 18px 42px rgba(24, 32, 48, 0.1);
+      }
+
+      .form-column.form-success-active .form-status-success.is-visible {
+        position: absolute;
+        inset: 0;
+        min-height: auto;
+        height: 100%;
+        margin-bottom: 0;
+      }
+
+      .form-status h3 {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 0.65rem;
+        color: #0b1535;
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        line-height: 1.05;
+      }
+
+      .form-status p {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        max-width: 430px;
+        color: #0f766e;
       }
 
       textarea {
@@ -2404,43 +2515,58 @@
               </ul>
             </div>
 
-            <form action="https://formspree.io/f/mgeqkkny" method="POST">
-              <input type="hidden" name="Submitted From" value="Sales Page" />
-              <input type="text" name="Name" placeholder="First & Last Name*" required />
-              <input type="email" name="Email" placeholder="Email*" required />
-              <select name="Source" required>
-                <option value="" selected disabled hidden>How did you hear about us?*</option>
-                <option value="Google">Google</option>
-                <option value="Knot/WeddingWire">Knot/Wedding Wire</option>
-                <option value="ChatGPT/Claude">ChatGPT/Claude</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Yelp">Yelp</option>
-                <option value="Referral">Referral</option>
-              </select>
-              <input
-                type="text"
-                name="Event Type & Location"
-                placeholder="Wedding venue or city*"
-                required
-              />
-              <input type="text" name="Event Date" placeholder="Wedding date*" required />
-              <select name="Number of Guest" required>
-                <option value="" selected disabled hidden>Number of guests?*</option>
-                <option value="50 - 100">50 - 100</option>
-                <option value="101 - 150">101 - 150</option>
-                <option value="151 - 200">151 - 200</option>
-                <option value="201 - 250">201 - 250</option>
-                <option value="251 - 300">251 - 300</option>
-                <option value="301 - 350">301 - 350</option>
-                <option value=">350">More than 350</option>
-              </select>
-              <textarea
-                name="Info"
-                placeholder="Tell us your estimated booth start time, venue details, wedding style, or questions"
-                required
-              ></textarea>
-              <button class="btn btn-primary" type="submit">Check My Wedding Date</button>
-            </form>
+            <div class="form-column">
+              <div
+                class="form-status"
+                data-form-status
+                role="status"
+                aria-live="polite"
+                tabindex="-1"
+              ></div>
+              <form
+                action="https://formspree.io/f/mgeqkkny"
+                method="POST"
+                data-ajax-form
+                data-success-title="Thank you!"
+                data-success-message="We received your wedding inquiry and will reply within 12 hours."
+              >
+                <input type="hidden" name="Submitted From" value="Sales Page" />
+                <input type="text" name="Name" placeholder="First & Last Name*" required />
+                <input type="email" name="Email" placeholder="Email*" required />
+                <select name="Source" required>
+                  <option value="" selected disabled hidden>How did you hear about us?*</option>
+                  <option value="Google">Google</option>
+                  <option value="Knot/WeddingWire">Knot/Wedding Wire</option>
+                  <option value="ChatGPT/Claude">ChatGPT/Claude</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Yelp">Yelp</option>
+                  <option value="Referral">Referral</option>
+                </select>
+                <input
+                  type="text"
+                  name="Event Type & Location"
+                  placeholder="Wedding venue or city*"
+                  required
+                />
+                <input type="text" name="Event Date" placeholder="Wedding date*" required />
+                <select name="Number of Guest" required>
+                  <option value="" selected disabled hidden>Number of guests?*</option>
+                  <option value="50 - 100">50 - 100</option>
+                  <option value="101 - 150">101 - 150</option>
+                  <option value="151 - 200">151 - 200</option>
+                  <option value="201 - 250">201 - 250</option>
+                  <option value="251 - 300">251 - 300</option>
+                  <option value="301 - 350">301 - 350</option>
+                  <option value=">350">More than 350</option>
+                </select>
+                <textarea
+                  name="Info"
+                  placeholder="Tell us your estimated booth start time, venue details, wedding style, or questions"
+                  required
+                ></textarea>
+                <button class="btn btn-primary" type="submit" data-sending-text="Sending...">Check My Wedding Date</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -2553,5 +2679,6 @@
         });
       })();
     </script>
+    <script src="./assets/js/formspree-ajax.js"></script>
   </body>
 </html>
