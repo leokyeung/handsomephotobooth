@@ -958,10 +958,11 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    gap: 10px 50px
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px 50px;
+    text-align: center
 }
 
 .footer-list {
@@ -990,6 +991,9 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     gap: 10px;
     margin: 1rem 0
 }
