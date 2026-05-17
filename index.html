@@ -1749,10 +1749,20 @@ connect-src 'self'
             <h5>⛔️ Fully Booked for May ⛔️</h5>
             <div class="contact-us" data-aos="zoom-in">
               <div class="contact-us-form">
+                <div
+                  class="form-status"
+                  data-form-status
+                  role="status"
+                  aria-live="polite"
+                  tabindex="-1"
+                ></div>
                 <form
                   action="https://formspree.io/f/mgeqkkny"
                   method="POST"
                   id="contact-form"
+                  data-ajax-form
+                  data-success-title="Thank you!"
+                  data-success-message="We received your inquiry and will reply within 12 hours."
                 >
                   <input type="hidden" name="Submitted From" value="Home Page" />
                   <div class="row">
@@ -1824,7 +1834,7 @@ connect-src 'self'
                     placeholder="Please provide estimate start time and any questions"
                     required
                   ></textarea>
-                  <button type="submit" class="btn">Submit</button>
+                  <button type="submit" class="btn" data-sending-text="Sending...">Submit</button>
                 </form>
               </div>
             </div>
@@ -1921,6 +1931,7 @@ connect-src 'self'
       }).init();
     </script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/formspree-ajax.js"></script>
     <script>
       document.addEventListener('click', function (e) {
         const btn = e.target.closest('.read-more-btn');
