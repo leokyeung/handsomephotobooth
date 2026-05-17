@@ -205,6 +205,12 @@
         scroll-behavior: smooth;
       }
 
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
       body {
         margin: 0;
         font-family: "Poppins", sans-serif;
@@ -673,6 +679,21 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
       }
 
+      .city-list {
+        display: none;
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.05rem;
+        line-height: 1.65;
+        color: var(--ink);
+      }
+
+      .city-list strong {
+        white-space: nowrap;
+        font-weight: 700;
+      }
+
       .card {
         padding: 26px;
         border-radius: 12px;
@@ -795,6 +816,7 @@
 
       .review-carousel {
         position: relative;
+        max-width: 100%;
       }
 
       .review-grid {
@@ -1110,11 +1132,18 @@
       @media (max-width: 620px) {
         .proof-grid,
         .feature-grid,
-        .city-grid,
         .faq-grid,
         .gallery-strip,
         .benefits {
           grid-template-columns: 1fr;
+        }
+
+        .city-grid {
+          display: none;
+        }
+
+        .city-list {
+          display: block;
         }
 
         .hero {
@@ -1138,12 +1167,62 @@
         }
 
         .hero-card {
-          padding: 22px 20px 20px;
+          padding: 18px 18px 20px;
+        }
+
+        .hero-card > p,
+        .hero-card .review-row,
+        .hero-card ul,
+        .hero-card .card-cta {
+          display: none;
+        }
+
+        .hero-card h2 {
+          font-size: 1.1rem;
+          margin: 0;
         }
 
         .trust-badge {
-          font-size: 0.78rem;
-          padding: 8px 12px;
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 16px;
+          border-radius: 14px;
+          background: #fff;
+          border: 1px solid rgba(0, 0, 0, 0.06);
+          box-shadow: 0 6px 18px rgba(24, 32, 48, 0.08);
+          color: var(--ink);
+          font-size: 0.9rem;
+          font-weight: 600;
+          letter-spacing: normal;
+          margin-bottom: 10px;
+        }
+
+        .trust-badge::after {
+          display: none;
+        }
+
+        .trust-badge-icon {
+          display: grid;
+          place-items: center;
+          flex-shrink: 0;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: rgba(255, 209, 102, 0.18);
+          color: #ffb703;
+          font-size: 1rem;
+        }
+
+        .trust-badge-desktop {
+          display: none;
+        }
+
+        .trust-badge-summary {
+          display: inline-flex;
+          flex-direction: column;
+          gap: 2px;
+          min-width: 0;
         }
 
         .review-row {
@@ -1174,7 +1253,7 @@
         .review-nav.next { right: 6px; }
 
         .contact-panel {
-          padding: 24px 20px;
+          display: none;
         }
 
         .quick-details li {
@@ -1188,7 +1267,7 @@
         }
       }
 
-      /* Trust badge with stars + shimmer */
+      /* Trust badge with stars + shimmer (desktop/tablet default) */
       .trust-badge {
         position: relative;
         display: inline-flex;
@@ -1256,6 +1335,123 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+
+      .trust-badge-desktop {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* B2 sub-elements: rendered only on mobile (see media query) */
+      .trust-badge-icon,
+      .trust-badge-summary {
+        display: none;
+      }
+
+      .trust-badge-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .trust-platforms-list {
+        font-size: 0.76rem;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .trust-platforms-list strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      @media (max-width: 620px) {
+        .hero-card {
+          text-align: center;
+          padding: 16px 18px 20px;
+          background: rgba(8, 13, 28, 0.45);
+          backdrop-filter: blur(6px);
+          -webkit-backdrop-filter: blur(6px);
+          border-radius: 16px;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+          overflow: visible;
+        }
+
+        .hero-card::before {
+          display: none;
+        }
+
+        .trust-badge {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          margin: 0 auto 12px;
+          padding: 0;
+          background: transparent;
+          border: 0;
+          box-shadow: none;
+          color: rgba(255, 255, 255, 0.92);
+          font-weight: 600;
+          letter-spacing: 0.3px;
+          overflow: visible;
+        }
+
+        .trust-badge::after {
+          display: none;
+        }
+
+        .trust-badge-desktop,
+        .trust-badge-icon {
+          display: none;
+        }
+
+        .trust-badge-summary {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          text-align: center;
+        }
+
+        .trust-badge-row {
+          gap: 8px;
+          font-size: 0.95rem;
+          color: #fff;
+        }
+
+        .trust-badge-row strong {
+          color: #fff;
+          font-weight: 800;
+        }
+
+        .trust-stars {
+          color: #ffb703;
+          font-size: 1rem;
+          letter-spacing: 2px;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+        }
+
+        .trust-platforms-list {
+          display: block;
+          padding-inline: 2px;
+          font-size: 0.78rem;
+          color: rgba(255, 255, 255, 0.82);
+          letter-spacing: 0.3px;
+        }
+
+        .trust-platforms-list strong {
+          color: #fff;
+        }
+
+        .hero-card h2 {
+          color: #fff;
+          text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.12);
+        }
       }
 
       /* Tearsheet pricing card */
@@ -1596,8 +1792,18 @@
 
           <aside class="hero-card" aria-label="Wedding photo booth highlights">
             <div class="trust-badge" role="img" aria-label="5 star rated on The Knot, WeddingWire, Yelp and Google">
-              <span class="trust-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span><strong>5.0</strong> &middot; 100+ Bay Area wedding reviews</span>
+              <span class="trust-badge-icon" aria-hidden="true">&#9733;</span>
+              <span class="trust-badge-desktop">
+                <span class="trust-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span><strong>5.0</strong> &middot; 100+ Bay Area wedding reviews</span>
+              </span>
+              <span class="trust-badge-summary">
+                <span class="trust-badge-row">
+                  <strong>5.0</strong>
+                  <span class="trust-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </span>
+                <span class="trust-platforms-list"><strong>The Knot</strong> &middot; <strong>WeddingWire</strong> &middot; <strong>Yelp</strong> &middot; <strong>Google</strong></span>
+              </span>
             </div>
 
             <h2>Trusted by Bay Area wedding couples</h2>
@@ -2076,6 +2282,14 @@
             <div class="card"><h3>San Mateo</h3><p>Peninsula weddings, hotel ballrooms, and easy access for Bay Area guests.</p></div>
             <div class="card"><h3>Your Venue?</h3><p>Tell us where you are getting married. We will confirm travel, timing, and setup.</p></div>
           </div>
+
+          <p class="city-list">
+            Serving wedding venues across
+            <strong>San Francisco</strong>, <strong>Oakland</strong>,
+            <strong>San Jose</strong>, <strong>Pleasanton</strong>,
+            <strong>Fremont</strong>, <strong>Berkeley</strong>,
+            <strong>San Mateo</strong>, and nearby Bay Area cities.
+          </p>
         </div>
       </section>
 
