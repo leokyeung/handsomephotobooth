@@ -672,7 +672,7 @@
       }
 
       .feature-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .city-grid {
@@ -1073,6 +1073,14 @@
         outline: none;
         background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #07b1bc 0%, #13929d 100%);
         box-shadow: 0 4px 15px rgba(7, 177, 188, 0.3);
+      }
+
+      select:required:invalid {
+        color: #6d6d6d;
+      }
+
+      select option {
+        color: var(--ink);
       }
 
       textarea {
@@ -1931,45 +1939,38 @@
       <section class="light-band">
         <div class="container">
           <div class="section-head">
-            <h2>Everything couples usually ask for is already included</h2>
+            <h2>Made for Bay Area wedding receptions</h2>
             <p>
-              No confusing setup, no complicated guest instructions, and no
-              generic template that feels disconnected from your wedding.
+              From cocktail hour to the dance floor, the booth is planned
+              around guest flow, venue timing, and photos people actually want
+              to keep.
             </p>
           </div>
 
           <div class="feature-grid">
             <article class="card">
-              <h3>DSLR photo quality</h3>
-              <p>Sharp, flattering images with studio-grade lighting.</p>
+              <h3>Smooth during busy receptions</h3>
+              <p>Guests can jump in between dinner, speeches, and dancing without slowing down the event.</p>
             </article>
             <article class="card">
-              <h3>Unlimited instant prints</h3>
-              <p>2x6 strips or 4x6 prints, as many as your guests want.</p>
+              <h3>Easy for every age group</h3>
+              <p>Simple posing, instant prints, and friendly guidance make it fun for kids, parents, and grandparents.</p>
             </article>
             <article class="card">
-              <h3>Custom wedding template</h3>
-              <p>Print design matched to your names, date, colors, and style.</p>
+              <h3>Flattering photos in venue lighting</h3>
+              <p>Studio-style lighting helps photos look polished in ballrooms, restaurants, backyards, and darker reception spaces.</p>
             </article>
             <article class="card">
-              <h3>Modern backdrop</h3>
-              <p>Clean, on-trend backdrops that look great in every photo.</p>
+              <h3>A line guests want to join</h3>
+              <p>The booth adds energy without taking attention away from the couple or the dance floor.</p>
             </article>
             <article class="card">
-              <h3>70+ wedding-friendly props</h3>
-              <p>Refreshed regularly, with culturally inclusive options.</p>
+              <h3>Clean, wedding-ready presentation</h3>
+              <p>The booth, backdrop, and prop area are set up to look neat in your venue, not like a random party rental.</p>
             </article>
             <article class="card">
-              <h3>On-site attendant</h3>
-              <p>A friendly pro to keep the line moving and guests laughing.</p>
-            </article>
-            <article class="card">
-              <h3>QR downloads + album</h3>
-              <p>Guests share to their phones. You get a digital album after.</p>
-            </article>
-            <article class="card">
-              <h3>Setup & breakdown</h3>
-              <p>We arrive an hour early. No setup fees, no surprise add-ons.</p>
+              <h3>Clear package, fewer surprises</h3>
+              <p>You know what is included before booking, with optional add-ons separated clearly.</p>
             </article>
           </div>
         </div>
@@ -2404,8 +2405,18 @@
             </div>
 
             <form action="https://formspree.io/f/mgeqkkny" method="POST">
+              <input type="hidden" name="Submitted From" value="Sales Page" />
               <input type="text" name="Name" placeholder="First & Last Name*" required />
               <input type="email" name="Email" placeholder="Email*" required />
+              <select name="Source" required>
+                <option value="" selected disabled hidden>How did you hear about us?*</option>
+                <option value="Google">Google</option>
+                <option value="Knot/WeddingWire">Knot/Wedding Wire</option>
+                <option value="ChatGPT/Claude">ChatGPT/Claude</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Yelp">Yelp</option>
+                <option value="Referral">Referral</option>
+              </select>
               <input
                 type="text"
                 name="Event Type & Location"
@@ -2414,7 +2425,7 @@
               />
               <input type="text" name="Event Date" placeholder="Wedding date*" required />
               <select name="Number of Guest" required>
-                <option selected disabled hidden>Number of guests?*</option>
+                <option value="" selected disabled hidden>Number of guests?*</option>
                 <option value="50 - 100">50 - 100</option>
                 <option value="101 - 150">101 - 150</option>
                 <option value="151 - 200">151 - 200</option>

@@ -1025,8 +1025,11 @@ input::placeholder,
 textarea::-webkit-input-placeholder {
     color: lightslategray;
 }
-.contact-us-form form select {
+.contact-us-form form select:required:invalid {
     color: lightslategray;
+}
+.contact-us-form form select option {
+    color: #1a1a1a;
 }
 .contact-us-form form textarea {
     min-height: 120px;
@@ -1570,6 +1573,72 @@ footer {
 .slider-card p span{
     font-weight: bold;
 }
+
+/* Collapsible testimonial text */
+.testimonial-text {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+.testimonial-text.collapsed {
+    max-height: 11.5em; /* ~6 lines */
+}
+.testimonial-text.collapsed::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4em;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.95) 80%,
+        #ffffff 100%
+    );
+    pointer-events: none;
+}
+.read-more-btn {
+    position: relative;
+    display: inline-block;
+    margin-top: 14px;
+    padding: 4px 2px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #d62976;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+.read-more-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #d62976, #962fbf);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.read-more-btn:hover {
+    color: #962fbf;
+}
+.read-more-btn:hover::after,
+.read-more-btn:focus-visible::after {
+    transform: scaleX(1);
+}
+.read-more-btn[aria-expanded="true"]::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+.read-more-btn:focus-visible {
+    outline: none;
+}
+
 .slider-card ul{
     display: flex;
     justify-content: center;
@@ -1600,6 +1669,9 @@ footer {
     }
     .slider-card p{
         font-size: 14px;
+    }
+    .testimonial-text.collapsed {
+        max-height: 9em;
     }
     .slider-card img{
         width: 150px; /* Adjust for smaller screens */
