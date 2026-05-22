@@ -853,7 +853,7 @@
 
       .review-nav {
         position: absolute;
-        top: 50%;
+        top: 58%;
         transform: translateY(-50%);
         width: 44px;
         height: 44px;
@@ -919,11 +919,26 @@
         gap: 16px;
       }
 
+      .gallery-strip a {
+        display: block;
+        border-radius: 10px;
+        outline: none;
+      }
+
       .gallery-strip img {
+        display: block;
+        width: 100%;
         height: 270px;
         object-fit: cover;
         border-radius: 10px;
         box-shadow: 0 18px 44px rgba(24, 32, 48, 0.12);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .gallery-strip a:hover img,
+      .gallery-strip a:focus-visible img {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 52px rgba(24, 32, 48, 0.18);
       }
 
       .faq-grid {
@@ -1082,6 +1097,7 @@
         margin: 0 0 1rem;
         padding: 0 1.25rem;
         font: inherit;
+        color: var(--ink);
         border: 1.8px solid transparent;
         border-radius: 5px;
         background-color: #fff;
@@ -1115,8 +1131,14 @@
         transition: background-color 9999s ease-out;
       }
 
+      input::placeholder,
+      textarea::placeholder {
+        color: #757575;
+        opacity: 1;
+      }
+
       select:required:invalid {
-        color: lightslategray;
+        color: #757575;
       }
 
       select option {
@@ -1207,10 +1229,57 @@
       }
 
       footer {
-        padding: 40px 0 50px;
+        padding: 38px 0 0;
         color: #182030;
-        background-color: #f4f2f2;
+        background: transparent;
         text-align: center;
+      }
+
+      footer h5.gradient {
+        margin: 0;
+        font-size: 1.5rem;
+        background: linear-gradient(90deg, #0f766e, #4f5bd5, #fc00ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      footer .social-list {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 1rem 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      footer .social-list a {
+        display: inline-flex;
+        width: 32px;
+      }
+
+      footer .social-list svg {
+        width: 100%;
+        height: auto;
+        fill: url(#sales-instagram-gradient);
+        transition: filter 0.3s ease, transform 0.3s ease;
+      }
+
+      footer .social-list a:hover svg,
+      footer .social-list a:focus-visible svg {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 8px rgba(225, 48, 108, 0.6));
+      }
+
+      footer .copyright {
+        margin-top: 25px;
+      }
+
+      footer .copyright p {
+        margin: 0;
+        padding: 15px 0 0;
+        border-top: 1px solid rgba(24, 32, 48, 0.28);
+        font-size: 0.875rem;
       }
 
       @media (max-width: 900px) {
@@ -1258,9 +1327,12 @@
         .proof-grid,
         .feature-grid,
         .faq-grid,
-        .gallery-strip,
         .benefits {
           grid-template-columns: 1fr;
+        }
+
+        .gallery-strip a:nth-child(n + 5) {
+          display: none;
         }
 
         .city-grid {
@@ -1374,8 +1446,24 @@
           grid-template-columns: 1fr;
         }
 
-        .review-nav.prev { left: 6px; }
-        .review-nav.next { right: 6px; }
+        .review-carousel {
+          padding: 0 30px;
+          overflow: visible;
+        }
+
+        .review-grid {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .review-nav {
+          width: 38px;
+          height: 38px;
+          font-size: 1rem;
+        }
+
+        .review-nav.prev { left: 0; }
+        .review-nav.next { right: 0; }
 
         .contact-panel {
           display: none;
@@ -1901,7 +1989,7 @@
         <div class="container hero-grid">
           <div>
             <div class="eyebrow">Bay Area Wedding Photo Booth Rental</div>
-            <h1>The Bay Area Wedding Photo Booth Couples Love</h1>
+            <h1>The Bay Area Wedding Photo Booth Rental Couples Love</h1>
             <p>
               Your guests will line up for it. Your photos will outlast the
               cake. Handsome Photobooth is the 5-star Bay Area wedding photo
@@ -2355,22 +2443,54 @@
           </div>
 
           <div class="gallery-strip">
-            <img
-              src="./assets/images/gallery/wedding/1.png"
-              alt="Elegant wedding photo booth template example"
-            />
-            <img
-              src="./assets/images/gallery/wedding/2.png"
-              alt="Custom wedding photo booth print layout"
-            />
-            <img
-              src="./assets/images/gallery/wedding/3.png"
-              alt="Modern wedding photo booth strip template"
-            />
-            <img
-              src="./assets/images/gallery/wedding/4.png"
-              alt="Wedding photo booth template with clean typography"
-            />
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/1.png">
+              <img
+                src="./assets/images/gallery/wedding/1.png"
+                alt="Elegant wedding photo booth template example"
+              />
+            </a>
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/2.png">
+              <img
+                src="./assets/images/gallery/wedding/2.png"
+                alt="Custom wedding photo booth print layout"
+              />
+            </a>
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/3.png">
+              <img
+                src="./assets/images/gallery/wedding/3.png"
+                alt="Modern wedding photo booth strip template"
+              />
+            </a>
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/4.png">
+              <img
+                src="./assets/images/gallery/wedding/4.png"
+                alt="Wedding photo booth template with clean typography"
+              />
+            </a>
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/5.png">
+              <img
+                src="./assets/images/gallery/wedding/5.png"
+                alt="Wedding photo booth keepsake template with custom branding"
+              />
+            </a>
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/6.png">
+              <img
+                src="./assets/images/gallery/wedding/6.png"
+                alt="Wedding photo booth template with romantic event design"
+              />
+            </a>
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/7.png">
+              <img
+                src="./assets/images/gallery/wedding/7.png"
+                alt="Wedding photo booth template preview for a reception"
+              />
+            </a>
+            <a data-fslightbox="wedding-templates" href="./assets/images/gallery/wedding/8.png">
+              <img
+                src="./assets/images/gallery/wedding/8.png"
+                alt="Wedding photo booth strip design with personalized styling"
+              />
+            </a>
           </div>
 
           <div class="cta-row" style="justify-content: center; margin-top: 36px;">
@@ -2391,13 +2511,13 @@
           </div>
 
           <div class="city-grid">
-            <div class="card"><h3>San Francisco</h3><p>Hotel ballrooms, rooftop receptions, restaurants, and SF wedding venues.</p></div>
-            <div class="card"><h3>Oakland</h3><p>East Bay reception halls, community spaces, and backyard weddings.</p></div>
-            <div class="card"><h3>San Jose</h3><p>South Bay banquet halls, cultural weddings, and 200+ guest celebrations.</p></div>
-            <div class="card"><h3>Pleasanton</h3><p>Tri-Valley country clubs, winery-style venues, and private estate weddings.</p></div>
-            <div class="card"><h3>Fremont</h3><p>Reception halls, multilingual celebrations, and milestone family events.</p></div>
-            <div class="card"><h3>Berkeley</h3><p>Intimate weddings, restaurant receptions, garden venues, and campus-area events.</p></div>
-            <div class="card"><h3>San Mateo</h3><p>Peninsula weddings, hotel ballrooms, and easy access for Bay Area guests.</p></div>
+            <div class="card"><h3>San Francisco</h3><p>Rooftop receptions, historic hotel ballrooms like the Fairmont or Mark Hopkins, SF City Hall, and premier SF wedding venues.</p></div>
+            <div class="card"><h3>Oakland</h3><p>East Bay country clubs, estate settings, and waterfront reception spaces like Fairview Metropolitan or Joaquin Miller park.</p></div>
+            <div class="card"><h3>San Jose</h3><p>Grand Silicon Valley estate weddings at Hayes Mansion, foothill golf clubs like Cinnabar Hills, and modern urban venues.</p></div>
+            <div class="card"><h3>Pleasanton</h3><p>Livermore Valley Wine Country estates like Palm Event Center, Tri-Valley country clubs, winery ceremonies, and private weddings.</p></div>
+            <div class="card"><h3>Fremont</h3><p>Grand banquet halls, luxury ballrooms like Paradise Ballrooms or Royal Palace, and historic Sunol estate weddings near Niles Canyon.</p></div>
+            <div class="card"><h3>Berkeley</h3><p>Intimate garden weddings, historic spots like Berkeley City Club, and scenic nature venues like Tilden Park's Brazilian Room.</p></div>
+            <div class="card"><h3>San Mateo</h3><p>Peninsula hotel ballrooms, coastal celebrations, and historic garden estates like Kohl Mansion in Burlingame.</p></div>
             <div class="card"><h3>Your Venue?</h3><p>Tell us where you are getting married. We will confirm travel, timing, and setup.</p></div>
           </div>
 
@@ -2574,15 +2694,39 @@
               </form>
             </div>
           </div>
+
+          <footer>
+            <h5 class="gradient">Follow Us!</h5>
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.instagram.com/handsomephotobooth/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Handsome Photobooth on Instagram"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <defs>
+                      <linearGradient id="sales-instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#feda75;stop-opacity:1" />
+                        <stop offset="25%" style="stop-color:#fa7e1e;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#d62976;stop-opacity:1" />
+                        <stop offset="75%" style="stop-color:#962fbf;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#4f5bd5;stop-opacity:1" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M9.9980469 3C6.1390469 3 3 6.1419531 3 10.001953L3 20.001953C3 23.860953 6.1419531 27 10.001953 27L20.001953 27C23.860953 27 27 23.858047 27 19.998047L27 9.9980469C27 6.1390469 23.858047 3 19.998047 3L9.9980469 3 z M 22 7C22.552 7 23 7.448 23 8C23 8.552 22.552 9 22 9C21.448 9 21 8.552 21 8C21 7.448 21.448 7 22 7 z M 15 9C18.309 9 21 11.691 21 15C21 18.309 18.309 21 15 21C11.691 21 9 18.309 9 15C9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="copyright">
+              <p>&copy; Copyright 2026 Handsome Photobooth | All Rights Reserved</p>
+            </div>
+          </footer>
         </div>
       </section>
     </main>
-
-    <footer>
-      <div class="container">
-        <p>&copy; Copyright 2026 Handsome Photobooth | All Rights Reserved</p>
-      </div>
-    </footer>
 
     <script>
       (function () {
@@ -2684,7 +2828,9 @@
           if (window.innerWidth > 900) setOpen(false);
         });
       })();
+
     </script>
+    <script src="./assets/js/fslightbox.js"></script>
     <script src="./assets/js/formspree-ajax.js"></script>
   </body>
 </html>
