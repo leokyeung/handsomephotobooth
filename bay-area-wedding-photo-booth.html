@@ -1049,7 +1049,7 @@
 
       form {
         display: grid;
-        gap: 14px;
+        gap: 0;
         transition: opacity 0.28s ease, transform 0.28s ease;
       }
 
@@ -1076,16 +1076,21 @@
       input,
       select,
       textarea {
+        display: block;
         width: 100%;
-        min-height: 52px;
-        border: 0;
-        border-radius: 8px;
-        padding: 0 16px;
+        height: 48px;
+        margin: 0 0 1rem;
+        padding: 0 1.25rem;
         font: inherit;
-        border: double 1px transparent;
+        border: 1.8px solid transparent;
+        border-radius: 5px;
+        background-color: #fff;
         background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #e5e7eb 0%, #cbd5e1 100%);
         background-origin: border-box;
         background-clip: padding-box, border-box;
+        outline: none;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
       }
 
       input:focus,
@@ -1111,11 +1116,11 @@
       }
 
       select:required:invalid {
-        color: #6d6d6d;
+        color: lightslategray;
       }
 
       select option {
-        color: var(--ink);
+        color: #1a1a1a;
       }
 
       .form-status {
@@ -1195,8 +1200,9 @@
       }
 
       textarea {
-        min-height: 118px;
-        padding-top: 14px;
+        min-height: 120px;
+        max-height: 240px;
+        padding: 1rem 1.25rem;
         resize: vertical;
       }
 
@@ -2535,12 +2541,12 @@
                 <input type="email" name="Email" placeholder="Email*" required />
                 <select name="Source" required>
                   <option value="" selected disabled hidden>How did you hear about us?*</option>
-                  <option value="Google">Google</option>
-                  <option value="Knot/WeddingWire">Knot/Wedding Wire</option>
-                  <option value="ChatGPT/Claude">ChatGPT/Claude</option>
-                  <option value="Instagram">Instagram</option>
-                  <option value="Yelp">Yelp</option>
-                  <option value="Referral">Referral</option>
+                  <option class="blackText" value="Google">Google</option>
+                  <option class="blackText" value="Knot/WeddingWire">Knot/Wedding Wire</option>
+                  <option class="blackText" value="ChatGPT/Claude">ChatGPT/Claude</option>
+                  <option class="blackText" value="Instagram">Instagram</option>
+                  <option class="blackText" value="Yelp">Yelp</option>
+                  <option class="blackText" value="Referral">Referral</option>
                 </select>
                 <input
                   type="text"
@@ -2550,14 +2556,14 @@
                 />
                 <input type="text" name="Event Date" placeholder="Wedding date*" required />
                 <select name="Number of Guest" required>
-                  <option value="" selected disabled hidden>Number of guests?*</option>
-                  <option value="50 - 100">50 - 100</option>
-                  <option value="101 - 150">101 - 150</option>
-                  <option value="151 - 200">151 - 200</option>
-                  <option value="201 - 250">201 - 250</option>
-                  <option value="251 - 300">251 - 300</option>
-                  <option value="301 - 350">301 - 350</option>
-                  <option value=">350">More than 350</option>
+                  <option value="" selected disabled hidden>Number of Guests?*</option>
+                  <option class="blackText" value="50 - 100">50 - 100</option>
+                  <option class="blackText" value="101 - 150">101 - 150</option>
+                  <option class="blackText" value="151 - 200">151 - 200</option>
+                  <option class="blackText" value="201 - 250">201 - 250</option>
+                  <option class="blackText" value="251 - 300">251 - 300</option>
+                  <option class="blackText" value="301 - 350">301 - 350</option>
+                  <option class="blackText" value=">350">> 350 (Please Specify Total Below)</option>
                 </select>
                 <textarea
                   name="Info"
