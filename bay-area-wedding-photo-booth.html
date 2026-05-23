@@ -827,7 +827,7 @@
         overflow-x: auto;
         overflow-y: visible;
         scroll-snap-type: x mandatory;
-        padding: 70px 4px 12px;
+        padding: 70px 0 34px;
         scrollbar-width: none;
       }
 
@@ -837,6 +837,7 @@
         scroll-snap-align: start;
         text-align: center;
         padding-top: 70px;
+        box-shadow: none;
       }
 
       .review-avatar {
@@ -2420,34 +2421,6 @@
                 </p>
                 <h3>Maggie C.</h3>
               </article>
-              <article class="card">
-                <img
-                  class="review-avatar"
-                  src="./assets/images/gallery/testimonal/2.png"
-                  alt="Rachel L. wedding photo booth review portrait"
-                />
-                <div class="stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="visually-hidden">5 out of 5 stars</span></div>
-                <p>
-                  "Leo let me pick from a variety of backgrounds and custom
-                  designed the photo strip with a personal touch. Highly highly
-                  recommend booking Leo."
-                </p>
-                <h3>Rachel L.</h3>
-              </article>
-              <article class="card">
-                <img
-                  class="review-avatar"
-                  src="./assets/images/gallery/testimonal/1.png"
-                  alt="Kikei W. wedding photo booth review portrait"
-                />
-                <div class="stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="visually-hidden">5 out of 5 stars</span></div>
-                <p>
-                  "Communicative throughout the entire process, which made for
-                  a stress-free experience. Beautiful prints, easy QR
-                  downloads, and a follow-up digital album after the wedding."
-                </p>
-                <h3>Kikei W.</h3>
-              </article>
             </div>
 
             <button
@@ -2575,9 +2548,7 @@
             <article class="card">
               <h3>What makes a good wedding photo booth?</h3>
               <p>
-                Look for flattering DSLR photo quality, reliable printing, easy
-                digital sharing, custom templates, a clean backdrop, fun props,
-                and an attendant who keeps the experience moving.
+                Choose a setup with a professional DSLR camera, studio flash umbrellas, and high-speed dye-sublimation printers for flattering photos and dry, smudge-free prints.
               </p>
             </article>
             <article class="card">
@@ -2768,13 +2739,18 @@
         var originals = Array.prototype.slice.call(track.querySelectorAll('.card'));
         if (originals.length === 0) return;
 
-        // Clone the originals so the track contains [A B C D E F | A B C D E F].
-        // We "teleport" the scroll position by one full set when the user
-        // crosses the seam, creating an infinite loop in both directions.
+        // Build [A B C D | A B C D | A B C D] so both previous and next
+        // arrows can loop without repeating review cards in the source HTML.
+        originals.slice().reverse().forEach(function (card) {
+          var beforeClone = card.cloneNode(true);
+          beforeClone.setAttribute('aria-hidden', 'true');
+          track.insertBefore(beforeClone, track.firstChild);
+        });
+
         originals.forEach(function (card) {
-          var clone = card.cloneNode(true);
-          clone.setAttribute('aria-hidden', 'true');
-          track.appendChild(clone);
+          var afterClone = card.cloneNode(true);
+          afterClone.setAttribute('aria-hidden', 'true');
+          track.appendChild(afterClone);
         });
 
         function step() {
@@ -2799,10 +2775,23 @@
           track.style.scrollBehavior = prevBehavior;
         }
 
+        function centerOnOriginalSet() {
+          var width = loopWidth();
+          if (width <= 0) return;
+          var prevBehavior = track.style.scrollBehavior;
+          track.style.scrollBehavior = 'auto';
+          track.scrollLeft = width;
+          void track.offsetWidth;
+          track.style.scrollBehavior = prevBehavior;
+        }
+
+        centerOnOriginalSet();
+        window.addEventListener('resize', centerOnOriginalSet);
+
         track.addEventListener('scroll', function () {
           var width = loopWidth();
           if (width <= 0) return;
-          if (track.scrollLeft >= width) {
+          if (track.scrollLeft >= width * 2) {
             teleport(-width);
           } else if (track.scrollLeft <= 0) {
             teleport(width);
