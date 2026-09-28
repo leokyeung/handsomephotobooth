@@ -74,6 +74,8 @@
                 {
                     breakpoint: 1024,
                     settings: {
+                        touchThreshold: 10,
+                        speed: 1000,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
@@ -83,6 +85,8 @@
                 {
                     breakpoint: 600,
                     settings: {
+                        touchThreshold: 10,
+                        speed: 1000,
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
@@ -90,6 +94,8 @@
                 {
                     breakpoint: 480,
                     settings: {
+                        touchThreshold: 10,
+                        speed: 1000,
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
