@@ -49,18 +49,6 @@
             clickable: !0,
         },
     });
-    const backVideo = document.querySelector(".back-video");
-    const setVideoSrc = () => {
-        if (window.innerWidth <= 680) {
-            if (backVideo.getAttribute("src") !== "./assets/videos/mobile.mp4")
-                backVideo.src = "./assets/videos/mobile.mp4"
-        } else if (backVideo.getAttribute("src") !== "./assets/videos/light.mp4") {
-            backVideo.src = "./assets/videos/light.mp4"
-        }
-    };
-    window.addEventListener("resize", setVideoSrc);
-    setVideoSrc()
-
     document.getElementById("scrollToAbout").addEventListener("click", function(event) {
         event.preventDefault();
         var aboutSection = document.getElementById("about");

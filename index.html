@@ -30,6 +30,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="apple-touch-icon" href="./assets/images/apple_touch.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="./assets/images/hero-poster.jpg" media="not all and (max-width: 680px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="./assets/images/hero-poster-mobile.jpg" media="(max-width: 680px)" fetchpriority="high" />
     <meta
       name="keywords"
       content="photo booth bay area, photobooth rental San Francisco, wedding photo booth, event photobooth, DSLR photo booth, studio quality photobooth, Bay Area wedding vendors, photo booth props, custom photobooth templates, Oakland photobooth, San Jose photobooth, instant photo prints"
@@ -479,15 +481,22 @@ connect-src 'self'
     <main>
       <!-- Hero Section -->
       <section class="hero-section" id="home">
+        <picture>
+          <source media="(max-width: 680px)" srcset="./assets/images/hero-poster-mobile.jpg" />
+          <img class="back-video" src="./assets/images/hero-poster.jpg" alt="" fetchpriority="high" />
+        </picture>
         <video
-          src="./assets/videos/light.mp4"
-          type="video/mp4"
+          data-hero-video
+          data-desktop-src="./assets/videos/light.mp4"
+          data-mobile-src="./assets/videos/mobile.mp4"
+          hidden
           autoplay
           loop
           muted
           playsinline
           class="back-video"
         ></video>
+        <script async src="./assets/js/hero-video.js"></script>
 
         <div class="container">
           <div class="hero-content">
