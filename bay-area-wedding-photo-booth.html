@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="./assets/images/hero-poster.jpg" media="not all and (max-width: 680px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="./assets/images/hero-poster-mobile.jpg" media="(max-width: 680px)" fetchpriority="high" />
     <meta name="robots" content="index, follow" />
     <link
       rel="canonical"
@@ -369,7 +371,7 @@
         position: relative;
         overflow: hidden;
         color: #fff;
-        background: url("./assets/images/booth.jpg") center / cover;
+        background: #171717;
         display: flex;
         align-items: center;
         min-height: 880px;
@@ -2015,16 +2017,23 @@
 
     <main>
       <section class="hero">
+        <picture>
+          <source media="(max-width: 680px)" srcset="./assets/images/hero-poster-mobile.jpg" />
+          <img class="hero-video" src="./assets/images/hero-poster.jpg" alt="" fetchpriority="high" />
+        </picture>
         <video
           class="hero-video"
-          src="./assets/videos/light.mp4"
-          type="video/mp4"
+          data-hero-video
+          data-desktop-src="./assets/videos/light.mp4"
+          data-mobile-src="./assets/videos/mobile.mp4"
+          hidden
           autoplay
           loop
           muted
           playsinline
           aria-hidden="true"
         ></video>
+        <script async src="./assets/js/hero-video.js"></script>
         <div class="container hero-grid">
           <div>
             <div class="eyebrow">Bay Area Wedding Photo Booth Rental</div>
