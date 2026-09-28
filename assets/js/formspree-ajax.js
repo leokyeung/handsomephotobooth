@@ -122,7 +122,7 @@
           }, 280);
         })
         .catch(function (error) {
-          showStatus(status, 'error', getErrorMessage(error.response, error.data), null, null, true);
+          showStatus(status, 'error', getErrorMessage(error.response, error.data), null, true);
         })
         .finally(function () {
           setSubmitting(submitButton, false);
