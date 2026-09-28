@@ -5,10 +5,26 @@
     const mobile = window.matchMedia("(max-width: 680px)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const connection = navigator.connection;
-    video.addEventListener("playing", () => { video.hidden = false; });
-    video.addEventListener("error", () => { video.hidden = true; });
+    const motionDisabled = () => reducedMotion.matches || connection?.saveData;
+    const playVideo = () => {
+        if (motionDisabled() || !video.hasAttribute("src")) return;
+        video.play().catch(() => {});
+    };
+    const retryMobilePlayback = () => {
+        if (mobile.matches && video.paused && document.visibilityState === "visible") playVideo();
+    };
+
+    video.addEventListener("playing", () => {
+        video.hidden = false;
+    });
+    video.addEventListener("error", () => {
+        video.hidden = true;
+    });
+    video.addEventListener("canplay", retryMobilePlayback);
+    document.addEventListener("visibilitychange", retryMobilePlayback);
+    window.addEventListener("pageshow", retryMobilePlayback);
     const updateVideo = () => {
-        if (reducedMotion.matches || connection?.saveData) {
+        if (motionDisabled()) {
             video.hidden = true;
             if (video.hasAttribute("src")) {
                 video.pause();
@@ -20,9 +36,18 @@
 
         const source = mobile.matches ? video.dataset.mobileSrc : video.dataset.desktopSrc;
         if (video.getAttribute("src") !== source) {
-            video.hidden = true;
+            if (mobile.matches) {
+                video.poster = video.previousElementSibling.querySelector("source").srcset;
+                video.muted = true;
+                video.playsInline = true;
+                video.hidden = false;
+            } else {
+                video.removeAttribute("poster");
+                video.hidden = true;
+            }
             video.src = source;
-            video.play().catch(() => {});
+            if (mobile.matches) video.load();
+            playVideo();
         }
     };
 
