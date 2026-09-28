@@ -194,7 +194,7 @@ for (const filename of ["index.html", "bay-area-wedding-photo-booth.html"]) {
             const asset = markup.match(new RegExp(`\\s${attribute}="([^"]+)"`))?.[1];
             assert.ok(asset && fs.existsSync(path.join(root, asset)), attribute);
         }
-        assert.match(html, /<script async src="\.\/assets\/js\/hero-video\.js"><\/script>/);
+        assert.match(html, /<script async src="\.\/assets\/js\/hero-video\.js\?v=ios-diag-1"><\/script>/);
         assert.doesNotMatch(html, /data-play-hero|hero-play/);
         assert.doesNotMatch(markup, /\scontrols(?:\s|=|>)/);
         assert.match(html, /<source media="\(max-width: 680px\)" srcset="\.\/assets\/images\/hero-poster-mobile\.jpg"/);
