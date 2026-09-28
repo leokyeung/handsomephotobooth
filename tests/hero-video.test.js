@@ -11,7 +11,7 @@ function createMediaQuery(matches) {
     return {
         matches,
         addEventListener(event, handler) { this.onChange = handler; },
-        change(matches) { this.matches = matches; this.onChange(); }
+        change(matches) { this.matches = matches; this.onChange?.(); }
     };
 }
 
@@ -90,22 +90,51 @@ test("changes source only when the selected size changes", () => {
     assert.deepEqual(hero.sources, ["light.mp4", "mobile.mp4"]);
 });
 
-test("requests no video for reduced motion or data saving", () => {
-    assert.deepEqual(loadHero({ reducedMotion: true }).sources, []);
-    assert.deepEqual(loadHero({ saveData: true }).sources, []);
+test("attempts autoplay with either reduced-motion setting on mobile and desktop", () => {
+    for (const mobile of [false, true]) {
+        for (const reducedMotion of [false, true]) {
+            const hero = loadHero({ mobile, reducedMotion });
+            assert.deepEqual(hero.sources, [mobile ? "mobile.mp4" : "light.mp4"]);
+            assert.equal(hero.playAttempts.length, 1);
+        }
+    }
 });
 
-test("reduced motion releases video and resuming uses the current viewport", () => {
-    const hero = loadHero();
+test("requests no video when data saving is enabled regardless of reduced motion", () => {
+    for (const reducedMotion of [false, true]) {
+        const hero = loadHero({ reducedMotion, saveData: true });
+        assert.deepEqual(hero.sources, []);
+        assert.equal(hero.playAttempts.length, 0);
+    }
+});
+
+test("reduced-motion changes do not pause or reload the video", () => {
+    for (const mobile of [false, true]) {
+        const hero = loadHero({ mobile, reducedMotion: true });
+        hero.events.playing();
+        hero.motionQuery.change(false);
+        hero.motionQuery.change(true);
+        assert.equal(hero.video.hidden, false);
+        assert.deepEqual(hero.sources, [mobile ? "mobile.mp4" : "light.mp4"]);
+        assert.equal(hero.video.pauseCount, 0);
+        assert.equal(hero.video.loadCount, mobile ? 1 : 0);
+        assert.equal(hero.playAttempts.length, 1);
+    }
+});
+
+test("data saving releases video and resuming uses the current viewport", () => {
+    const hero = loadHero({ reducedMotion: true });
     hero.events.playing();
-    hero.motionQuery.change(true);
+    hero.connection.saveData = true;
+    hero.connection.onChange();
     assert.equal(hero.video.hidden, true);
     assert.equal(hero.video.hasAttribute("src"), false);
     assert.equal(hero.video.pauseCount, 1);
     assert.equal(hero.video.loadCount, 1);
     hero.mobileQuery.change(true);
     assert.deepEqual(hero.sources, ["light.mp4"]);
-    hero.motionQuery.change(false);
+    hero.connection.saveData = false;
+    hero.connection.onChange();
     assert.deepEqual(hero.sources, ["light.mp4", "mobile.mp4"]);
 });
 
@@ -117,7 +146,7 @@ test("responds to data-saving changes without requiring the connection API", () 
     hero.connection.saveData = false;
     hero.connection.onChange();
     assert.deepEqual(hero.sources, ["light.mp4", "light.mp4"]);
-    assert.deepEqual(loadHero({ hasConnection: false }).sources, ["light.mp4"]);
+    assert.deepEqual(loadHero({ hasConnection: false, reducedMotion: true }).sources, ["light.mp4"]);
 });
 
 test("handles rejected autoplay without an unhandled rejection", async () => {
@@ -135,7 +164,7 @@ test("retains the mobile preview when autoplay is rejected without adding contro
 });
 
 test("retries paused mobile playback on readiness and resume, but not desktop", () => {
-    const hero = loadHero({ mobile: true });
+    const hero = loadHero({ mobile: true, reducedMotion: true });
     assert.equal(hero.video.loadCount, 1);
     hero.events.canplay();
     hero.windowEvents.pageshow();
@@ -155,9 +184,9 @@ test("retries paused mobile playback on readiness and resume, but not desktop", 
     assert.equal(desktop.playAttempts.length, 1);
 });
 
-test("does not retry autoplay when motion preferences suppress video", () => {
-    for (const options of [{ reducedMotion: true }, { saveData: true }]) {
-        const hero = loadHero({ mobile: true, ...options });
+test("does not retry autoplay when data saving suppresses video", () => {
+    for (const reducedMotion of [false, true]) {
+        const hero = loadHero({ mobile: true, reducedMotion, saveData: true });
         hero.events.canplay();
         hero.windowEvents.pageshow();
         assert.equal(hero.playAttempts.length, 0);
@@ -194,7 +223,7 @@ for (const filename of ["index.html", "bay-area-wedding-photo-booth.html"]) {
             const asset = markup.match(new RegExp(`\\s${attribute}="([^"]+)"`))?.[1];
             assert.ok(asset && fs.existsSync(path.join(root, asset)), attribute);
         }
-        assert.match(html, /<script async src="\.\/assets\/js\/hero-video\.js\?v=ios-diag-1"><\/script>/);
+        assert.match(html, /<script async src="\.\/assets\/js\/hero-video\.js\?v=ios-diag-2"><\/script>/);
         assert.doesNotMatch(html, /data-play-hero|hero-play/);
         assert.doesNotMatch(markup, /\scontrols(?:\s|=|>)/);
         assert.match(html, /<source media="\(max-width: 680px\)" srcset="\.\/assets\/images\/hero-poster-mobile\.jpg"/);

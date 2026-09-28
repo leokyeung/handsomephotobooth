@@ -29,7 +29,7 @@
             const bounds = video.getBoundingClientRect();
             const style = window.getComputedStyle(video);
             report.textContent = JSON.stringify({
-                revision: "ios-diag-1",
+                revision: "ios-diag-2",
                 page: window.location.pathname,
                 playResults,
                 error: video.error ? { code: video.error.code, message: video.error.message } : null,
@@ -57,9 +57,8 @@
         window.setInterval(renderDiagnostics, 1000);
     }
 
-    const motionDisabled = () => reducedMotion.matches || connection?.saveData;
     const playVideo = () => {
-        if (motionDisabled() || !video.hasAttribute("src")) return;
+        if (connection?.saveData || !video.hasAttribute("src")) return;
         recordPlayback({ result: "requested" });
         video.play().then(
             () => recordPlayback({ result: "playing" }),
@@ -80,7 +79,7 @@
     document.addEventListener("visibilitychange", retryMobilePlayback);
     window.addEventListener("pageshow", retryMobilePlayback);
     const updateVideo = () => {
-        if (motionDisabled()) {
+        if (connection?.saveData) {
             video.hidden = true;
             if (video.hasAttribute("src")) {
                 video.pause();
@@ -108,7 +107,6 @@
     };
 
     mobile.addEventListener("change", updateVideo);
-    reducedMotion.addEventListener("change", updateVideo);
     connection?.addEventListener("change", updateVideo);
     updateVideo();
 })();
