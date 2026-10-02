@@ -33,7 +33,7 @@
     <meta property="og:image" content="https://i.ibb.co/tzMTRrr/display.png">
     <meta property="og:image:type" content="image/png">
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style.css?v=blog-cards-20261002">
+    <link rel="stylesheet" href="../assets/css/style.css?v=blog-filters-20261002">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -140,7 +140,7 @@
                         </p>
                     </header>
 
-                    <a href="./open-air-vs-enclosed-photo-booth.html" class="blog-featured">
+                    <a href="./open-air-vs-enclosed-photo-booth.html" class="blog-featured" data-category="vendor">
                         <div class="blog-featured-img">
                             <img src="../assets/images/open-air-vs-enclosed-photo-booth.png" alt="Generated event scene comparing open-air and enclosed photo booths" loading="lazy">
                         </div>
@@ -161,14 +161,14 @@
                     </a>
 
                     <nav class="blog-category-row" aria-label="Blog topics">
-                        <a href="#all-posts" class="blog-chip active">All Posts</a>
-                        <a href="#all-posts" class="blog-chip">Wedding Planning</a>
-                        <a href="#all-posts" class="blog-chip">Pricing Guides</a>
-                        <a href="#all-posts" class="blog-chip">Vendor Tips</a>
+                        <button type="button" class="blog-chip active" data-filter="all" aria-pressed="true">All Posts</button>
+                        <button type="button" class="blog-chip" data-filter="wedding" aria-pressed="false">Wedding Planning</button>
+                        <button type="button" class="blog-chip" data-filter="pricing" aria-pressed="false">Pricing Guides</button>
+                        <button type="button" class="blog-chip" data-filter="vendor" aria-pressed="false">Vendor Tips</button>
                     </nav>
 
                     <div id="all-posts" class="blog-grid">
-                        <a href="./wedding-photo-booth-timeline.html" class="blog-post-card">
+                        <a href="./wedding-photo-booth-timeline.html" class="blog-post-card" data-category="wedding">
                             <div class="blog-post-img">
                                 <img src="../assets/images/wedding-photo-booth-timeline.jpg" alt="Open-air wedding photo booth set up near cocktail hour at a reception" loading="lazy">
                             </div>
@@ -185,7 +185,7 @@
                             </div>
                         </a>
 
-                        <a href="./blog_3.html" class="blog-post-card">
+                        <a href="./blog_3.html" class="blog-post-card" data-category="pricing">
                             <div class="blog-post-img">
                                 <img src="../assets/images/photobooth.jpg" alt="Wedding photo booth setup for Bay Area pricing guide" loading="lazy">
                             </div>
@@ -202,7 +202,7 @@
                             </div>
                         </a>
 
-                        <a href="./blog_2.html" class="blog-post-card">
+                        <a href="./blog_2.html" class="blog-post-card" data-category="vendor">
                             <div class="blog-post-img">
                                 <img src="../assets/images/planning.jpg" alt="Event planner comparing Bay Area photo booth vendors" loading="lazy">
                             </div>
@@ -219,7 +219,7 @@
                             </div>
                         </a>
 
-                        <a href="./blog_1.html" class="blog-post-card">
+                        <a href="./blog_1.html" class="blog-post-card" data-category="wedding">
                             <div class="blog-post-img">
                                 <img src="../assets/images/booth.jpg" alt="Open-air wedding photo booth with backdrop and props" loading="lazy">
                             </div>
@@ -291,6 +291,7 @@
         </div>
     </footer>
     <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/blog-filter.js?v=20261002"></script>
 </body>
 
 </html>

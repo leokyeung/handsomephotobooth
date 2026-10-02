@@ -1461,6 +1461,9 @@ body.blogs-page > header {
     gap: 10px;
 }
 .blog-chip {
+    font-family: inherit;
+    line-height: 1.5;
+    cursor: pointer;
     padding: 8px 16px;
     border-radius: 999px;
     background: #fff;
@@ -1479,6 +1482,14 @@ body.blogs-page > header {
     background: #0b1535;
     color: #fff;
     border-color: #0b1535;
+}
+.blog-chip:focus-visible {
+    outline: 2px solid #0f766e;
+    outline-offset: 3px;
+}
+.blog-featured[hidden],
+.blog-post-card[hidden] {
+    display: none;
 }
 .blog-grid {
     display: grid;
