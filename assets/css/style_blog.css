@@ -887,14 +887,18 @@ header.open .hamburger span:nth-child(4) {
 }
 
 .article-page .hero-section {
-    min-height: 480px;
+    min-height: 0;
+    padding: 168px 0 48px;
     background-color: #1a1e21
 }
 
 .article-page .hero-content h1 {
     color: #fff;
-    max-width: 700px;
-    margin: 0 auto
+    max-width: 840px;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    line-height: 1.25;
+    text-wrap: balance
 }
 
 .article-page .hero-content h2 {
@@ -905,16 +909,70 @@ header.open .hamburger span:nth-child(4) {
 
 .article-page .hero-content a {
     color: var(--primaryColor);
-    margin-bottom: 1rem
+    margin-bottom: 1.25rem;
+    line-height: 1.5
+}
+
+.article-page header nav {
+    gap: 1.5rem
+}
+
+.article-page .logo {
+    width: 160px;
+    flex-shrink: 0
+}
+
+.article-page .nav-list {
+    gap: 2rem;
+    font-size: 1.1rem
+}
+
+.article-page .btn_top {
+    margin-right: 0;
+    margin-left: auto;
+    flex-shrink: 0
+}
+
+.article-page .hamburger {
+    flex-shrink: 0
+}
+
+.article-page .article-section {
+    padding: 40px 0 72px
 }
 
 .article-img {
     max-width: 840px;
-    margin: -220px auto 2rem
+    margin: 0 auto 2.5rem
+}
+
+.article-img img {
+    border-radius: 8px
 }
 
 .article-section article {
-    margin: 1.5rem 0
+    max-width: 70ch;
+    margin: 0 auto;
+    color: #182030;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+    overflow-wrap: break-word
+}
+
+.article-section article h2 {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.6rem;
+    line-height: 1.35;
+    text-align: left
+}
+
+.article-section article h3 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: left
 }
 
 .article-section article h5 {
@@ -923,9 +981,106 @@ header.open .hamburger span:nth-child(4) {
 }
 
 .article-section article p {
-    font-size: 1.1rem;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
     text-align: left;
-    margin: 1rem 0
+    margin: 0 0 1.25rem
+}
+
+.article-section article ul,
+.article-section article ol {
+    margin: 0 0 1.5rem;
+    padding-left: 1.5rem
+}
+
+.article-section article ul {
+    list-style: disc
+}
+
+.article-section article ol {
+    list-style: decimal
+}
+
+.article-section article li {
+    padding-left: 0.25rem;
+    font-weight: inherit
+}
+
+.article-section article li + li {
+    margin-top: 0.75rem
+}
+
+.article-section article strong,
+.article-section article b {
+    font-weight: 600
+}
+
+.article-section article em {
+    font-style: italic
+}
+
+.article-section article a {
+    display: inline;
+    text-underline-offset: 0.2em
+}
+
+.article-section article hr {
+    margin: 2.5rem 0;
+    border: 0;
+    border-top: 1px solid #dfe3e6
+}
+
+.article-section article .article-outro {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #dfe3e6;
+    font-style: italic
+}
+
+.article-section article .article-cta {
+    margin-bottom: 0
+}
+
+@media (max-width: 992px) {
+    .article-page header nav {
+        gap: 0.75rem
+    }
+
+    .article-page .logo {
+        width: 120px
+    }
+
+    .article-page .nav-list {
+        gap: 1rem
+    }
+
+    .article-page .hero-section {
+        padding: 120px 0 40px
+    }
+}
+
+@media (max-width: 600px) {
+    .article-page .hero-content h1 {
+        font-size: 1.85rem
+    }
+
+    .article-page .article-section {
+        padding: 28px 0 48px
+    }
+
+    .article-img {
+        margin-bottom: 2rem
+    }
+
+    .article-section article {
+        font-size: 1rem
+    }
+
+    .article-section article h2 {
+        margin-top: 2rem;
+        font-size: 1.3rem
+    }
 }
 
 .share-list {
