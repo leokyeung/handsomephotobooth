@@ -1,0 +1,14 @@
+
+/* SEO guides and local service information */
+.article-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.article-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.article-table caption { text-align: left; font-weight: 600; margin-bottom: .75rem; }
+.article-table th, .article-table td { padding: .8rem; border-bottom: 1px solid #dfe3e6; text-align: left; }
+.article-table th { background: #f7f8fa; font-weight: 600; }
+.article-section article .article-meta { color: #556070; font-size: .9rem; }
+.local-seo-section { padding: 64px 0; background: #f8f9fb; color: #182030; }
+.local-seo-section h2 { margin-bottom: 20px; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.local-seo-section p { max-width: 76ch; margin: 0 auto 20px; font-size: 1rem; line-height: 1.7; }
+.local-seo-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.local-seo-links a { display: inline-block; border: 1px solid #dfe3e6; border-radius: 12px; padding: 14px 20px; background: white; color: #182030; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+.local-seo-links a:hover, .local-seo-links a:focus-visible { border-color: #ff6b6b; }

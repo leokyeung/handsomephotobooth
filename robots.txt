@@ -1,4 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /tests/
 
 Sitemap: https://handsomephotobooth.com/sitemap.xml

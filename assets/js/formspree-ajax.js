@@ -106,6 +106,16 @@
           });
         })
         .then(function () {
+          try {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'generate_lead', {
+                form_id: form.id || 'quote-inquiry',
+                form_location: window.location.pathname
+              });
+            }
+          } catch (analyticsError) {
+            // Analytics must never interrupt delivery of an accepted inquiry.
+          }
           prepareSuccessTransition(form);
           form.reset();
           showStatus(
