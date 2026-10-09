@@ -1,0 +1,11 @@
+{
+  "name": "handsomephotobooth-site-checks",
+  "private": true,
+  "scripts": {
+    "test": "node tests/lead-tracking.cjs",
+    "check:seo": "python3 scripts/check_seo.py"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

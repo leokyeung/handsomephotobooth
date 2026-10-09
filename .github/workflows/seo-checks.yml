@@ -1,0 +1,21 @@
+name: SEO and inquiry checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  static-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate metadata, structured data, sitemap, and links
+        run: python3 scripts/check_seo.py
+      - name: Install test dependencies
+        run: npm ci --ignore-scripts
+      - name: Verify inquiry success, failure, and lead tracking
+        run: npm test

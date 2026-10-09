@@ -60,11 +60,11 @@ script-src 'self' 'unsafe-inline' 'unsafe-eval'
     https://cdnjs.cloudflare.com;
   img-src 'self' data: blob:
     https://i.ibb.co
-    https://www.google-analytics.com
+    https://*.google-analytics.com
     https://cdnjs.cloudflare.com;
   media-src 'self';
 connect-src 'self'
-  https://www.google-analytics.com
+  https://*.google-analytics.com
   https://www.googletagmanager.com
   https://formspree.io
   https://cloudflareinsights.com;
@@ -186,6 +186,14 @@ connect-src 'self'
           {
             "@type": "City",
             "name": "San Mateo"
+          },
+          {
+            "@type": "City",
+            "name": "Alameda"
+          },
+          {
+            "@type": "City",
+            "name": "San Leandro"
           }
         ],
         "serviceArea": {
@@ -231,6 +239,34 @@ connect-src 'self'
           "https://www.theknot.com/marketplace/handsome-photobooth-san-leandro-ca-2069091",
           "https://www.weddingwire.com/biz/handsome-photobooth/e9b136802e0a665e.html",
           "https://www.yelp.com/biz/handsome-photobooth-oakland-2"
+        ],
+        "location": [
+          {
+            "@type": "Place",
+            "name": "Alameda location",
+            "url": "https://handsomephotobooth.com/alameda-photo-booth-rental.html",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1209 Park St",
+              "addressLocality": "Alameda",
+              "addressRegion": "CA",
+              "postalCode": "94501",
+              "addressCountry": "US"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "San Leandro location",
+            "url": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1415 E 14th St",
+              "addressLocality": "San Leandro",
+              "addressRegion": "CA",
+              "postalCode": "94578",
+              "addressCountry": "US"
+            }
+          }
         ]
       }
     </script>
@@ -397,6 +433,7 @@ connect-src 'self'
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+  <link rel="stylesheet" href="./assets/css/seo-guides.css?v=20261009" />
   </head>
 
   <body>
@@ -2181,6 +2218,11 @@ connect-src 'self'
         </div>
       </section>
       <!-- Contact Section End -->
+    <section class="local-seo-section" aria-labelledby="local-service-title">
+<div class="container"><h2 id="local-service-title">Photo booth rentals from Alameda and San Leandro</h2>
+<p>With two East Bay locations, Handsome Photobooth brings DSLR photos, instant prints, and an attendant to weddings and events across the Bay Area. Explore local planning details or send us your venue for a quote.</p>
+<nav class="local-seo-links" aria-label="Local photo booth rentals"><a href="./alameda-photo-booth-rental.html">Alameda photo booth rental</a><a href="./san-leandro-photo-booth-rental.html">San Leandro photo booth rental</a><a href="./blog/wedding-photo-booth-setup-checklist.html">Wedding setup checklist</a></nav></div></section>
+
     </main>
 
     <!-- Footer -->
@@ -2271,7 +2313,7 @@ connect-src 'self'
     </script>
     <script src="./assets/js/navigation.js"></script>
     <script src="./assets/js/script.js?v=nav-split-1"></script>
-    <script src="./assets/js/formspree-ajax.js"></script>
+    <script src="./assets/js/formspree-ajax.js?v=20261009"></script>
     <script>
       document.addEventListener('click', function (e) {
         const btn = e.target.closest('.read-more-btn');
