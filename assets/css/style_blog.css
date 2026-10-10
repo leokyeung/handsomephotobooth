@@ -1022,7 +1022,20 @@ header.open .hamburger span:nth-child(4) {
 
 .article-section article a {
     display: inline;
-    text-underline-offset: 0.2em
+    color: #075c66;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.18em
+}
+
+.article-section article a:hover {
+    color: #00454d
+}
+
+.article-section article a:focus-visible {
+    outline: 2px solid #075c66;
+    outline-offset: 3px
 }
 
 .article-section article hr {
