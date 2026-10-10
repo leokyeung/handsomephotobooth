@@ -12,3 +12,20 @@
 .local-seo-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 .local-seo-links a { display: inline-block; border: 1px solid #dfe3e6; border-radius: 12px; padding: 14px 20px; background: white; color: #182030; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
 .local-seo-links a:hover, .local-seo-links a:focus-visible { border-color: #ff6b6b; }
+
+/* Visible, accessible inline links for the wedding setup checklist.
+   Scoped to article content, not the site's navigation or buttons. */
+.wedding-setup-guide .article-section article a {
+  color: #075c66;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+}
+.wedding-setup-guide .article-section article a:hover {
+  color: #00454d;
+}
+.wedding-setup-guide .article-section article a:focus-visible {
+  outline: 2px solid #075c66;
+  outline-offset: 3px;
+}
