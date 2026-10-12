@@ -1,5 +1,16 @@
 # SEO change log
 
+## 2026-10-12: Wedding photo booth timeline update
+
+- Expanded the existing wedding timeline article instead of creating a competing URL. The update now answers how long to run a booth, compares three-hour schedule patterns, explains dinner and dancing tradeoffs, covers placement, and gives a fact-bounded answer about when to request availability.
+- Updated the page title, description, Open Graph copy, visible heading, BlogPosting modification date, and matching FAQ structured data.
+- Updated the existing blog-index card and Blog schema headline, then changed sitemap modification dates only for the article and index actually edited.
+- Preserved the canonical URL, published three-hour package, pricing, booking terms, imagery, and quote destination.
+
+Search Console comparison for relevant non-branded commercial queries, September 13–October 10 versus August 16–September 12, 2026: clicks increased from 4 to 9; impressions decreased from 2,730 to 1,420; CTR increased from 0.15% to 0.63%; and impression-weighted average position improved from 19.4 to 17.6. The existing timeline page recorded 31 impressions at average position 6.9 in the latest window, including visibility for questions about how long to run a booth and how far ahead to book. Query/page data also showed the homepage and cost guide overlapping on broad Bay Area rental terms, so this update stays focused on timeline intent rather than adding another commercial landing page.
+
+Validation and publication: pending pull request checks and live verification.
+
 ## 2026-10-09: Initial foundation and local content
 
 - Revised the existing cost-guide URL with the published $899 package, checked add-on arithmetic, fee questions, and related planning links; removed unsupported market-average claims.
