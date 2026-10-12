@@ -9,7 +9,7 @@
 
 Search Console comparison for relevant non-branded commercial queries, September 13–October 10 versus August 16–September 12, 2026: clicks increased from 4 to 9; impressions decreased from 2,730 to 1,420; CTR increased from 0.15% to 0.63%; and impression-weighted average position improved from 19.4 to 17.6. The existing timeline page recorded 31 impressions at average position 6.9 in the latest window, including visibility for questions about how long to run a booth and how far ahead to book. Query/page data also showed the homepage and cost guide overlapping on broad Bay Area rental terms, so this update stays focused on timeline intent rather than adding another commercial landing page.
 
-Validation and publication: pending pull request checks and live verification.
+Validation: `python scripts/check_seo.py` passed all 11 canonical pages, JSON-LD, metadata, sitemap parity, local links, and fragments. Review and publication: [PR #47](https://github.com/leokyeung/handsomephotobooth/pull/47); live verification pending merge and GitHub Pages deployment.
 
 ## 2026-10-09: Initial foundation and local content
 
