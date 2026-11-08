@@ -59,7 +59,30 @@
       el.hidden = true;
       return;
     }
-    el.textContent = '\u26D4\uFE0F Fully booked on ' + label(list) + ' \u26D4\uFE0F';
+    var words = label(list).split(' ');
+    var tokens = [];
+    for (var i = 0; i < words.length; i++) {
+      // A month name stays with its first day; ranges like "12-13," never split.
+      if (/^[A-Za-z]/.test(words[i]) && i + 1 < words.length) tokens.push(words[i] + ' ' + words[++i]);
+      else tokens.push(words[i]);
+    }
+    tokens[tokens.length - 1] += ' \u26D4\uFE0F';
+
+    var doc = el.ownerDocument;
+    var unbreakable = function (text) {
+      var span = doc.createElement('span');
+      span.style.whiteSpace = 'nowrap';
+      span.textContent = text;
+      return span;
+    };
+    el.textContent = '';
+    el.appendChild(unbreakable('\u26D4\uFE0F Fully'));
+    el.appendChild(doc.createTextNode(' booked on '));
+    tokens.forEach(function (token, n) {
+      if (n) el.appendChild(doc.createTextNode(' '));
+      el.appendChild(unbreakable(token));
+    });
+    el.style.textWrap = 'balance';
     el.hidden = false;
   }
 
