@@ -1040,6 +1040,10 @@ header.open .hamburger span:nth-child(4) {
     background-color: #f4f2f2;
 }
 
+#booked-notice {
+    margin-bottom: -1rem;
+}
+
 .contact-us {
     margin-top: 1.5rem;
 }
