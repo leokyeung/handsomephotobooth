@@ -2,7 +2,7 @@
   "name": "handsomephotobooth-site-checks",
   "private": true,
   "scripts": {
-    "test": "node tests/lead-tracking.cjs",
+    "test": "node tests/lead-tracking.cjs && node tests/availability.cjs",
     "check:seo": "python3 scripts/check_seo.py"
   },
   "devDependencies": {
