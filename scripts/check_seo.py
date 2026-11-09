@@ -7,10 +7,12 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 HOST = 'handsomephotobooth.com'
+GA_ID = 'G-6RDG7BCNMX'
 
 class Page(HTMLParser):
     def __init__(self, content):
         super().__init__()
+        self.content = content
         self.links, self.ids, self.canonicals, self.descriptions = [], set(), [], []
         self.h1s = 0
         self.title = ''
@@ -71,6 +73,17 @@ for path, page in pages.items():
         if not target.exists(): errors.append(f'{rel}: missing local target {link}')
         elif parsed.fragment and target in pages and parsed.fragment not in pages[target].ids:
             errors.append(f'{rel}: missing fragment {link}')
+    if 'data-ajax-form' in page.content:
+        if f'googletagmanager.com/gtag/js?id={GA_ID}' not in page.content:
+            errors.append(f'{rel}: quote form page is missing the Google tag loader')
+        ga_configured = (
+            f'gtag("config", "{GA_ID}")' in page.content
+            or f"gtag('config', '{GA_ID}')" in page.content
+        )
+        if not ga_configured:
+            errors.append(f'{rel}: quote form page does not configure {GA_ID}')
+        if 'assets/js/formspree-ajax.js' not in page.content:
+            errors.append(f'{rel}: quote form page is missing accepted-inquiry tracking')
 
 ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 urls = [x.text for x in ET.parse(ROOT / 'sitemap.xml').findall('.//sm:loc', ns)]
@@ -78,4 +91,4 @@ if len(urls) != len(set(urls)): errors.append('Sitemap contains duplicate URLs')
 if set(urls) != canonicals: errors.append('Sitemap and canonical page URLs differ')
 if errors:
     raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(pages)} pages, unique titles/canonicals, descriptions, JSON-LD, sitemap, local links and fragments')
+print(f'PASS: {len(pages)} pages, unique titles/canonicals, descriptions, JSON-LD, sitemap, local links, fragments and quote-page measurement tags')
