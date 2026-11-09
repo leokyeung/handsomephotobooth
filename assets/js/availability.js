@@ -59,7 +59,9 @@
       el.hidden = true;
       return;
     }
-    el.textContent = '\u26D4\uFE0F Fully booked on ' + label(list) + ' \u26D4\uFE0F';
+    var dateTarget = el.querySelector('[data-booked-dates]');
+    if (dateTarget) dateTarget.textContent = label(list);
+    else el.textContent = '\u26D4\uFE0F Fully booked on ' + label(list) + ' \u26D4\uFE0F';
     el.hidden = false;
   }
 

@@ -117,9 +117,9 @@ connect-src 'self'
     <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Stylesheets -->
-    <link rel="preload" href="./assets/css/style.css?v=20261108" as="style" />
+    <link rel="preload" href="./assets/css/style.css?v=20261109-notice" as="style" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261108" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261109-notice" />
     <link rel="stylesheet" href="./assets/css/swiper.css" />
 
     <!-- Font -->
@@ -2122,7 +2122,7 @@ connect-src 'self'
         <div class="container">
           <div class="contact-content">
             <h2 class="gradient" data-aos="fade-in">Contact Us</h2>
-            <h5 id="booked-notice" hidden></h5>
+            <p id="booked-notice" class="booked-notice-inline" hidden><strong>Fully booked:</strong> <span data-booked-dates></span></p>
             <div class="contact-us" data-aos="zoom-in">
               <div class="contact-us-form">
                 <div
@@ -2311,7 +2311,7 @@ connect-src 'self'
     <script src="./assets/js/navigation.js"></script>
     <script src="./assets/js/script.js?v=nav-split-1"></script>
     <script src="./assets/js/formspree-ajax.js?v=20261009"></script>
-    <script src="./assets/js/availability.js?v=20261108"></script>
+    <script src="./assets/js/availability.js?v=20261109-notice"></script>
     <script>
       document.addEventListener('click', function (e) {
         const btn = e.target.closest('.read-more-btn');

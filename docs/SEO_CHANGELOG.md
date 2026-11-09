@@ -1,5 +1,23 @@
 # SEO change log
 
+## 2026-11-09: Compact booking availability notices
+
+- Applied the approved text-only, 15px availability notice to the
+	[homepage](https://handsomephotobooth.com/) and
+	[wedding page](https://handsomephotobooth.com/bay-area-wedding-photo-booth.html).
+- Kept a muted-red semibold label, dark dates, and the existing 24px gap above
+	the name field. Preserved automatic date updates and the current date window.
+- Updated CSS and script cache versions without changing booking data, forms,
+	videos, URLs, or unrelated local previews.
+
+Validation: inquiry and availability unit tests passed; the SEO checker passed
+all 11 canonical pages in an isolated release worktree. Six intercepted browser
+form scenarios passed without sending real inquiries. Both pages passed layout
+checks at 320, 360, 390, and 1440px with no clipping and the existing form gap.
+The current dates fit one line at 360px and wider and wrap naturally at 320px.
+Release: [PR #62](https://github.com/leokyeung/handsomephotobooth/pull/62).
+No sitemap submission is needed because no URLs were added or changed.
+
 ## 2026-10-12: Wedding photo booth timeline update
 
 - Expanded the existing wedding timeline article instead of creating a competing URL. The update now answers how long to run a booth, compares three-hour schedule patterns, explains dinner and dancing tradeoffs, covers placement, and gives a fact-bounded answer about when to request availability.
