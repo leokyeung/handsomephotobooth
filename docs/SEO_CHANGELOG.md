@@ -1,5 +1,23 @@
 # SEO change log
 
+## 2026-11-09: Wedding page Analytics tag
+
+- Added the existing `G-6RDG7BCNMX` Analytics tag to the
+	[wedding page](https://handsomephotobooth.com/bay-area-wedding-photo-booth.html),
+	the only canonical page without it. Direct landings are now measured, and
+	the existing `generate_lead` event now fires there; before, the form script
+	skipped it silently because `gtag` was undefined.
+- No change to the form script, which records a lead only after Formspree
+	accepts an inquiry and never lets an Analytics error interrupt one.
+
+Validation: inquiry and availability unit tests passed; the SEO checker passed
+all 11 canonical pages in an isolated release worktree. In a real browser with
+all external requests intercepted, the tag loaded once, the property was
+configured, and one `generate_lead` carrying only form id and page path was
+recorded after an accepted inquiry. No real inquiry was sent.
+Release: [PR #63](https://github.com/leokyeung/handsomephotobooth/pull/63).
+No sitemap submission is needed because no URLs were added or changed.
+
 ## 2026-11-09: Compact booking availability notices
 
 - Applied the approved text-only, 15px availability notice to the
