@@ -28,6 +28,21 @@ for (const file of ['index.html', 'bay-area-wedding-photo-booth.html']) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   assert.match(html, /id="booked-notice"/, file);
   assert.match(html, /assets\/js\/availability\.js/, file);
+  const notice = new JSDOM(html).window.document.getElementById('booked-notice');
+  assert.equal(notice.hidden, true, file);
+  render(notice, { dates: ['2026-11-14', '2026-11-15', '2026-12-04'] }, noon);
+  assert.equal(notice.hidden, false, file);
+  assert.equal(notice.textContent, 'Fully booked: Nov 14-15; Dec 4', file);
+  assert.equal(notice.querySelector('strong').textContent, 'Fully booked:', file);
+  render(notice, { dates: ['2026-12-12'] }, noon);
+  assert.equal(notice.textContent, 'Fully booked: Dec 12', file);
+  assert.equal(notice.querySelectorAll('[data-booked-dates]').length, 1, file);
+  assert.equal(notice.querySelectorAll('i, svg').length, 0, file);
+  render(notice, { dates: [] }, noon);
+  assert.equal(notice.hidden, true, file);
+  render(notice, { dates: ['2026-12-19'] }, noon);
+  assert.equal(notice.hidden, false, file);
+  assert.ok(notice.textContent.includes('Dec 19'), file);
 }
 JSON.parse(fs.readFileSync(path.join(root, 'availability.json'), 'utf8'));
 console.log('availability tests passed');

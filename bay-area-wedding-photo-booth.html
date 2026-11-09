@@ -1177,12 +1177,21 @@
         color: #1a1a1a;
       }
 
-      .booked-notice {
-        margin-top: 36px;
+      #booked-notice.booked-notice-inline {
+        max-width: 920px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        color: #292929;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+      }
+
+      #booked-notice.booked-notice-inline strong {
         color: #9f1239;
         font-weight: 600;
-        font-size: clamp(0.95rem, 2.4vw, 1.15rem);
-        line-height: 1.4;
       }
 
       .section-head p.booked-notice {
@@ -2756,7 +2765,7 @@
               final quote.
             </p>
             <br/>
-            <p class="booked-notice" id="booked-notice" hidden></p>
+            <p class="booked-notice booked-notice-inline" id="booked-notice" hidden><strong>Fully booked:</strong> <span data-booked-dates></span></p>
           </div>
 
           <div class="contact-box">
@@ -2992,6 +3001,6 @@
     </script>
     <script src="./assets/js/fslightbox.js"></script>
     <script src="./assets/js/formspree-ajax.js?v=20261009"></script>
-    <script src="./assets/js/availability.js?v=20261108"></script>
+    <script src="./assets/js/availability.js?v=20261109-notice"></script>
   </body>
 </html>
