@@ -1,5 +1,36 @@
 # SEO change log
 
+## 2026-11-10: Fact-aligned blog content and structured-data cleanup
+
+- Grounded [blog_1.html](https://handsomephotobooth.com/blog/blog_1.html) and
+  [blog_2.html](https://handsomephotobooth.com/blog/blog_2.html) in published
+  package facts ($899 three-hour Glam Package, smudge-free instant prints,
+  digital album delivery within a few days, optional $49 album and $99
+  scrapbook add-ons, and 50% deposit/travel terms), removing unverified
+  "completely waterproof", "Weeks after", and unqualified "all-inclusive" claims.
+- Aligned the `FAQPage` JSON-LD and body copy on the
+  [open-air vs. enclosed guide](https://handsomephotobooth.com/blog/open-air-vs-enclosed-photo-booth.html)
+  and added a visible FAQ section matching the structured data.
+- Removed the artificial same-page anchor `BreadcrumbList` from the
+  [homepage](https://handsomephotobooth.com/) and added valid `BreadcrumbList`
+  JSON-LD (`Home → Blog → Article`) to the
+  [blog index](https://handsomephotobooth.com/blog/blog.html) and all six
+  articles.
+- Linked the
+  [Alameda](https://handsomephotobooth.com/alameda-photo-booth-rental.html) and
+  [San Leandro](https://handsomephotobooth.com/san-leandro-photo-booth-rental.html)
+  `LocalBusiness` entities to `https://handsomephotobooth.com/#business` via
+  `parentOrganization`, changed their `og:type` to `website`, and replaced the
+  blog hub's external `i.ibb.co` `og:image` with a first-party image.
+- Updated `dateModified` and `sitemap.xml` `lastmod` dates to `2026-11-10` for
+  all edited pages.
+
+Validation: `python3 scripts/check_seo.py` passed all 11 canonical pages;
+`npm test` passed all inquiry and availability checks; headless Chrome verified
+all updated pages at 390px and 1440px.
+Release: [PR #66](https://github.com/leokyeung/handsomephotobooth/pull/66).
+No sitemap submission is needed because no URLs were added or changed.
+
 ## 2026-11-09: Internal linking to East Bay city pages and wedding guides
 
 - Restored crawlable links to the
