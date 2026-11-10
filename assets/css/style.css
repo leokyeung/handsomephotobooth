@@ -276,6 +276,10 @@ header.scroll {
 header.scroll .nav-container {
     padding: 1rem 0;
 }
+.nav-container .container {
+    max-width: none;
+    padding: 0 1.5rem;
+}
 nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -302,10 +306,15 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 3rem;
+    gap: 80px;
     font-size: 1.3rem;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-left: 3rem;
 }
 .nav-list li {
+    white-space: nowrap;
     -webkit-transition: color 0.35s ease;
     -o-transition: color 0.35s ease;
     transition: color 0.35s ease;
@@ -2038,6 +2047,8 @@ footer {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        flex: none;
+        justify-content: center;
         gap: 1rem;
         position: absolute;
         top: 100%;
