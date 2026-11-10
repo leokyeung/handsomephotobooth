@@ -1,5 +1,46 @@
 # SEO change log
 
+## 2026-11-10: Article comparison tables, FAQ parity, image dimensions, and SEO guardrails
+
+- Upgraded all six blog guides and both East Bay city service pages with
+  `.article-meta` bylines, bold **Quick Answer** openings, scannable
+  `.article-table` comparison tables, and matching visible + `FAQPage` JSON-LD
+  questions:
+  - [open-air vs. enclosed guide](https://handsomephotobooth.com/blog/open-air-vs-enclosed-photo-booth.html):
+    repaired spliced paragraphs and added a 5-row Open-Air vs. Enclosed table.
+  - [wedding benefits guide](https://handsomephotobooth.com/blog/blog_1.html):
+    added a 4-row print format and keepsake table (2 × 6 strip, 4 × 6 print,
+    $99 scrapbook, $49 album) and 3 visible + schema FAQs.
+  - [vendor selection guide](https://handsomephotobooth.com/blog/blog_2.html):
+    added a DSLR vs. Tablet comparison table, a 6-question copy-and-send vendor
+    checklist, 3 visible + schema FAQs, and accurate `planning.jpg` alt text.
+  - [cost guide](https://handsomephotobooth.com/blog/blog_3.html): synced the
+    visible update date, added a 5-row sample package combinations table ($899
+    to $1,148), and added 3 visible + schema Cost FAQs.
+  - [wedding timeline guide](https://handsomephotobooth.com/blog/wedding-photo-booth-timeline.html):
+    added a 3-option schedule comparison table and completed the three timed
+    schedule patterns.
+  - [setup checklist](https://handsomephotobooth.com/blog/wedding-photo-booth-setup-checklist.html):
+    added `FAQPage` JSON-LD matching the four existing visible setup FAQs.
+  - [Alameda](https://handsomephotobooth.com/alameda-photo-booth-rental.html)
+    and [San Leandro](https://handsomephotobooth.com/san-leandro-photo-booth-rental.html):
+    added a 5-row package and setup summary table, 3 local FAQs + `FAQPage`
+    JSON-LD, and reservation-only venue delivery wording.
+- Improved [blog.html](https://handsomephotobooth.com/blog/blog.html) by adding
+  an `<h2>` heading above the article grid, removing `loading="lazy"` and
+  adding `fetchpriority="high"` on the top featured LCP image, and adding
+  explicit `width` and `height` attributes to all images across all 11 canonical
+  pages.
+- Hardened `scripts/check_seo.py` to skip `noindex` local mockups, require at
+  least 2 incoming internal links per canonical page, and require `alt` plus
+  numeric `width` and `height` attributes on all `<img>` elements.
+
+Validation: `python3 scripts/check_seo.py` passed all 11 canonical pages;
+`npm test` passed all inquiry and availability checks; headless Chrome verified
+all updated pages at 390px and 1440px with zero horizontal overflow.
+Release: [PR #67](https://github.com/leokyeung/handsomephotobooth/pull/67).
+No sitemap submission is needed because no URLs were added or changed.
+
 ## 2026-11-10: Fact-aligned blog content and structured-data cleanup
 
 - Grounded [blog_1.html](https://handsomephotobooth.com/blog/blog_1.html) and

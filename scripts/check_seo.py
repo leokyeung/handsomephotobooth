@@ -24,7 +24,8 @@ def answers(node):
 class Page(HTMLParser):
     def __init__(self, content):
         super().__init__()
-        self.links, self.ids, self.canonicals, self.descriptions = [], set(), [], []
+        self.links, self.anchors, self.imgs, self.ids, self.canonicals, self.descriptions = [], [], [], set(), [], []
+        self.noindex = False
         self.h1s = 0
         self.title = ''
         self.in_title = False
@@ -45,8 +46,11 @@ class Page(HTMLParser):
         if tag == 'h1': self.h1s += 1
         if tag == 'title': self.in_title = True
         if tag == 'meta' and a.get('name') == 'description': self.descriptions.append(a.get('content', ''))
+        if tag == 'meta' and a.get('name') == 'robots' and 'noindex' in a.get('content', '').lower(): self.noindex = True
         if tag == 'link' and a.get('rel') == 'canonical': self.canonicals.append(a.get('href'))
         if tag in ('a', 'link') and a.get('href'): self.links.append(a['href'])
+        if tag == 'a' and a.get('href'): self.anchors.append(a['href'])
+        if tag == 'img': self.imgs.append(a)
         if tag in ('img', 'script', 'source') and a.get('src'): self.links.append(a['src'])
         if tag == 'script' and a.get('type') == 'application/ld+json': self.schema = ''
 
@@ -66,9 +70,11 @@ class Page(HTMLParser):
             self.schemas.append(json.loads(self.schema))
             self.schema = None
 
-pages = {p: Page(p.read_text(encoding='utf-8-sig')) for p in ROOT.rglob('*.html')}
+all_pages = {p.resolve(): Page(p.read_text(encoding='utf-8-sig')) for p in ROOT.rglob('*.html')}
+pages = {p: page for p, page in all_pages.items() if not page.noindex}
 errors = []
 titles, canonicals = set(), set()
+incoming = {p: set() for p in pages}
 for path, page in pages.items():
     rel = path.relative_to(ROOT)
     if page.h1s != 1: errors.append(f'{rel}: expected one H1, got {page.h1s}')
@@ -83,6 +89,14 @@ for path, page in pages.items():
         if canonical != expected: errors.append(f'{rel}: canonical {canonical} does not match {expected}')
         if canonical in canonicals: errors.append(f'{rel}: duplicate canonical')
         canonicals.add(canonical)
+    for img in page.imgs:
+        src = img.get('src', '<img without src>')
+        if 'alt' not in img:
+            errors.append(f'{rel}: image {src} missing alt attribute')
+        elif not img['alt'].strip() and 'hero-poster' not in src:
+            errors.append(f'{rel}: non-decorative image {src} has empty alt')
+        if not str(img.get('width', '')).isdigit() or not str(img.get('height', '')).isdigit():
+            errors.append(f'{rel}: image {src} missing numeric width/height')
     for link in page.links:
         parsed = urlsplit(link)
         if parsed.scheme not in ('', 'http', 'https'): continue
@@ -97,6 +111,16 @@ for path, page in pages.items():
         if not target.exists(): errors.append(f'{rel}: missing local target {link}')
         elif parsed.fragment and target in pages and parsed.fragment not in pages[target].ids:
             errors.append(f'{rel}: missing fragment {link}')
+    for href in page.anchors:
+        parsed = urlsplit(href)
+        if parsed.scheme not in ('', 'http', 'https'): continue
+        if parsed.netloc and parsed.netloc not in (HOST, 'www.' + HOST): continue
+        part = unquote(parsed.path)
+        target = (ROOT / part.lstrip('/')) if (parsed.netloc or part.startswith('/')) else (path.parent / part if part else path)
+        if target.is_dir(): target /= 'index.html'
+        target = target.resolve()
+        if target in incoming and target != path:
+            incoming[target].add(path)
 
 ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 urls = [x.text for x in ET.parse(ROOT / 'sitemap.xml').findall('.//sm:loc', ns)]
@@ -115,6 +139,8 @@ for path, page in pages.items():
     faq = dimensions(' '.join(a for schema in page.schemas for a in answers(schema)))
     if faq and faq != dimensions(page.text):
         errors.append(f'{rel}: FAQ setup dimensions {sorted(faq)} do not match visible text {sorted(dimensions(page.text))}')
+    if len(incoming[path]) < 2:
+        errors.append(f'{rel}: expected at least 2 incoming internal links, got {len(incoming[path])}')
 if errors:
     raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(pages)} pages, unique titles/canonicals, descriptions, JSON-LD, sitemap, local links and fragments, Analytics tag, FAQ setup dimensions')
+print(f'PASS: {len(pages)} pages, unique titles/canonicals, descriptions, JSON-LD, sitemap, local links and fragments, Analytics tag, FAQ setup dimensions, incoming links, image dimensions/alt')
