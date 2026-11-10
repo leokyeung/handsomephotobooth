@@ -1,5 +1,24 @@
 # SEO change log
 
+## 2026-11-09: Consistent setup dimensions and new SEO checks
+
+- Set the booth footprint to approximately 10 ft × 10 ft everywhere. The
+  [wedding page](https://handsomephotobooth.com/bay-area-wedding-photo-booth.html)
+  FAQ structured data said 8 × 8 while the visible card said 10 × 10; both now
+  use the same wording, and the "an 10" typo is gone.
+- Changed three 8 × 8 mentions in the
+  [open-air vs enclosed article](https://handsomephotobooth.com/blog/open-air-vs-enclosed-photo-booth.html)
+  to 10 ft × 10 ft, matching the setup checklist and both city pages. Updated its
+  modified date and the sitemap dates for it and the wedding page.
+- `scripts/check_seo.py` now fails if a sitemap page lacks the `G-6RDG7BCNMX`
+  tag, or if a page's FAQ structured-data dimensions differ from its visible text.
+
+Validation: the checker passed all 11 canonical pages in a clean export. Test
+copies with a wrong tag ID, a commented-out tag, and a stale 8 × 8 in either the
+FAQ or the visible text each failed as intended. Inquiry and availability tests
+passed. Release: [PR #64](https://github.com/leokyeung/handsomephotobooth/pull/64).
+No sitemap submission is needed because no URLs were added or changed.
+
 ## 2026-11-09: Wedding page Analytics tag
 
 - Added the existing `G-6RDG7BCNMX` Analytics tag to the
