@@ -1,5 +1,33 @@
 # SEO change log
 
+## 2026-11-09: Internal linking to East Bay city pages and wedding guides
+
+- Restored crawlable links to the
+  [Alameda](https://handsomephotobooth.com/alameda-photo-booth-rental.html) and
+  [San Leandro](https://handsomephotobooth.com/san-leandro-photo-booth-rental.html)
+  service pages from the [homepage](https://handsomephotobooth.com/) FAQ, the
+  [wedding page](https://handsomephotobooth.com/bay-area-wedding-photo-booth.html)
+  service-area section, and between the two East Bay pages.
+- Added contextual links from the wedding page FAQ cards to the
+  [timeline guide](https://handsomephotobooth.com/blog/wedding-photo-booth-timeline.html),
+  [setup checklist](https://handsomephotobooth.com/blog/wedding-photo-booth-setup-checklist.html),
+  [cost guide](https://handsomephotobooth.com/blog/blog_3.html), and
+  [open-air vs. enclosed comparison](https://handsomephotobooth.com/blog/open-air-vs-enclosed-photo-booth.html).
+- Added the setup checklist to the related-reading sections of
+  [blog_1.html](https://handsomephotobooth.com/blog/blog_1.html),
+  [blog_2.html](https://handsomephotobooth.com/blog/blog_2.html), and the
+  comparison guide, and updated cost-guide link descriptions to reference
+  published package and add-on pricing rather than local-average claims.
+- Updated `dateModified` and `sitemap.xml` `lastmod` dates for the edited pages,
+  and bumped `seo-guides.css` cache version on the homepage.
+
+Validation: `python3 scripts/check_seo.py` passed all 11 canonical pages in an
+isolated release export; `npm test` passed all inquiry and availability checks;
+headless Chrome confirmed all new internal links and underline styles. Every
+canonical page now has incoming links from at least 3 to 10 other pages.
+Release: [PR #65](https://github.com/leokyeung/handsomephotobooth/pull/65).
+No sitemap submission is needed because no URLs were added or changed.
+
 ## 2026-11-09: Consistent setup dimensions and new SEO checks
 
 - Set the booth footprint to approximately 10 ft × 10 ft everywhere. The
