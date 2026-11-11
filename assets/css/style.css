@@ -100,6 +100,10 @@ section {
     min-width: auto;
     padding: 0.5rem 0.65rem;
     background: linear-gradient(90deg, #00dbde, #fc00ff);
+    background-size: 101% 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
     color: white;
     border: none;
     text-align: center;
