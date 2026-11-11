@@ -295,6 +295,7 @@ nav {
 .logo {
     width: 200px;
     overflow: hidden;
+    margin-left: 16px;
 }
 .nav-list {
     display: -webkit-box;
