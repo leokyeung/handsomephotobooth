@@ -2215,10 +2215,13 @@ footer {
         transition: -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
         -o-transition: transform 0.5s, box-shadow 0.5s;
         transition: transform 0.5s, box-shadow 0.5s;
-        transition: transform 0.5s, box-shadow 0.5s, -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+        transition: transform 0.5s, box-shadow 0.5s, -webkit-transform 0.5s, -webkit-box-shadow 0.5s, visibility 0s linear 0.5s;
+        visibility: hidden;
         z-index: -1;
     }
     header.open .nav-list {
+        visibility: visible;
+        transition: transform 0.5s, box-shadow 0.5s, visibility 0s;
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
