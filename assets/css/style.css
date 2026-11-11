@@ -1879,16 +1879,6 @@ body.blogs-page > header {
     flex-direction: column;
     align-items: center;
 }
-.review-platform + .review-platform::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 8px;
-    bottom: 8px;
-    width: 1px;
-    background: var(--review-rule);
-    pointer-events: none;
-}
 .review-platform--knot { --review-link: #26232a; }
 .review-platform--wire { --review-link: #007e87; }
 .review-platform--yelp { --review-link: #c41200; }
@@ -1951,13 +1941,16 @@ body.blogs-page > header {
     padding: 8px 4px;
     color: var(--review-link);
     font-weight: 600;
+    text-decoration: none;
+    touch-action: manipulation;
+}
+.review-links a span {
     text-decoration: underline;
     text-decoration-color: color-mix(in srgb, var(--review-link) 30%, transparent);
     text-underline-offset: 4px;
-    touch-action: manipulation;
 }
 .review-links a i { font-size: 9px; margin-left: 4px; }
-.review-links a:hover { text-decoration-color: currentColor; }
+.review-links a:hover span { text-decoration-color: currentColor; }
 .review-links a:focus-visible { outline: 2px solid var(--review-link); outline-offset: 3px; border-radius: 2px; }
 .review-strip .review-awards {
     margin: 28px 0 0;
@@ -1982,30 +1975,7 @@ body.blogs-page > header {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 32px 16px;
     }
-    .review-platforms::before {
-        content: '';
-        position: absolute;
-        top: 8px;
-        bottom: 8px;
-        left: 50%;
-        width: 1px;
-        background: var(--review-rule);
-        pointer-events: none;
-    }
     .review-platform { padding: 0 4px; }
-    .review-platform + .review-platform::before { display: none; }
-    .review-platform:nth-child(n+3)::after {
-        content: '';
-        position: absolute;
-        top: -16px;
-        left: -8px;
-        right: -8px;
-        height: 1px;
-        background: var(--review-rule);
-        pointer-events: none;
-    }
-    .review-platform:nth-child(3)::after { left: 0; }
-    .review-platform:nth-child(4)::after { right: 0; }
     .review-brand img { width: 104px; height: 32px; }
     .review-platform--wire .review-brand { gap: 4px; font-size: 14px; }
     .review-platform--wire .review-brand img { width: 24px; height: 24px; }
