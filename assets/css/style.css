@@ -2175,9 +2175,14 @@ footer {
     .hamburger {
         display: block;
     }
-    header,
+    header {
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    }
     .nav-container {
-        background-color: #000;
+        background-color: transparent;
     }
     .nav-container,
     header.scroll .nav-container {
