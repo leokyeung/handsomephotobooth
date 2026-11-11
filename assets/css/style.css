@@ -2792,19 +2792,44 @@ footer {
 }
 
 .seo-feature-card {
-    background: #ffffff;
-    border: 1px solid #eef0f6;
+    --feature-border-gradient: linear-gradient(135deg, rgba(45, 212, 191, 0.4), rgba(59, 130, 246, 0.4));
+    --feature-glow-start: rgba(45, 212, 191, 0.22);
+    --feature-glow-end: rgba(59, 130, 246, 0.22);
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+        var(--feature-border-gradient) border-box;
+    border: 1px solid transparent;
     border-radius: 16px;
     padding: 28px;
-    box-shadow: 0 10px 30px rgba(24, 32, 48, 0.03);
-    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+    box-shadow: -4px -4px 18px -5px var(--feature-glow-start),
+        4px 4px 18px -5px var(--feature-glow-end),
+        0 10px 30px rgba(24, 32, 48, 0.03);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     will-change: transform, box-shadow;
+}
+
+.seo-feature-card:nth-child(2) {
+    --feature-border-gradient: linear-gradient(135deg, rgba(236, 72, 153, 0.4), rgba(251, 146, 60, 0.4));
+    --feature-glow-start: rgba(236, 72, 153, 0.22);
+    --feature-glow-end: rgba(251, 146, 60, 0.22);
+}
+
+.seo-feature-card:nth-child(3) {
+    --feature-border-gradient: linear-gradient(135deg, rgba(167, 139, 250, 0.4), rgba(244, 114, 182, 0.4));
+    --feature-glow-start: rgba(167, 139, 250, 0.22);
+    --feature-glow-end: rgba(244, 114, 182, 0.22);
+}
+
+.seo-feature-card:nth-child(4) {
+    --feature-border-gradient: linear-gradient(135deg, rgba(251, 191, 36, 0.4), rgba(52, 211, 153, 0.4));
+    --feature-glow-start: rgba(251, 191, 36, 0.22);
+    --feature-glow-end: rgba(52, 211, 153, 0.22);
 }
 
 .seo-feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(24, 32, 48, 0.08);
-    border-color: #667eea;
+    box-shadow: -4px -4px 22px -4px var(--feature-glow-start),
+        4px 4px 22px -4px var(--feature-glow-end),
+        0 16px 32px rgba(24, 32, 48, 0.05);
 }
 
 .card-icon {
@@ -2893,6 +2918,16 @@ footer {
     max-width: 760px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.seo-cta-section--single .seo-cta-content {
+    text-align: center;
+    align-items: center;
+}
+
+.seo-cta-section--single .seo-cta-eyebrow,
+.seo-cta-section--single .seo-cta-button {
+    align-self: center;
 }
 
 .seo-cta-card {
