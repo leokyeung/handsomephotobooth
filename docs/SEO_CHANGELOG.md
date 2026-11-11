@@ -1,5 +1,21 @@
 # SEO change log
 
+## 2026-11-10: Repaired article markup and AI-readable contact facts
+
+- Repaired spliced HTML from the previous release in the
+  [wedding benefits guide](https://handsomephotobooth.com/blog/blog_1.html)
+  (byline and intro inside the header nav, FAQ inside the table),
+  [cost guide](https://handsomephotobooth.com/blog/blog_3.html) (stray text in
+  the menu, FAQ inside the questions list, stale visible date), and
+  [setup checklist](https://handsomephotobooth.com/blog/wedding-photo-booth-setup-checklist.html)
+  (dangling byline).
+- Showed email and both location addresses in the homepage and wedding page
+  footers; homepage location schema now has `hasMap` Google listing links.
+- Wedding page Google review card now links to the Alameda Google listing
+  instead of a generic search.
+- Linked the cost and timeline guides from the homepage package section.
+- Added `/llms.txt` with approved business facts and key pages.
+
 ## 2026-11-10: Article comparison tables, FAQ parity, image dimensions, and SEO guardrails
 
 - Upgraded all six blog guides and both East Bay city service pages with
