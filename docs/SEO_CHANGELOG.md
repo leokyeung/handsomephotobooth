@@ -7,8 +7,14 @@
   brighter gold stars, and published review counts. Counts are shown per
   platform, not added together; Google links cover both existing locations.
 - Preserved the Best of Weddings award years and added a connected divider
-  cross on mobile, with minimum 44px link targets. No rating schema added.
+  cross on mobile and tablet, with minimum 44px link targets. No rating schema added.
 - Versioned the homepage stylesheet to avoid stale cached presentation.
+- URL: https://handsomephotobooth.com/.
+- Local checks: SEO guardrails, inquiry/availability tests, whitespace checks,
+  and browser checks at 1280, 768, 390, and 320px passed. Reviewed screenshots;
+  verified local logos, text fit, divider intersections, keyboard navigation,
+  all five intercepted click/tap links, and review content without JavaScript.
+- PR: https://github.com/leokyeung/handsomephotobooth/pull/71.
 
 ## 2026-11-10: Review profiles in llms.txt and current Yelp URL
 
