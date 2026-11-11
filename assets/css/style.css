@@ -2181,11 +2181,11 @@ footer {
     }
     .nav-container,
     header.scroll .nav-container {
-        padding: 0.75rem 0;
+        padding: 15px 0;
     }
     .logo {
-        width: 120px;
-        margin-left: 0;
+        width: 130px;
+        margin-left: -9px;
     }
     .nav-list {
         -webkit-box-orient: vertical;
