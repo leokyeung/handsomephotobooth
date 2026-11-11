@@ -1,5 +1,13 @@
 # SEO change log
 
+## 2026-11-10: Review strip polish
+
+- Removed the divider lines between review platforms on desktop and the cross on
+  mobile and tablet; the award row keeps its top rule.
+- Underlined only the link words, not the arrow icon. Stylesheet version bumped
+  to `20261110-reviews2`.
+- Checks: SEO guardrails, tests, and browser checks at 1280, 768, 390, and 320px.
+
 ## 2026-11-10: Visible homepage review strip
 
 - Replaced the homepage's three oversized badges with the owner-approved
