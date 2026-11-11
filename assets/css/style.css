@@ -2800,6 +2800,7 @@ footer {
     border: 1px solid transparent;
     border-radius: 16px;
     padding: 28px;
+    text-align: center;
     box-shadow: -4px -4px 18px -5px var(--feature-glow-start),
         4px 4px 18px -5px var(--feature-glow-end),
         0 10px 30px rgba(24, 32, 48, 0.03);
