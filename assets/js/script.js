@@ -32,7 +32,9 @@
             clickable: !0,
         },
     });
-    document.getElementById("scrollToAbout").addEventListener("click", function(event) {
+        const aboutLink = document.getElementById("scrollToAbout");
+        if (aboutLink) {
+            aboutLink.addEventListener("click", function(event) {
         event.preventDefault();
         var aboutSection = document.getElementById("about");
         var offset = 50; // Adjust this value to control the offset
@@ -42,6 +44,7 @@
           behavior: "smooth"
         });
       });
+        }
 
     // Slick Slider for Testimonal  
       $(document).ready(function () {
