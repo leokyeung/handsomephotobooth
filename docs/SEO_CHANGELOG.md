@@ -1,5 +1,11 @@
 # SEO change log
 
+## 2026-11-10: Removed duplicate award badge from booking card
+
+- Removed the Best of Weddings badge from the homepage "Ready to Book" card; the
+  award still appears in the intro and the review strip. No other copy changed.
+- Checks: SEO guardrails and desktop and mobile previews.
+
 ## 2026-11-10: Homepage feature card and booking section styling
 
 - Gave the four feature cards distinct gradient outlines with soft glows and
