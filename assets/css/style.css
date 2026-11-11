@@ -2185,6 +2185,7 @@ footer {
     }
     .logo {
         width: 120px;
+        margin-left: 0;
     }
     .nav-list {
         -webkit-box-orient: vertical;
