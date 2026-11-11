@@ -6,7 +6,9 @@
   and https://handsomephotobooth.com/bay-area-wedding-photo-booth.html.
 - Preserved inquiry forms, social links, copyright, structured data, and the
   full address details on the existing location pages.
-- Validation: focused footer DOM assertions and SEO guardrails passed.
+- Validation: focused footer DOM assertions, SEO guardrails, inquiry/availability
+  tests, and desktop/mobile browser checks for both pages passed.
+- PR: https://github.com/leokyeung/handsomephotobooth/pull/75.
 
 ## 2026-11-10: Removed duplicate award badge from booking card
 
