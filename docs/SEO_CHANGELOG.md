@@ -1,5 +1,12 @@
 # SEO change log
 
+## 2026-11-10: Bing title length and hero alt text
+
+- Bing URL Inspection flagged "Title too long" and a missing image alt on the
+  homepage. Shortened all titles to 70 characters or fewer (homepage, Alameda,
+  San Leandro, benefits guide, cost guide) and added descriptive alt text to
+  the hero poster image on the homepage and wedding page.
+
 ## 2026-11-10: Repaired article markup and AI-readable contact facts
 
 - Repaired spliced HTML from the previous release in the
