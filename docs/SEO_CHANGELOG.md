@@ -1,5 +1,15 @@
 # SEO change log
 
+## 2026-11-10: Visible homepage review strip
+
+- Replaced the homepage's three oversized badges with the owner-approved
+  four-platform review strip, local logo assets, platform-colored links,
+  brighter gold stars, and published review counts. Counts are shown per
+  platform, not added together; Google links cover both existing locations.
+- Preserved the Best of Weddings award years and added a connected divider
+  cross on mobile, with minimum 44px link targets. No rating schema added.
+- Versioned the homepage stylesheet to avoid stale cached presentation.
+
 ## 2026-11-10: Review profiles in llms.txt and current Yelp URL
 
 - Added a Reviews and awards section to `/llms.txt` with owner-supplied and

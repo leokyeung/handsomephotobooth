@@ -114,9 +114,9 @@ connect-src 'self'
     <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Stylesheets -->
-    <link rel="preload" href="./assets/css/style.css?v=20261109-nav2" as="style" />
+    <link rel="preload" href="./assets/css/style.css?v=20261110-reviews" as="style" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261109-nav2" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261110-reviews" />
     <link rel="stylesheet" href="./assets/css/swiper.css" />
 
     <!-- Font -->
@@ -582,55 +582,65 @@ connect-src 'self'
 
             </div>
             <br />
-            <div style="text-align: center; padding-bottom: 50px">
-              <a
-                target="_blank"
-                href="https://www.theknot.com/marketplace/redirect-2069091?utm_source=vendor_website&utm_medium=banner&utm_term=22dc7e3a-efd4-4a2c-9307-b0f21aa0733e&utm_campaign=vendor_badge_assets"
-                class="wow animate__fadeInLeft"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.2s"
-                ><img
-                  alt="Couples love us! See our reviews on The Knot."
-                  src="./assets/images/knot.png"
-                  style="width: 155px"
-                  loading="lazy"
-                  decoding="async"
-                  width="500"
-                  height="500"
-                /></a>
-
-              <a
-                target="_blank"
-                href="https://www.yelp.com/biz/handsome-photobooth-san-leandro"
-                class="wow animate__fadeInUp"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.2s"
-                ><img
-                  alt="Couples love us! See our reviews on Yelp."
-                  src="./assets/images/star.png"
-                  style="width: 350px; padding-left: 50px; padding-right: 50px"
-                  loading="lazy"
-                  decoding="async"
-                  width="588"
-                  height="274"
-                /></a>
-
-              <a
-                target="_blank"
-                href="https://www.weddingwire.com/biz/handsome-photobooth/e9b136802e0a665e.html"
-                class="wow animate__fadeInRight"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.2s"
-                ><img
-                  alt="Couples love us! See our reviews on WeddingWire."
-                  src="./assets/images/wire.png"
-                  style="width: 170px"
-                  loading="lazy"
-                  decoding="async"
-                  width="500"
-                  height="500"
-                /></a>
-            </div>
+            <section class="review-strip" aria-labelledby="review-strip-title">
+              <h2 id="review-strip-title">Our clients say it best.</h2>
+              <div class="review-platforms">
+                <div class="review-platform review-platform--knot">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/the-knot.svg" alt="The Knot" width="300" height="67" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  </div>
+                  <span class="review-count">194 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.theknot.com/marketplace/handsome-photobooth-san-leandro-ca-2069091" target="_blank" rel="noopener noreferrer" aria-label="Read reviews on The Knot">Read reviews <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--wire">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/weddingwire.png" alt="WeddingWire" width="190" height="190" loading="lazy" decoding="async" /><span aria-hidden="true">WeddingWire</span>
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  </div>
+                  <span class="review-count">194 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.weddingwire.com/biz/handsome-photobooth/e9b136802e0a665e.html" target="_blank" rel="noopener noreferrer" aria-label="Read reviews on WeddingWire">Read reviews <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--yelp">
+                  <span class="review-brand">
+                    <span aria-hidden="true">Yelp</span><img src="./assets/images/reviews/yelp.svg" alt="Yelp" width="1899" height="2500" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  </div>
+                  <span class="review-count">40 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.yelp.com/biz/handsome-photobooth-san-leandro" target="_blank" rel="noopener noreferrer" aria-label="Read reviews on Yelp">Read reviews <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--google">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/google.png" alt="Google" width="184" height="60" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  </div>
+                  <span class="review-count">100+ reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ7TAsbjaHj4ARqLT78siF4do" target="_blank" rel="noopener noreferrer" aria-label="Read Google reviews for Alameda">Alameda</a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ_ddK0IenxGMRfHvdMTvcMEM" target="_blank" rel="noopener noreferrer" aria-label="Read Google reviews for San Leandro">San Leandro</a>
+                  </div>
+                </div>
+              </div>
+              <p class="review-awards"><i class="fa-solid fa-award" aria-hidden="true"></i><span>The Knot <strong>Best of Weddings</strong><span class="review-awards-years">2024 &middot; 2025 &middot; 2026</span></span></p>
+            </section>
           </div>
         </div>
       </section>
