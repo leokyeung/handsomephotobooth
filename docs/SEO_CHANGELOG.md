@@ -1,5 +1,12 @@
 # SEO change log
 
+## 2026-11-10: Homepage feature card and booking section styling
+
+- Gave the four feature cards distinct gradient outlines with soft glows and
+  centered the "Ready to Book" section. No copy, links, or schema changed.
+- Stylesheet version bumped to `20261110-cards`.
+- Checks: SEO guardrails, tests, and browser checks at desktop, tablet, and mobile widths.
+
 ## 2026-11-10: Review strip polish
 
 - Removed the divider lines between review platforms on desktop and the cross on
