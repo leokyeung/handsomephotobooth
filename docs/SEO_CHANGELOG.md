@@ -1,5 +1,14 @@
 # SEO change log
 
+## 2026-11-10: Review profiles in llms.txt and current Yelp URL
+
+- Added a Reviews and awards section to `/llms.txt` with owner-supplied and
+  profile-verified ratings: The Knot/WeddingWire 5.0 (194 shared reviews),
+  Yelp 5.0 (40), Google 5.0 (100+), plus awards. Not added as on-page or
+  `AggregateRating` markup (self-serving review rule).
+- Updated Yelp links and `sameAs` from `handsome-photobooth-oakland-2` to
+  `handsome-photobooth-san-leandro`.
+
 ## 2026-11-10: Bing title length and hero alt text
 
 - Bing URL Inspection flagged "Title too long" and a missing image alt on the
