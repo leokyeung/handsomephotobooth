@@ -1,5 +1,15 @@
 # SEO change log
 
+## 2026-11-11: Simplified homepage and wedding page footers
+
+- Removed the footer Contact details from https://handsomephotobooth.com/
+  and https://handsomephotobooth.com/bay-area-wedding-photo-booth.html.
+- Preserved inquiry forms, social links, copyright, structured data, and the
+  full address details on the existing location pages.
+- Validation: focused footer DOM assertions, SEO guardrails, inquiry/availability
+  tests, and desktop/mobile browser checks for both pages passed.
+- PR: https://github.com/leokyeung/handsomephotobooth/pull/75.
+
 ## 2026-11-10: Removed duplicate award badge from booking card
 
 - Removed the Best of Weddings badge from the homepage "Ready to Book" card; the
