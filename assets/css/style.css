@@ -2880,6 +2880,112 @@ footer {
     font-weight: 300 !important;
 }
 
+/* ==========================================
+   Corporate Events Section
+   ========================================== */
+.corporate-events-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f7f8ff 100%);
+    padding: 78px 0;
+    text-align: center;
+}
+
+.corporate-events-content {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.corporate-events-eyebrow {
+    margin: 0 0 10px;
+    color: #4c51bf;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.corporate-events-content h2 {
+    margin-bottom: 18px;
+}
+
+.corporate-events-intro,
+.corporate-events-areas {
+    max-width: 820px;
+    margin: 0 auto;
+    color: #4a5568;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.corporate-events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 36px 0 30px;
+    text-align: left;
+}
+
+.corporate-events-card {
+    background: #ffffff;
+    border: 1px solid rgba(102, 126, 234, 0.18);
+    border-radius: 16px;
+    padding: 26px;
+    box-shadow: 0 12px 32px rgba(76, 81, 191, 0.08);
+}
+
+.corporate-events-card h3 {
+    margin: 0 0 10px;
+    color: #1a202c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.corporate-events-card p {
+    margin: 0;
+    color: #4a5568;
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.corporate-events-areas {
+    font-size: 0.98rem;
+}
+
+.corporate-events-button {
+    margin-top: 24px;
+    background: #4c51bf;
+    color: #ffffff;
+}
+
+.corporate-events-button:hover {
+    background: #3c429f;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 900px) {
+    .corporate-events-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .corporate-events-section {
+        padding: 58px 0;
+    }
+
+    .corporate-events-card {
+        padding: 22px;
+    }
+
+    .corporate-events-intro,
+    .corporate-events-areas {
+        font-size: 0.96rem;
+    }
+}
+
 /* Responsive Styles for SEO Feature Grid */
 @media screen and (max-width: 991px) {
     .seo-feature-grid {
