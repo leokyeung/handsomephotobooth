@@ -598,6 +598,10 @@
   color: #475467;
 }
 
+.city-landing .local-quote-card cite.cite-right {
+  text-align: right;
+}
+
 /* Inline quote inquiry section on city pages */
 .city-landing .local-contact-section {
   padding: 84px 0 76px;

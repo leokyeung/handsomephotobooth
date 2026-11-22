@@ -1,5 +1,22 @@
 # SEO change log
 
+## 2026-11-22: Pleasanton page: real photos, venue facts, trimmed copy
+
+- Pleasanton hero is now an owner-supplied Ruby Hill wedding strip; gallery is
+  four owner-supplied photos labeled by venue (two Palm Event Center, two Casa
+  Real) with venue-specific alt text; added an owner-supplied review from
+  Megan (Palm Event Center) in place of an unrelated quote.
+- Removed unverified venue details (room names, lighting, "regularly") and kept
+  only what the owner confirmed: many weddings at both Palm Event Center and
+  Casa Real. Cut the duplicate package bullet list, sample-schedule table, and
+  scrapbook paragraph; reduced "Tri-Valley" from 11 mentions to 2.
+- FAQ text and `FAQPage` schema kept in sync; contact section trimmed.
+- Photos are already compressed (about 215-290 KB); further recompression
+  saved under 20% with visible softening, so it was skipped.
+- Owner follow-up: confirm the featured guests and Megan agreed to public use;
+  submit the sitemap in Google Search Console and request indexing for the
+  Pleasanton page.
+
 ## 2026-11-21: Pleasanton venue page and East Bay landing-page upgrades
 
 - Added [Pleasanton](https://handsomephotobooth.com/pleasanton-photo-booth-rental.html)
