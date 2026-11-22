@@ -23,6 +23,7 @@ h2 { font-size:clamp(1.8rem,3vw,3rem); letter-spacing:-.035em }
 .hero-cta-row { margin-top:26px; gap:12px 20px; font-size:.85rem; font-weight:650 }
 .city-btn-primary { display:inline-block; border:0; color:white; background:var(--accent); padding:13px 20px; text-decoration:none }
 figcaption { padding:10px 2px 0 }
+.local-gallery-grid { display:grid; gap:8px; grid-template-columns:repeat(2,1fr) }
 .city-review-strip { margin:20px 0 46px; border-block:1px solid var(--line); padding:24px 0 }
 .city-review-strip h2 { max-width:28em; margin:0 0 20px }
 .review-platforms { display:grid; grid-template-columns:repeat(4,1fr); gap:16px }
