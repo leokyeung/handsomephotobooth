@@ -1,5 +1,28 @@
 # SEO change log
 
+## 2026-11-22: Pleasanton page modern redesign
+
+- Redesigned https://handsomephotobooth.com/pleasanton-photo-booth-rental.html
+  with a photo-first hero (Palm Event Center portrait with the Casa Real print),
+  review cards, a full 3-Hour Glam Package card matching the homepage
+  inclusions and add-ons, venue booth-spot cards over owner-supplied Casa Real
+  and Palm Event Center photos, timing/setup tip cards, a card-style FAQ
+  accordion, and a simpler two-column inquiry form ("Check my date").
+- Trimmed copy without losing target terms: removed the byline, duplicate
+  add-on and service-area sentences, the alternate timeline option, and the
+  Wi-Fi/hotspot wording (owner confirmed both venues have reliable Wi-Fi). The
+  last FAQ is now "Can you match our wedding stationery and colors?" in both the
+  visible FAQ and `FAQPage` schema.
+- Replaced shared blog styles on this page with `assets/css/pleasanton.css`;
+  hero preload now targets the Palm Event Center portrait. Sitemap `lastmod`
+  updated.
+- Validation: `python3 scripts/check_seo.py` (12 pages), `npm test`, intercepted
+  success/rejection submissions in a local browser (no inquiry sent), and
+  desktop/mobile layout checks at 1280px and 375px with no horizontal overflow.
+- Owner follow-up: confirm permission to use the Casa Real and Palm Event
+  Center venue photos.
+- PR: https://github.com/leokyeung/handsomephotobooth/pull/81.
+
 ## 2026-11-22: Pleasanton page: real photos, venue facts, trimmed copy
 
 - Pleasanton hero is now an owner-supplied Ruby Hill wedding strip; gallery is
