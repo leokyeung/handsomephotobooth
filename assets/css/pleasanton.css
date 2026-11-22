@@ -137,13 +137,14 @@ footer .social-list { display:flex; justify-content:center }
   display:grid; grid-template-rows:28px auto auto 1fr; gap:6px; padding:18px; border:0; border-radius:14px;
   background:white; box-shadow:0 1px 2px #231e240f,0 8px 24px -14px #231e2430; font-size:.9rem;
 }
-.print .review-brand { height:28px; font-size:1rem }
+.print .review-brand { height:28px; font-size:1rem; justify-content:center }
 .print .review-brand img { height:22px }
-.print .review-rating { display:flex; align-items:center; gap:8px; margin-top:6px }
+.print .review-rating { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:6px }
 .print .review-rating strong { font:600 1.6rem/1 system-ui,sans-serif; letter-spacing:-.03em }
 .print .review-stars { color:#e3a008; font-size:.95rem; letter-spacing:1px }
 .print .review-count { color:#6b6266; font-size:.85rem }
-.print .review-links { display:flex; flex-wrap:wrap; gap:4px 14px; align-self:end; margin-top:6px }
+.print .review-links { display:flex; flex-wrap:wrap; justify-content:center; gap:4px 14px; align-self:end; margin-top:6px }
+.print .review-platform { text-align:center }
 .print .review-links a { color:var(--accent); font-weight:600; font-size:.85rem; text-decoration:none }
 .print .review-links a:hover { text-decoration:underline }
 .print .review-awards {
