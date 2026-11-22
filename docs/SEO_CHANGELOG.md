@@ -22,6 +22,10 @@
 - Owner follow-up: confirm permission to use the Casa Real and Palm Event
   Center venue photos.
 - PR: https://github.com/leokyeung/handsomephotobooth/pull/81.
+- Fix: restored the gallery grid rule dropped from `pleasanton.css` so the
+  "Real wedding photo booth moments" photos lay out as designed; stylesheet
+  version bumped. Layout verified identical to the approved preview at
+  375px and 1280px.
 
 ## 2026-11-22: Pleasanton page: real photos, venue facts, trimmed copy
 
