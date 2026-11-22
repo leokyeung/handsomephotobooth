@@ -21,6 +21,7 @@
   desktop/mobile layout checks at 1280px and 375px with no horizontal overflow.
 - Owner follow-up: confirm permission to use the Casa Real and Palm Event
   Center venue photos.
+- PR: https://github.com/leokyeung/handsomephotobooth/pull/81.
 
 ## 2026-11-22: Pleasanton page: real photos, venue facts, trimmed copy
 
