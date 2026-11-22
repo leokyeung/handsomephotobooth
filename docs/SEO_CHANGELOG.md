@@ -11,11 +11,18 @@
   Casa Real. Cut the duplicate package bullet list, sample-schedule table, and
   scrapbook paragraph; reduced "Tri-Valley" from 11 mentions to 2.
 - FAQ text and `FAQPage` schema kept in sync; contact section trimmed.
-- Photos are already compressed (about 215-290 KB); further recompression
-  saved under 20% with visible softening, so it was skipped.
+- Photos are WebP-optimized for the Pleasanton page (hero 26-48 KB, gallery
+  tiles 16-65 KB at displayed size, full size only in the lightbox), cutting
+  image weight from over 1 MB to about 140 KB; preload fixed to avoid a double
+  hero download; page scripts deferred.
+- Hero attributed to Casa Real at Ruby Hill Winery; booth placement at each
+  venue added from owner-supplied facts; guessed Wi-Fi/venue wording removed.
+- Form status messages centered; success message no longer names the city on
+  the three city pages.
 - Owner follow-up: confirm the featured guests and Megan agreed to public use;
   submit the sitemap in Google Search Console and request indexing for the
-  Pleasanton page.
+  Pleasanton page. Consider softening the "capture and printing run locally
+  without internet" wording on the San Leandro and Alameda FAQs unless confirmed.
 
 ## 2026-11-21: Pleasanton venue page and East Bay landing-page upgrades
 
