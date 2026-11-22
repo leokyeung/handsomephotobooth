@@ -27,6 +27,7 @@
   version bumped. Layout verified identical to the approved preview at
   375px and 1280px.
 - Centered the logo, rating, review count, and links in each review card.
+- Removed the "See the $899 package" hero link; the header nav still links to the package card.
 
 ## 2026-11-22: Pleasanton page: real photos, venue facts, trimmed copy
 
