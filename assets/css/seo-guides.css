@@ -35,3 +35,747 @@
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
+
+/* City & venue landing pages (.city-landing) */
+.city-landing {
+  background-color: #f9fbfd;
+  color: #182030;
+}
+
+.city-landing,
+.city-landing *,
+.city-landing *::before,
+.city-landing *::after {
+  box-sizing: border-box;
+}
+
+.city-landing strong,
+.city-landing b {
+  font-weight: 600;
+}
+
+.city-landing #package-summary,
+.city-landing #venue-experience {
+  scroll-margin-top: 96px;
+}
+
+.city-landing .hero-section {
+  min-height: 0;
+  padding: 156px 0 64px;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(0, 219, 222, 0.24), transparent 48%),
+    radial-gradient(circle at 82% 18%, rgba(252, 0, 255, 0.22), transparent 50%),
+    linear-gradient(145deg, #131926 0%, #1d2638 58%, #182232 100%);
+  text-align: center;
+}
+
+.city-landing .hero-content {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.city-landing .hero-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.city-landing .hero-breadcrumb a {
+  color: #6ff7f9;
+  margin: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.city-landing .hero-content h1 {
+  color: #fff;
+  max-width: 860px;
+  margin: 0 auto 16px;
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.city-landing .hero-lead {
+  max-width: 720px;
+  margin: 0 auto 26px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.city-landing .hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.city-landing .hero-cta-row a {
+  margin: 0;
+}
+
+.city-landing .city-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.78rem 1.6rem;
+  border-radius: 8px;
+  background: #ff3ea5;
+  color: #fff !important;
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  box-shadow: 0 10px 24px rgba(255, 62, 165, 0.38);
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.city-landing .city-btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 14px 28px rgba(255, 62, 165, 0.5);
+}
+
+.city-landing .city-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.78rem 1.45rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.city-landing .city-btn-secondary:hover {
+  background: #fff;
+  color: #182030 !important;
+}
+
+.city-landing .article-section {
+  padding: 44px 0 56px;
+}
+
+.city-landing .article-img {
+  max-width: 960px;
+  margin: 0 auto 1.75rem;
+}
+
+.city-landing .article-img img {
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(24, 32, 48, 0.14);
+}
+
+.city-landing .article-img figcaption {
+  margin-top: 10px;
+  color: #556070;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Self-contained 4-platform review strip for city pages */
+.city-landing .city-review-strip {
+  --review-ink: #26232a;
+  --review-muted: #67616e;
+  --review-rule: #e8e4ec;
+  --review-gold: #b77813;
+  --review-star: #f4b400;
+  max-width: 960px;
+  margin: 0 auto 2.5rem;
+  padding: 26px 24px 24px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(24, 32, 48, 0.08);
+  box-shadow: 0 12px 34px rgba(24, 32, 48, 0.06);
+  color: var(--review-ink);
+  text-align: center;
+}
+
+.city-landing .city-review-strip h2 {
+  margin: 0 0 22px;
+  font-size: 1.28rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--review-ink);
+}
+
+.city-landing .review-platforms {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.city-landing .review-platform {
+  min-width: 0;
+  padding: 2px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city-landing .review-platform--knot { --review-link: #26232a; }
+.city-landing .review-platform--wire { --review-link: #007e87; }
+.city-landing .review-platform--yelp { --review-link: #c41200; }
+.city-landing .review-platform--google { --review-link: #1967d2; }
+
+.city-landing .review-brand {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.city-landing .review-brand img {
+  display: block;
+  width: 112px;
+  max-width: 100%;
+  height: 34px;
+  object-fit: contain;
+}
+
+.city-landing .review-platform--wire .review-brand {
+  gap: 6px;
+  color: var(--review-link);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.city-landing .review-platform--wire .review-brand img { width: 30px; height: 30px; }
+.city-landing .review-platform--yelp .review-brand { gap: 5px; font-size: 24px; font-weight: 600; }
+.city-landing .review-platform--yelp .review-brand img { width: 24px; height: 32px; }
+.city-landing .review-platform--google .review-brand img { width: 94px; }
+
+.city-landing .review-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.city-landing .review-rating strong {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.city-landing .review-stars {
+  color: var(--review-star);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.city-landing .review-count {
+  color: var(--review-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.city-landing .review-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  min-height: 44px;
+  font-size: 0.8rem;
+}
+
+.city-landing .review-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 4px;
+  color: var(--review-link);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.city-landing .review-links a span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.city-landing .review-awards {
+  margin: 18px 0 0;
+  padding: 16px 12px 0;
+  border-top: 1px solid var(--review-rule);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--review-muted);
+  text-align: center;
+}
+
+.city-landing .review-awards strong {
+  color: var(--review-ink);
+  font-weight: 600;
+}
+
+.city-landing .article-section article {
+  max-width: 860px;
+}
+
+/* Venue & local area spotlight cards inside article */
+.city-landing .local-venue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 1.5rem 0 2rem;
+}
+
+.city-landing .local-venue-card {
+  padding: 22px 24px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(7, 177, 188, 0.2);
+  box-shadow: 0 10px 28px rgba(24, 32, 48, 0.06);
+}
+
+.city-landing .local-venue-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: #182030;
+}
+
+.city-landing .local-venue-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.68;
+  color: #364152;
+}
+
+.city-landing .local-venue-card p + p {
+  margin-top: 0.75rem;
+}
+
+/* Sample gallery & review quote block */
+.city-landing .local-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 1.5rem 0;
+}
+
+.city-landing .local-gallery-grid figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(24, 32, 48, 0.08);
+  box-shadow: 0 10px 26px rgba(24, 32, 48, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.city-landing .local-gallery-grid figure a {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.city-landing .local-gallery-grid img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.city-landing .local-gallery-grid figure a:hover img,
+.city-landing .local-gallery-grid figure a:focus-visible img {
+  transform: scale(1.04);
+}
+
+.city-landing .local-gallery-grid figcaption {
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #475467;
+  background: #fff;
+  border-top: 1px solid rgba(24, 32, 48, 0.06);
+}
+
+/* Visible Bay Area location & venue links bar on homepage */
+.home-local-bar {
+  max-width: 960px;
+  margin: 32px auto 0;
+  padding: 18px 22px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(7, 177, 188, 0.2);
+  box-shadow: 0 8px 24px rgba(24, 32, 48, 0.06);
+  text-align: center;
+}
+
+.home-local-bar p {
+  margin: 0 0 12px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #182030;
+}
+
+.home-local-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 12px;
+}
+
+.home-local-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f3fbfc;
+  border: 1px solid rgba(7, 177, 188, 0.28);
+  color: #075c66;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.home-local-links a:hover,
+.home-local-links a:focus-visible {
+  background: #e2f6f8;
+  border-color: #07b1bc;
+}
+
+.city-landing .local-quote-card {
+  margin: 1.75rem 0 2rem;
+  padding: 22px 26px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 219, 222, 0.08), rgba(252, 0, 255, 0.08));
+  border-left: 4px solid #07b1bc;
+}
+
+.city-landing .local-quote-card blockquote {
+  margin: 0 0 10px;
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #182030;
+}
+
+.city-landing .local-quote-card cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #475467;
+}
+
+/* Inline quote inquiry section on city pages */
+.city-landing .local-contact-section {
+  padding: 84px 0 76px;
+  background-color: #f1ecff;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(252, 0, 255, 0.14), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(0, 219, 222, 0.14), transparent 55%);
+  scroll-margin-top: 96px;
+}
+
+.city-landing .local-contact-head {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.city-landing .local-contact-head h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.city-landing .local-contact-head p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #475467;
+  font-weight: 400;
+  text-align: center;
+}
+
+.city-landing #booked-notice.booked-notice-inline {
+  max-width: 920px;
+  margin: 14px auto 0;
+  color: #292929;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.city-landing #booked-notice.booked-notice-inline strong {
+  color: #9f1239;
+  font-weight: 600;
+}
+
+.city-landing .local-contact-box {
+  max-width: 1020px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 28px;
+  align-items: start;
+  text-align: left;
+}
+
+.city-landing .local-contact-panel {
+  min-width: 0;
+  padding: 28px 26px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(7, 177, 188, 0.2);
+  box-shadow: 0 14px 38px rgba(24, 32, 48, 0.08);
+}
+
+.city-landing .local-contact-panel h3 {
+  margin: 0 0 16px;
+  font-size: 1.28rem;
+  line-height: 1.3;
+  color: #182030;
+}
+
+.city-landing .local-quick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.city-landing .local-quick-list li {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f7fbfc;
+  border: 1px solid rgba(7, 177, 188, 0.14);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #182030;
+}
+
+.city-landing .local-quick-list a {
+  color: #075c66;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.city-landing .local-form-column {
+  min-width: 0;
+  padding: 28px 26px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 38px rgba(24, 32, 48, 0.08);
+}
+
+.city-landing .local-form-column.form-success-active {
+  position: relative;
+  min-height: var(--success-area-height, 420px);
+}
+
+.city-landing .local-form-column form {
+  display: grid;
+  gap: 0;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.city-landing .local-form-column form[hidden] {
+  display: none;
+}
+
+.city-landing .local-form-column .form-is-leaving {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+
+.city-landing .local-form-column input,
+.city-landing .local-form-column select,
+.city-landing .local-form-column textarea {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin: 0 0 0.9rem;
+  padding: 0 1rem;
+  font: inherit;
+  font-size: 0.98rem;
+  color: #182030;
+  border: 1.8px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.city-landing .local-form-column textarea {
+  min-height: 112px;
+  padding: 0.85rem 1rem;
+  resize: vertical;
+}
+
+.city-landing .local-form-column input:focus,
+.city-landing .local-form-column select:focus,
+.city-landing .local-form-column textarea:focus {
+  border-color: #07b1bc;
+  box-shadow: 0 0 0 3px rgba(7, 177, 188, 0.18);
+}
+
+.city-landing .local-form-column select:required:invalid {
+  color: #6b7280;
+}
+
+.city-landing .local-form-column select option {
+  color: #182030;
+}
+
+.city-landing .local-form-column button[type="submit"] {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.city-landing .form-status {
+  display: none;
+  margin-bottom: 14px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.city-landing .form-status h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.city-landing .form-status p {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+.city-landing .form-status.is-visible {
+  display: block;
+}
+
+.city-landing .form-status.is-entered {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.city-landing .form-status-success {
+  color: #0f766e;
+  background: #ecfdf5;
+  border: 1px solid rgba(7, 177, 188, 0.25);
+}
+
+.city-landing .form-status-error {
+  color: #9f1239;
+  background: #fff1f2;
+  border: 1px solid rgba(159, 18, 57, 0.2);
+}
+
+.city-landing .footer-locations {
+  margin: 0 0 22px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475467;
+  text-align: center;
+}
+
+.city-landing .footer-locations a {
+  color: #075c66;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+@media (max-width: 900px) {
+  .city-landing .review-platforms {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+
+  .city-landing .local-venue-grid,
+  .city-landing .local-contact-box {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .city-landing .local-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .city-landing .hero-section {
+    padding: 118px 0 44px;
+  }
+
+  .city-landing .hero-lead {
+    font-size: 0.98rem;
+  }
+
+  .city-landing .hero-cta-row a {
+    width: 100%;
+  }
+
+  .city-landing .city-review-strip {
+    padding: 20px 14px 18px;
+  }
+
+  .city-landing .review-rating strong {
+    font-size: 1.5rem;
+  }
+
+  .city-landing .local-gallery-grid img {
+    height: 165px;
+  }
+
+  .city-landing .local-contact-section {
+    padding: 48px 0 56px;
+  }
+
+  .city-landing .local-contact-panel,
+  .city-landing .local-form-column {
+    padding: 22px 18px;
+  }
+}
+

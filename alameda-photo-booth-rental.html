@@ -28,8 +28,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="preload" as="image" href="./assets/images/photobooth.jpg" fetchpriority="high" />
+    <link rel="apple-touch-icon" href="./assets/images/apple_touch.png" />
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <meta name="author" content="Handsome Photobooth" />
+    <meta name="geo.region" content="US-CA" />
+    <meta name="geo.placename" content="Alameda, CA" />
+    <meta name="geo.position" content="37.7613643;-122.2455585" />
+    <meta name="ICBM" content="37.7613643, -122.2455585" />
+    <meta name="theme-color" content="#ff6b6b" />
 
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:url" content="https://handsomephotobooth.com/alameda-photo-booth-rental.html" />
@@ -47,7 +54,24 @@
       property="og:image"
       content="https://handsomephotobooth.com/assets/images/photobooth.jpg"
     />
+    <meta
+      property="og:image:alt"
+      content="Handsome Photobooth open-air DSLR setup and studio flash umbrella for Alameda weddings and events"
+    />
     <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Alameda Photo Booth Rental for Weddings &amp; Events"
+    />
+    <meta
+      name="twitter:description"
+      content="Alameda photo booth rental with DSLR photos, unlimited prints, custom templates, props, and an attendant. Explore the $899 three-hour package and check your date."
+    />
+    <meta
+      name="twitter:image"
+      content="https://handsomephotobooth.com/assets/images/photobooth.jpg"
+    />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -67,16 +91,55 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "WebPage",
+            "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#webpage",
+            "url": "https://handsomephotobooth.com/alameda-photo-booth-rental.html",
+            "name": "Alameda Wedding & Event Photo Booth Rental | Handsome Photobooth",
+            "description": "Alameda photo booth rental with DSLR photos, unlimited prints, custom templates, props, and an attendant. Explore the $899 three-hour package and check your date.",
+            "dateModified": "2026-11-21",
+            "inLanguage": "en-US",
+            "about": {
+              "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#business"
+            },
+            "breadcrumb": {
+              "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#breadcrumb"
+            }
+          },
+          {
             "@type": "LocalBusiness",
             "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#business",
             "name": "Handsome Photobooth",
+            "description": "Open-air DSLR photo booth rental company based on Park Street in Alameda, CA serving island weddings, waterfront venues, corporate events, and East Bay celebrations.",
             "url": "https://handsomephotobooth.com/alameda-photo-booth-rental.html",
+            "logo": "https://handsomephotobooth.com/assets/images/logo.png",
             "image": "https://handsomephotobooth.com/assets/images/photobooth.jpg",
             "priceRange": "$899",
             "email": "leo@handsomephotobooth.com",
             "parentOrganization": {
               "@id": "https://handsomephotobooth.com/#business"
             },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "leo@handsomephotobooth.com",
+              "areaServed": "US-CA",
+              "availableLanguage": ["en", "zh"]
+            },
+            "knowsAbout": [
+              "Alameda photo booth rental",
+              "Island and waterfront wedding photo booths",
+              "Corporate event photo booths",
+              "Instant 2x6 and 4x6 photo prints",
+              "Custom photo booth templates",
+              "DSLR event photography"
+            ],
+            "sameAs": [
+              "https://www.instagram.com/handsomephotobooth/",
+              "https://www.facebook.com/handsomephotobooth",
+              "https://www.theknot.com/marketplace/handsome-photobooth-san-leandro-ca-2069091",
+              "https://www.weddingwire.com/biz/handsome-photobooth/e9b136802e0a665e.html",
+              "https://www.yelp.com/biz/handsome-photobooth-san-leandro"
+            ],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "1209 Park St",
@@ -91,32 +154,87 @@
               "longitude": -122.2455585
             },
             "hasMap": "https://www.google.com/maps/search/?api=1&query=Handsome+Photobooth&query_place_id=ChIJ7TAsbjaHj4ARqLT78siF4do",
-            "areaServed": {
-              "@type": "City",
-              "name": "Alameda"
-            }
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Alameda"
+              },
+              {
+                "@type": "City",
+                "name": "Oakland"
+              },
+              {
+                "@type": "City",
+                "name": "Berkeley"
+              },
+              {
+                "@type": "City",
+                "name": "Piedmont"
+              }
+            ]
           },
           {
             "@type": "Service",
+            "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#service",
             "name": "Alameda Photo Booth Rental for Weddings & Events",
             "serviceType": "Photo Booth Rental",
+            "description": "Three-hour DSLR open-air photo booth rental delivered to Alameda Island, waterfront hangars, Oakland, and Berkeley venues with studio lighting, unlimited prints, custom templates, 70+ props, QR downloads, and an attendant.",
             "provider": {
               "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#business"
             },
-            "areaServed": {
-              "@type": "City",
-              "name": "Alameda"
-            },
-            "offers": {
-              "@type": "Offer",
-              "name": "3 Hours Glam Package",
-              "price": 899,
-              "priceCurrency": "USD",
-              "url": "https://handsomephotobooth.com/#pricing"
-            }
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Alameda"
+              },
+              {
+                "@type": "City",
+                "name": "Oakland"
+              },
+              {
+                "@type": "City",
+                "name": "Berkeley"
+              },
+              {
+                "@type": "City",
+                "name": "Piedmont"
+              }
+            ],
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "3 Hours Glam Package",
+                "price": 899,
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#package-summary"
+              },
+              {
+                "@type": "Offer",
+                "name": "Additional Hour",
+                "price": 150,
+                "priceCurrency": "USD",
+                "url": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#package-summary"
+              },
+              {
+                "@type": "Offer",
+                "name": "Photo Album with All Pictures",
+                "price": 49,
+                "priceCurrency": "USD",
+                "url": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#package-summary"
+              },
+              {
+                "@type": "Offer",
+                "name": "Scrapbook Service",
+                "price": 99,
+                "priceCurrency": "USD",
+                "url": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#package-summary"
+              }
+            ]
           },
           {
             "@type": "BreadcrumbList",
+            "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -134,6 +252,7 @@
           },
           {
             "@type": "FAQPage",
+            "@id": "https://handsomephotobooth.com/alameda-photo-booth-rental.html#faq",
             "mainEntity": [
               {
                 "@type": "Question",
@@ -153,10 +272,26 @@
               },
               {
                 "@type": "Question",
-                "name": "Do you bring the photo booth to Alameda wedding and corporate venues?",
+                "name": "Do you bring the photo booth to Alameda Island, Oakland, and Berkeley venues?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Our team delivers, sets up, attends, and breaks down the booth at your Alameda or East Bay celebration venue. Share your venue address, loading entrance, and timeline when requesting a quote."
+                  "text": "Yes. From our Park Street base in Alameda, our team delivers, sets up, attends, and breaks down the booth across Alameda Island, Alameda Point waterfront venues, Jack London Square, Oakland, Piedmont, and Berkeley."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How early should we reserve an Alameda date and what deposit is required?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Popular spring, summer, and fall weekend dates typically book 4 to 9 months ahead. A 50% deposit with a signed agreement secures your date, and the remaining balance is due 30 days before your event."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can the photo booth be set up at Alameda Point hangars or waterfront patios?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Indoor hangar, clubhouse, and ballroom setups work seamlessly with our studio lighting. For bayside patios, confirm wind shelter, a nearby standard power outlet, and an indoor backup spot with your venue coordinator."
                 }
               }
             ]
@@ -164,36 +299,10 @@
         ]
       }
     </script>
-  <link rel="stylesheet" href="./assets/css/seo-guides.css?v=20261110" />
+  <link rel="stylesheet" href="./assets/css/seo-guides.css?v=20261121b" />
   </head>
 
-  <body class="article-page">
-    <div id="fb-root"></div>
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "102230392638740");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v15.0",
-        });
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-
+  <body class="article-page city-landing">
     <header>
       <div class="nav-container">
         <div class="container">
@@ -206,7 +315,7 @@
                 height="79"
               />
             </a>
-            <a href="https://handsomephotobooth.com/#contact" class="btn_top"
+            <a href="#contact" class="btn_top"
               >Contact Us</a
             >
             <ul class="nav-list">
@@ -217,14 +326,14 @@
               </li>
               <li>
                 <a
-                  href="https://handsomephotobooth.com/#pricing"
+                  href="#package-summary"
                   class="nav-link"
-                  >Package & Equipment</a
+                  >Package &amp; Equipment</a
                 >
               </li>
               <li>
                 <a
-                  href="https://handsomephotobooth.com/#contact"
+                  href="#contact"
                   class="nav-link"
                   >Contact Us</a
                 >
@@ -252,10 +361,19 @@
       <section class="hero-section" id="home">
         <div class="container">
           <div class="hero-content">
-            <a href="https://handsomephotobooth.com/"
-              >Home</a
-            >
+            <p class="hero-breadcrumb">
+              <a href="https://handsomephotobooth.com/">Home</a>
+              <span aria-hidden="true">/</span>
+              <span>Alameda, CA</span>
+            </p>
             <h1>Alameda Photo Booth Rental for Weddings &amp; Events</h1>
+            <p class="hero-lead">
+              Studio-lit DSLR photo booth rentals based on Park Street in Alameda—serving island weddings, waterfront venues, corporate celebrations, and parties with instant prints, custom templates, 70+ props, and an on-site attendant.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#contact" class="city-btn-primary">Check Availability &amp; Get Quote</a>
+              <a href="#package-summary" class="city-btn-secondary">See $899 Package Details</a>
+            </div>
           </div>
         </div>
       </section>
@@ -263,20 +381,84 @@
       <section class="article-section">
         <div class="container">
           <div class="article-content">
-            <div class="article-img">
+            <figure class="article-img">
               <img
                 src="./assets/images/photobooth.jpg"
-                alt="Handsome Photobooth equipment and open-air setup"
+                alt="Handsome Photobooth open-air DSLR setup and studio flash umbrella for Alameda weddings and events"
                 width="1729"
                 height="1297"
+                fetchpriority="high"
                 decoding="async"
               />
-            </div>
+              <figcaption>Compact open-air DSLR booth, studio lighting, modern backdrop, and instant print station delivered to your Alameda or East Bay venue.</figcaption>
+            </figure>
+
+            <section class="city-review-strip" aria-labelledby="alameda-reviews-heading">
+              <h2 id="alameda-reviews-heading">5-star rated by Bay Area couples &amp; event hosts</h2>
+              <div class="review-platforms">
+                <div class="review-platform review-platform--knot">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/the-knot.svg" alt="The Knot" width="300" height="67" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">194 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.theknot.com/marketplace/handsome-photobooth-san-leandro-ca-2069091" target="_blank" rel="noopener noreferrer" aria-label="Read Handsome Photobooth reviews on The Knot"><span>Read reviews &#8599;</span></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--wire">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/weddingwire.png" alt="WeddingWire" width="190" height="190" loading="lazy" decoding="async" /><span aria-hidden="true">WeddingWire</span>
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">194 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.weddingwire.com/biz/handsome-photobooth/e9b136802e0a665e.html" target="_blank" rel="noopener noreferrer" aria-label="Read Handsome Photobooth reviews on WeddingWire"><span>Read reviews &#8599;</span></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--yelp">
+                  <span class="review-brand">
+                    <span aria-hidden="true">Yelp</span><img src="./assets/images/reviews/yelp.svg" alt="Yelp" width="1899" height="2500" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">40 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.yelp.com/biz/handsome-photobooth-san-leandro" target="_blank" rel="noopener noreferrer" aria-label="Read Handsome Photobooth reviews on Yelp"><span>Read reviews &#8599;</span></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--google">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/google.png" alt="Google" width="184" height="60" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">100+ reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ7TAsbjaHj4ARqLT78siF4do" target="_blank" rel="noopener noreferrer" aria-label="Read Google reviews for Alameda"><span>Alameda</span></a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ_ddK0IenxGMRfHvdMTvcMEM" target="_blank" rel="noopener noreferrer" aria-label="Read Google reviews for San Leandro"><span>San Leandro</span></a>
+                  </div>
+                </div>
+              </div>
+              <p class="review-awards"><strong>The Knot Best of Weddings</strong> &amp; <strong>WeddingWire Couples' Choice Awards</strong> · 2024 · 2025 · 2026</p>
+            </section>
+
             <article>
-<p class="article-meta">Updated <time datetime="2026-11-10">November 10, 2026</time> · Handsome Photobooth · Alameda, CA</p>
-<p><strong>A photo booth for your Alameda celebration, brought to your event venue.</strong> Handsome Photobooth rents an open-air DSLR booth for weddings, company events, birthdays, and parties. Our Alameda location is one of two East Bay locations, alongside <a href="./san-leandro-photo-booth-rental.html">San Leandro</a>.</p>
-<p>Our published three-hour Glam Package is <strong>$899</strong>. Send your date, venue, guest count, and preferred hours so we can confirm availability and provide a final quote for your celebration.</p>
-<div class="article-table-wrap">
+<p class="article-meta">Updated <time datetime="2026-11-21">November 21, 2026</time> · Handsome Photobooth · Alameda, CA</p>
+<p><strong>A photo booth for your Alameda celebration, delivered and attended at your venue.</strong> Handsome Photobooth rents an open-air DSLR booth for island weddings, company parties, milestone birthdays, and community celebrations. Our Park Street location in Alameda is one of two East Bay bases alongside <a href="./san-leandro-photo-booth-rental.html">San Leandro</a>, serving Alameda, Oakland, Berkeley, and Tri-Valley Wine Country venues in <a href="./pleasanton-photo-booth-rental.html">Pleasanton</a>.</p>
+<p>Our published three-hour Glam Package is <strong>$899</strong>. Share your date, venue, guest count, and preferred operating hours <a href="#contact">in the quote form below</a> to check availability and receive a written quote.</p>
+
+<div class="article-table-wrap" id="package-summary">
   <table class="article-table">
     <caption>Alameda photo booth package and setup summary</caption>
     <thead><tr><th scope="col">Detail</th><th scope="col">Published specification</th></tr></thead>
@@ -289,22 +471,203 @@
     </tbody>
   </table>
 </div>
-<p class="article-cta"><a href="./index.html#contact">Check availability for your Alameda event</a></p>
-<h2>What comes with the photo booth?</h2><ul><li>Three operating hours with a professional booth attendant</li><li>DSLR photos, studio lighting, and a modern backdrop</li><li>Unlimited instant 2 × 6 strips or 4 × 6 prints</li><li>A personalized print template and a selection of props</li><li>QR downloads and a downloadable digital album</li><li>Setup and breakdown</li></ul>
-<p>An additional hour is listed at $150. Photo album and scrapbook options are available separately. See the <a href="./index.html#pricing">current package and equipment</a> and <a href="./blog/blog_3.html">cost guide</a> before choosing your options. Confirm travel and venue-specific arrangements in your final quote.</p>
-<h2>Planning an Alameda wedding or party</h2><p>For an island celebration, send the exact venue address and vendor entrance along with your event timeline. If your venue is reached by a bridge or tunnel, share the arrival route recommended by the venue and any loading window. A street address is a starting point; the reception room, equipment route, and loading instructions make the plan usable.</p><p>For a waterfront or patio setting, decide on an indoor backup with the coordinator. Discuss wind protection, shade, power, and connectivity with the booth team before settling on the spot. Indoors, a position near the reception activity helps guests find the booth while keeping the entrance and food-service routes clear.</p><h2>A keepsake that fits your celebration</h2><p>For a wedding, personalize the print template with your names, date, and design style. For a birthday or company event, send the theme and template preferences when requesting your quote. Choose your backdrop and print format as part of planning so the setup feels connected to the rest of the event.</p>
-<h2>Space, power, and setup</h2><p>Allow roughly 10 ft × 10 ft for the booth, backdrop, and prop table, with extra space for guests waiting. We need one standard power outlet within reach. Venue Wi-Fi is helpful for QR downloads, and a mobile hotspot can be used when venue Wi-Fi is limited; discuss connectivity at the specific venue with us.</p>
-<p>Send your coordinator our <a href="./blog/wedding-photo-booth-setup-checklist.html">setup checklist</a> and review the <a href="./blog/wedding-photo-booth-timeline.html">wedding timeline guide</a> for operating-hour ideas. For weddings, the <a href="./bay-area-wedding-photo-booth.html">wedding package page</a> includes more planning details.</p>
-<h2>Our Alameda location</h2><p><strong>Handsome Photobooth</strong><br>1209 Park St<br>Alameda, CA 94501</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ7TAsbjaHj4ARqLT78siF4do">View our Alameda Google listing and reviews</a>. Event rentals are coordinated in advance and brought to your venue; contact us to discuss your celebration details.</p>
+
+<h2>What comes with the $899 Glam Package?</h2>
+<ul>
+  <li>Three operating hours with a professional on-site booth attendant</li>
+  <li>DSLR camera, studio-grade lighting, and a modern backdrop</li>
+  <li>Unlimited instant 2 × 6 strips or 4 × 6 prints</li>
+  <li>A personalized print template and 70+ curated props</li>
+  <li>Instant QR downloads and a downloadable Google Photos digital album</li>
+  <li>Delivery, setup, and breakdown included</li>
+</ul>
+<p>Published optional extras include an additional operating hour ($150), a physical photo album with all pictures ($49), and on-site scrapbook service ($99). Review our <a href="./index.html#pricing">current package and equipment</a> and <a href="./blog/blog_3.html">wedding photo booth cost guide</a> to compare options before booking.</p>
+
+<h2>Planning for Alameda Island &amp; East Bay venues</h2>
+<p>Alameda celebrations range from historic halls and Park Street venues to converted hangars, bayside clubhouses, and nearby Oakland receptions. Sharing a few island-specific details keeps load-in smooth:</p>
+
+<div class="local-venue-grid">
+  <div class="local-venue-card">
+    <h3>Alameda Point Hangars, Tasting Rooms &amp; Shoreline Clubs</h3>
+    <p>Venues along <strong>Alameda Point</strong> (Monarch Street hangars and tasting rooms), <strong>Harbor Bay</strong>, and bayside spaces catch afternoon breezes off San Francisco Bay. Confirm an indoor spot or wind-sheltered backup with your coordinator so backdrops stay crisp after sunset.</p>
+    <p>In open warehouse, hangar, or historic hall layouts—such as the <strong>Alameda Elks Lodge</strong> or <strong>Albert H. Dewitt Officers' Club</strong>—placing the booth within sight of the bar or dance floor draws steady guest participation all night.</p>
+  </div>
+  <div class="local-venue-card">
+    <h3>Park Street, Island Bridges/Tunnels &amp; Oakland Access</h3>
+    <p>Share the exact vendor entrance, loading zone, and preferred bridge or Posey/Webster tube route recommended by your venue, along with any load-in window or elevator instructions.</p>
+    <p>From our Park Street base, we are minutes away from neighboring <strong>Jack London Square</strong>, <strong>Lake Merritt</strong>, <strong>Oakland Hills</strong>, <strong>Piedmont</strong>, and <strong>Berkeley</strong> celebration venues.</p>
+  </div>
+</div>
+
+<h2>Popular Alameda schedules &amp; package options</h2>
+<p>Choose the package and operating window that fits how your guests move through the event:</p>
+<div class="article-table-wrap">
+  <table class="article-table">
+    <caption>Common Alameda Island &amp; East Bay celebration packages</caption>
+    <thead>
+      <tr>
+        <th scope="col">Celebration style</th>
+        <th scope="col">Recommended setup</th>
+        <th scope="col">Published subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Hangar Offsite, Birthday, or Graduation</th>
+        <td>3-Hour Glam Package with custom 4 × 6 or 2 × 6 print layout, 70+ props, instant QR sharing, and attendant</td>
+        <td>$899</td>
+      </tr>
+      <tr>
+        <th scope="row">Island Wedding + Guestbook Keepsake</th>
+        <td>3-Hour Glam Package (cocktail hour or post-dinner dancing) + Scrapbook Service ($99) with duplicate prints &amp; guest notes</td>
+        <td>$998</td>
+      </tr>
+      <tr>
+        <th scope="row">Extended Waterfront Reception (4 Hours)</th>
+        <td>3-Hour Glam Package + 1 Additional Operating Hour ($150) for 150+ guest receptions</td>
+        <td>$1,049</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Custom templates &amp; flattering DSLR portraits</h2>
+<p>For weddings, personalize your print layout with names, wedding date, florals, and typography. For corporate events or milestone birthdays, send your brand colors, logo, or party theme—tap any sample below to inspect full-size print details:</p>
+
+<div class="local-gallery-grid">
+  <figure>
+    <a data-fslightbox="alameda-gallery" href="./assets/images/gallery/sample/2a.jpeg">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/sample/2a-480.webp 480w, ./assets/images/thumbnails/gallery/sample/2a-960.webp 960w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/sample/2a.jpeg" alt="Wedding couple and friends smiling in an open-air DSLR photo booth" width="1779" height="1186" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>Studio-lit DSLR group portrait at a wedding reception</figcaption>
+  </figure>
+  <figure>
+    <a data-fslightbox="alameda-gallery" href="./assets/images/gallery/sample/6a1.jpg">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/sample/6a1-960.webp 960w, ./assets/images/thumbnails/gallery/sample/6a1-480.webp 480w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/sample/6a1.jpg" alt="Guests posing with curated props at an East Bay wedding reception" width="2678" height="1785" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>70+ curated props refreshed twice each year</figcaption>
+  </figure>
+  <figure>
+    <a data-fslightbox="alameda-gallery" href="./assets/images/gallery/wedding/1.png">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/wedding/1-480.webp 480w, ./assets/images/thumbnails/gallery/wedding/1-960.webp 960w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/wedding/1.png" alt="Elegant custom wedding photo booth template sample" width="1197" height="1198" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>Custom wedding template tailored to your palette</figcaption>
+  </figure>
+  <figure>
+    <a data-fslightbox="alameda-gallery" href="./assets/images/gallery/wedding/5.png">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/wedding/5-480.webp 480w, ./assets/images/thumbnails/gallery/wedding/5-960.webp 960w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/wedding/5.png" alt="Personalized 4x6 keepsake print design for an event" width="1346" height="896" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>Personalized 4 × 6 keepsake print layout</figcaption>
+  </figure>
+</div>
+
+<div class="local-quote-card">
+  <blockquote>
+    “I had a lot of compliments on my wedding day and Handsome Photobooth was one of the vendors that got the most compliments! Leo was quick to respond and everything was so straightforward and carried out seamlessly—one of the easiest vendors to work with!”
+  </blockquote>
+  <cite>— Rachel L., Verified 5-Star Wedding Review</cite>
+</div>
+
+<h2>Space, power, and setup</h2>
+<p>Allow approximately 10 ft × 10 ft for the booth, backdrop, and prop table, with extra room for guests waiting in line, plus one standard power outlet within reach. Venue Wi-Fi is helpful for QR downloads, and a mobile hotspot can be used when venue Wi-Fi is limited.</p>
+<p>Send your coordinator our <a href="./blog/wedding-photo-booth-setup-checklist.html">setup checklist</a> and review the <a href="./blog/wedding-photo-booth-timeline.html">wedding timeline guide</a> for operating-hour ideas. For weddings, see our <a href="./bay-area-wedding-photo-booth.html">Bay Area wedding photo booth page</a> for additional planning details.</p>
+
+<h2>Our Alameda location</h2>
+<p><strong>Handsome Photobooth</strong><br />1209 Park St<br />Alameda, CA 94501</p>
+<p><a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ7TAsbjaHj4ARqLT78siF4do">View our Alameda Google listing and reviews</a>. Event rentals are coordinated in advance and brought directly to your celebration venue.</p>
+
 <h2>Alameda Photo Booth Rental FAQs</h2>
 <h3>How much does a photo booth rental cost in Alameda?</h3>
 <p>Handsome Photobooth's published 3-Hour Glam Package is $899, including DSLR photos, studio lighting, unlimited 2 × 6 or 4 × 6 instant prints, custom templates, over 70 props, an on-site attendant, QR downloads, a digital album, and setup and breakdown.</p>
 <h3>How much space and power does the photo booth need at an Alameda venue?</h3>
 <p>Plan for approximately 10 ft × 10 ft for the booth, backdrop, and prop table, plus separate space for guests waiting in line, and one standard power outlet within reach.</p>
-<h3>Do you bring the photo booth to Alameda wedding and corporate venues?</h3>
-<p>Yes. Our team delivers, sets up, attends, and breaks down the booth at your Alameda or East Bay celebration venue. Share your venue address, loading entrance, and timeline when requesting a quote.</p>
-<h2>How to request your quote</h2><ol><li>Share your date, venue address, event type, and approximate guest count.</li><li>Tell us your preferred operating hours, print format, and any optional extras.</li><li>We confirm availability, setup logistics, and the final booking details.</li></ol>
-<p class="article-cta"><a href="./index.html#contact">Request your Alameda photo booth quote</a> or email <a href="mailto:leo@handsomephotobooth.com">leo@handsomephotobooth.com</a>. We also serve Bay Area events beyond our two locations; tell us where your celebration is taking place.</p></article>
+<h3>Do you bring the photo booth to Alameda Island, Oakland, and Berkeley venues?</h3>
+<p>Yes. From our Park Street base in Alameda, our team delivers, sets up, attends, and breaks down the booth across Alameda Island, Alameda Point waterfront venues, Jack London Square, Oakland, Piedmont, and Berkeley.</p>
+<h3>How early should we reserve an Alameda date and what deposit is required?</h3>
+<p>Popular spring, summer, and fall weekend dates typically book 4 to 9 months ahead. A 50% deposit with a signed agreement secures your date, and the remaining balance is due 30 days before your event.</p>
+<h3>Can the photo booth be set up at Alameda Point hangars or waterfront patios?</h3>
+<p>Yes. Indoor hangar, clubhouse, and ballroom setups work seamlessly with our studio lighting. For bayside patios, confirm wind shelter, a nearby standard power outlet, and an indoor backup spot with your venue coordinator.</p>
+</article>
+          </div>
+        </div>
+      </section>
+
+      <section class="local-contact-section" id="contact">
+        <div class="container">
+          <div class="local-contact-head">
+            <h2 class="gradient">Check Availability for Your Alameda Event</h2>
+            <p>Share your date, venue, and guest count below—we reply within 12 hours with availability and a custom quote.</p>
+            <p id="booked-notice" class="booked-notice-inline" hidden><strong>Fully booked:</strong> <span data-booked-dates></span></p>
+          </div>
+
+          <div class="local-contact-box">
+            <div class="local-contact-panel">
+              <h3>Quick booking details</h3>
+              <ul class="local-quick-list">
+                <li><strong>$899 3-Hour Glam Package</strong> includes DSLR photos, unlimited prints, custom template, 70+ props, QR gallery, setup, attendant, and breakdown.</li>
+                <li><strong>Optional extras:</strong> Additional hour ($150), Photo album ($49), or Scrapbook service ($99).</li>
+                <li><strong>Venue requirements:</strong> Approximately 10 ft × 10 ft + 1 standard power outlet.</li>
+                <li><strong>Simple reservation:</strong> A 50% deposit and signed agreement secure your date; balance due 30 days before your event.</li>
+                <li>Prefer email? Reach Leo directly at <a href="mailto:leo@handsomephotobooth.com">leo@handsomephotobooth.com</a>.</li>
+              </ul>
+            </div>
+
+            <div class="local-form-column">
+              <div
+                class="form-status"
+                data-form-status
+                role="status"
+                aria-live="polite"
+                tabindex="-1"
+              ></div>
+              <form
+                action="https://formspree.io/f/mgeqkkny"
+                method="POST"
+                id="alameda-quote-form"
+                data-ajax-form
+                data-success-title="Thank you!"
+                data-success-message="We received your Alameda inquiry and will reply within 12 hours."
+              >
+                <input type="hidden" name="Submitted From" value="Alameda Page" />
+                <input type="text" name="Name" placeholder="First &amp; Last Name*" required />
+                <input type="email" name="Email" placeholder="Email*" required />
+                <select name="Source" required>
+                  <option value="" selected disabled hidden>How did you hear about us?*</option>
+                  <option value="Google">Google</option>
+                  <option value="Knot/WeddingWire">Knot/Wedding Wire</option>
+                  <option value="ChatGPT/Claude">ChatGPT/Claude</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Yelp">Yelp</option>
+                  <option value="Referral">Referral</option>
+                </select>
+                <input type="text" name="Event Type & Location" placeholder="Event Type &amp; Venue (e.g., Alameda Waterfront Wedding)*" required />
+                <input type="text" name="Event Date" placeholder="Event Date*" required />
+                <select name="Number of Guest" required>
+                  <option value="" selected disabled hidden>Number of Guests?*</option>
+                  <option value="50 - 100">50 - 100</option>
+                  <option value="101 - 150">101 - 150</option>
+                  <option value="151 - 200">151 - 200</option>
+                  <option value="201 - 250">201 - 250</option>
+                  <option value="251 - 300">251 - 300</option>
+                  <option value="301 - 350">301 - 350</option>
+                  <option value=">350">&gt; 350 (Please Specify Total Below)</option>
+                </select>
+                <textarea name="Info" placeholder="Tell us your estimated booth start time, print preference, or any questions*" required></textarea>
+                <button type="submit" class="city-btn-primary" data-sending-text="Sending...">Request Alameda Quote</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -313,6 +676,13 @@
     <footer>
       <div class="container">
         <div class="footer-content">
+          <p class="footer-locations">
+            Explore more Bay Area service pages:
+            <a href="./index.html">Bay Area Home</a> ·
+            <a href="./bay-area-wedding-photo-booth.html">Bay Area Weddings</a> ·
+            <a href="./san-leandro-photo-booth-rental.html">San Leandro</a> ·
+            <a href="./pleasanton-photo-booth-rental.html">Pleasanton (Casa Real &amp; Palm Event Center)</a>
+          </p>
           <div class="footer-nav">
             <div>
               <h5 class="gradient">Follow Us!</h5>
@@ -372,6 +742,9 @@
       </div>
     </footer>
 
+    <script src="./assets/js/fslightbox.js"></script>
     <script src="./assets/js/navigation.js"></script>
+    <script src="./assets/js/formspree-ajax.js?v=20261009"></script>
+    <script src="./assets/js/availability.js?v=20261109-notice"></script>
   </body>
 </html>

@@ -726,11 +726,11 @@
       }
 
       .city-list {
-        display: none;
-        max-width: 720px;
-        margin: 0 auto;
+        display: block;
+        max-width: 760px;
+        margin: 26px auto 0;
         text-align: center;
-        font-size: 1.05rem;
+        font-size: 1.02rem;
         line-height: 1.65;
         color: var(--ink);
       }
@@ -741,6 +741,7 @@
       }
 
       .faq-grid .card p a,
+      .city-grid .card a,
       .light-band .section-head p a,
       .city-list a {
         text-decoration: underline;
@@ -1434,11 +1435,12 @@
         }
 
         .city-grid {
-          display: none;
+          grid-template-columns: 1fr;
+          gap: 14px;
         }
 
-        .city-list {
-          display: block;
+        .city-grid .card {
+          padding: 18px 20px;
         }
 
         .hero {
@@ -2688,16 +2690,16 @@
             <h2>Wedding photo booth service across the Bay Area</h2>
             <p>
               From San Francisco hotel receptions to East Bay (<a href="./alameda-photo-booth-rental.html">Alameda</a>, <a href="./san-leandro-photo-booth-rental.html">San Leandro</a>), South Bay,
-              Peninsula, and Tri-Valley celebrations, we bring the booth,
+              Peninsula, and Tri-Valley (<a href="./pleasanton-photo-booth-rental.html">Pleasanton</a>) celebrations, we bring the booth,
               backdrop, prints, props, and attendant to your wedding venue.
             </p>
           </div>
 
           <div class="city-grid">
             <div class="card"><h3>San Francisco</h3><p>Rooftop receptions, historic hotel ballrooms like the Fairmont or Mark Hopkins, SF City Hall, and premier SF wedding venues.</p></div>
-            <div class="card"><h3>Oakland</h3><p>East Bay country clubs, estate settings, and waterfront reception spaces like Fairview Metropolitan or Joaquin Miller park.</p></div>
+            <div class="card"><h3>Oakland &amp; East Bay</h3><p>Country clubs, redwoods, and bayside venues like Fairview Metropolitan or Joaquin Miller, plus our local hubs in <a href="./alameda-photo-booth-rental.html">Alameda</a> and <a href="./san-leandro-photo-booth-rental.html">San Leandro</a>.</p></div>
             <div class="card"><h3>San Jose</h3><p>Grand Silicon Valley estate weddings at Hayes Mansion, foothill golf clubs like Cinnabar Hills, and modern urban venues.</p></div>
-            <div class="card"><h3>Pleasanton</h3><p>Livermore Valley Wine Country estates like Palm Event Center, Tri-Valley country clubs, winery ceremonies, and private weddings.</p></div>
+            <div class="card"><h3><a href="./pleasanton-photo-booth-rental.html">Pleasanton</a></h3><p>Livermore Valley Wine Country estates like <a href="./pleasanton-photo-booth-rental.html">Casa Real at Ruby Hill Winery and Palm Event Center</a>, Tri-Valley country clubs, and private weddings.</p></div>
             <div class="card"><h3>Fremont</h3><p>Grand banquet halls, luxury ballrooms like Paradise Ballrooms or Royal Palace, and historic Sunol estate weddings near Niles Canyon.</p></div>
             <div class="card"><h3>Berkeley</h3><p>Intimate garden weddings, historic spots like Berkeley City Club, and scenic nature venues like Tilden Park's Brazilian Room.</p></div>
             <div class="card"><h3>San Mateo</h3><p>Peninsula hotel ballrooms, coastal celebrations, and historic garden estates like Kohl Mansion in Burlingame.</p></div>
@@ -2707,7 +2709,7 @@
           <p class="city-list">
             Serving wedding venues across
             <strong>San Francisco</strong>, <strong>Oakland</strong>,
-            <strong>San Jose</strong>, <strong>Pleasanton</strong>,
+            <strong>San Jose</strong>, <strong><a href="./pleasanton-photo-booth-rental.html">Pleasanton</a></strong>,
             <strong>Fremont</strong>, <strong>Berkeley</strong>,
             <strong>San Mateo</strong>, <strong><a href="./alameda-photo-booth-rental.html">Alameda</a></strong>,
             <strong><a href="./san-leandro-photo-booth-rental.html">San Leandro</a></strong>, and nearby Bay Area cities.

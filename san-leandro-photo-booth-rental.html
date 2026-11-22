@@ -28,8 +28,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="preload" as="image" href="./assets/images/photobooth.jpg" fetchpriority="high" />
+    <link rel="apple-touch-icon" href="./assets/images/apple_touch.png" />
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <meta name="author" content="Handsome Photobooth" />
+    <meta name="geo.region" content="US-CA" />
+    <meta name="geo.placename" content="San Leandro, CA" />
+    <meta name="geo.position" content="37.7241753;-122.1549178" />
+    <meta name="ICBM" content="37.7241753, -122.1549178" />
+    <meta name="theme-color" content="#ff6b6b" />
 
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:url" content="https://handsomephotobooth.com/san-leandro-photo-booth-rental.html" />
@@ -47,7 +54,24 @@
       property="og:image"
       content="https://handsomephotobooth.com/assets/images/photobooth.jpg"
     />
+    <meta
+      property="og:image:alt"
+      content="Handsome Photobooth open-air DSLR setup with studio lighting and backdrop for San Leandro events"
+    />
     <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="San Leandro Photo Booth Rental for Weddings &amp; Events"
+    />
+    <meta
+      name="twitter:description"
+      content="San Leandro photo booth rental with DSLR photos, unlimited prints, custom templates, props, and an attendant. Explore the $899 three-hour package and check your date."
+    />
+    <meta
+      name="twitter:image"
+      content="https://handsomephotobooth.com/assets/images/photobooth.jpg"
+    />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -67,16 +91,55 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "WebPage",
+            "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#webpage",
+            "url": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html",
+            "name": "San Leandro Wedding & Event Photo Booth Rental | Handsome Photobooth",
+            "description": "San Leandro photo booth rental with DSLR photos, unlimited prints, custom templates, props, and an attendant. Explore the $899 three-hour package and check your date.",
+            "dateModified": "2026-11-21",
+            "inLanguage": "en-US",
+            "about": {
+              "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#business"
+            },
+            "breadcrumb": {
+              "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#breadcrumb"
+            }
+          },
+          {
             "@type": "LocalBusiness",
             "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#business",
             "name": "Handsome Photobooth",
+            "description": "Open-air DSLR photo booth rental company based in San Leandro, CA serving East Bay weddings, corporate events, and private celebrations with instant prints, custom templates, QR sharing, and an attendant.",
             "url": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html",
+            "logo": "https://handsomephotobooth.com/assets/images/logo.png",
             "image": "https://handsomephotobooth.com/assets/images/photobooth.jpg",
             "priceRange": "$899",
             "email": "leo@handsomephotobooth.com",
             "parentOrganization": {
               "@id": "https://handsomephotobooth.com/#business"
             },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "leo@handsomephotobooth.com",
+              "areaServed": "US-CA",
+              "availableLanguage": ["en", "zh"]
+            },
+            "knowsAbout": [
+              "San Leandro photo booth rental",
+              "East Bay wedding photo booths",
+              "Corporate event photo booths",
+              "Instant 2x6 and 4x6 photo prints",
+              "Custom photo booth templates",
+              "DSLR event photography"
+            ],
+            "sameAs": [
+              "https://www.instagram.com/handsomephotobooth/",
+              "https://www.facebook.com/handsomephotobooth",
+              "https://www.theknot.com/marketplace/handsome-photobooth-san-leandro-ca-2069091",
+              "https://www.weddingwire.com/biz/handsome-photobooth/e9b136802e0a665e.html",
+              "https://www.yelp.com/biz/handsome-photobooth-san-leandro"
+            ],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "1415 E 14th St",
@@ -91,32 +154,95 @@
               "longitude": -122.1549178
             },
             "hasMap": "https://www.google.com/maps/search/?api=1&query=Handsome+Photobooth&query_place_id=ChIJ_ddK0IenxGMRfHvdMTvcMEM",
-            "areaServed": {
-              "@type": "City",
-              "name": "San Leandro"
-            }
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "San Leandro"
+              },
+              {
+                "@type": "City",
+                "name": "Oakland"
+              },
+              {
+                "@type": "City",
+                "name": "Castro Valley"
+              },
+              {
+                "@type": "City",
+                "name": "San Lorenzo"
+              },
+              {
+                "@type": "City",
+                "name": "Hayward"
+              }
+            ]
           },
           {
             "@type": "Service",
+            "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#service",
             "name": "San Leandro Photo Booth Rental for Weddings & Events",
             "serviceType": "Photo Booth Rental",
+            "description": "Three-hour DSLR open-air photo booth rental delivered to San Leandro and East Bay venues with studio lighting, unlimited prints, custom templates, 70+ props, QR downloads, and an attendant.",
             "provider": {
               "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#business"
             },
-            "areaServed": {
-              "@type": "City",
-              "name": "San Leandro"
-            },
-            "offers": {
-              "@type": "Offer",
-              "name": "3 Hours Glam Package",
-              "price": 899,
-              "priceCurrency": "USD",
-              "url": "https://handsomephotobooth.com/#pricing"
-            }
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "San Leandro"
+              },
+              {
+                "@type": "City",
+                "name": "Oakland"
+              },
+              {
+                "@type": "City",
+                "name": "Castro Valley"
+              },
+              {
+                "@type": "City",
+                "name": "San Lorenzo"
+              },
+              {
+                "@type": "City",
+                "name": "Hayward"
+              }
+            ],
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "3 Hours Glam Package",
+                "price": 899,
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#package-summary"
+              },
+              {
+                "@type": "Offer",
+                "name": "Additional Hour",
+                "price": 150,
+                "priceCurrency": "USD",
+                "url": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#package-summary"
+              },
+              {
+                "@type": "Offer",
+                "name": "Photo Album with All Pictures",
+                "price": 49,
+                "priceCurrency": "USD",
+                "url": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#package-summary"
+              },
+              {
+                "@type": "Offer",
+                "name": "Scrapbook Service",
+                "price": 99,
+                "priceCurrency": "USD",
+                "url": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#package-summary"
+              }
+            ]
           },
           {
             "@type": "BreadcrumbList",
+            "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -134,6 +260,7 @@
           },
           {
             "@type": "FAQPage",
+            "@id": "https://handsomephotobooth.com/san-leandro-photo-booth-rental.html#faq",
             "mainEntity": [
               {
                 "@type": "Question",
@@ -153,10 +280,26 @@
               },
               {
                 "@type": "Question",
-                "name": "Do you bring the photo booth to San Leandro weddings and company events?",
+                "name": "Do you bring the photo booth to San Leandro weddings, company events, and nearby East Bay cities?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Our team delivers, sets up, attends, and breaks down the booth at your San Leandro or East Bay venue. Share your venue address, parking and load-in instructions, and event schedule when requesting a quote."
+                  "text": "Yes. From our E 14th St location in San Leandro, our team delivers, sets up, attends, and breaks down the booth across San Leandro, Oakland, Castro Valley, San Lorenzo, Hayward, and the wider Bay Area."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How far in advance should we book and what deposit is required?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Popular spring, summer, and fall weekend dates typically book 4 to 9 months in advance. A 50% deposit with a signed agreement secures your date, and the remaining balance is due 30 days before your event."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if our San Leandro venue has limited Wi-Fi or is near the waterfront?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "DSLR capture and dye-sublimation printing run locally without internet, and we can use a mobile hotspot for QR downloads when venue Wi-Fi is limited. For bayside or patio spaces near the San Leandro Marina, confirm wind shelter and an indoor backup spot with your coordinator."
                 }
               }
             ]
@@ -164,36 +307,10 @@
         ]
       }
     </script>
-  <link rel="stylesheet" href="./assets/css/seo-guides.css?v=20261110" />
+  <link rel="stylesheet" href="./assets/css/seo-guides.css?v=20261121b" />
   </head>
 
-  <body class="article-page">
-    <div id="fb-root"></div>
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "102230392638740");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v15.0",
-        });
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-
+  <body class="article-page city-landing">
     <header>
       <div class="nav-container">
         <div class="container">
@@ -206,7 +323,7 @@
                 height="79"
               />
             </a>
-            <a href="https://handsomephotobooth.com/#contact" class="btn_top"
+            <a href="#contact" class="btn_top"
               >Contact Us</a
             >
             <ul class="nav-list">
@@ -217,14 +334,14 @@
               </li>
               <li>
                 <a
-                  href="https://handsomephotobooth.com/#pricing"
+                  href="#package-summary"
                   class="nav-link"
-                  >Package & Equipment</a
+                  >Package &amp; Equipment</a
                 >
               </li>
               <li>
                 <a
-                  href="https://handsomephotobooth.com/#contact"
+                  href="#contact"
                   class="nav-link"
                   >Contact Us</a
                 >
@@ -252,10 +369,19 @@
       <section class="hero-section" id="home">
         <div class="container">
           <div class="hero-content">
-            <a href="https://handsomephotobooth.com/"
-              >Home</a
-            >
+            <p class="hero-breadcrumb">
+              <a href="https://handsomephotobooth.com/">Home</a>
+              <span aria-hidden="true">/</span>
+              <span>San Leandro, CA</span>
+            </p>
             <h1>San Leandro Photo Booth Rental for Weddings &amp; Events</h1>
+            <p class="hero-lead">
+              Open-air DSLR photo booth delivered from our E 14th St location in San Leandro to East Bay weddings, corporate events, and private celebrations—with unlimited prints, custom templates, 70+ props, QR sharing, and an attendant.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#contact" class="city-btn-primary">Check Availability &amp; Get Quote</a>
+              <a href="#package-summary" class="city-btn-secondary">See $899 Package Details</a>
+            </div>
           </div>
         </div>
       </section>
@@ -263,20 +389,84 @@
       <section class="article-section">
         <div class="container">
           <div class="article-content">
-            <div class="article-img">
+            <figure class="article-img">
               <img
                 src="./assets/images/photobooth.jpg"
-                alt="Handsome Photobooth equipment and open-air setup"
+                alt="Handsome Photobooth open-air DSLR setup with studio lighting and backdrop for San Leandro events"
                 width="1729"
                 height="1297"
+                fetchpriority="high"
                 decoding="async"
               />
-            </div>
+              <figcaption>Open-air DSLR booth, studio flash lighting, backdrop, and instant dye-sublimation printer brought directly to your venue.</figcaption>
+            </figure>
+
+            <section class="city-review-strip" aria-labelledby="san-leandro-reviews-heading">
+              <h2 id="san-leandro-reviews-heading">5-star rated across Bay Area wedding &amp; event platforms</h2>
+              <div class="review-platforms">
+                <div class="review-platform review-platform--knot">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/the-knot.svg" alt="The Knot" width="300" height="67" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">194 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.theknot.com/marketplace/handsome-photobooth-san-leandro-ca-2069091" target="_blank" rel="noopener noreferrer" aria-label="Read Handsome Photobooth reviews on The Knot"><span>Read reviews &#8599;</span></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--wire">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/weddingwire.png" alt="WeddingWire" width="190" height="190" loading="lazy" decoding="async" /><span aria-hidden="true">WeddingWire</span>
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">194 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.weddingwire.com/biz/handsome-photobooth/e9b136802e0a665e.html" target="_blank" rel="noopener noreferrer" aria-label="Read Handsome Photobooth reviews on WeddingWire"><span>Read reviews &#8599;</span></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--yelp">
+                  <span class="review-brand">
+                    <span aria-hidden="true">Yelp</span><img src="./assets/images/reviews/yelp.svg" alt="Yelp" width="1899" height="2500" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">40 reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.yelp.com/biz/handsome-photobooth-san-leandro" target="_blank" rel="noopener noreferrer" aria-label="Read San Leandro reviews on Yelp"><span>San Leandro Yelp &#8599;</span></a>
+                  </div>
+                </div>
+                <div class="review-platform review-platform--google">
+                  <span class="review-brand">
+                    <img src="./assets/images/reviews/google.png" alt="Google" width="184" height="60" loading="lazy" decoding="async" />
+                  </span>
+                  <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
+                    <strong>5.0</strong>
+                    <span class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                  <span class="review-count">100+ reviews</span>
+                  <div class="review-links">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ_ddK0IenxGMRfHvdMTvcMEM" target="_blank" rel="noopener noreferrer" aria-label="Read Google reviews for San Leandro"><span>San Leandro</span></a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ7TAsbjaHj4ARqLT78siF4do" target="_blank" rel="noopener noreferrer" aria-label="Read Google reviews for Alameda"><span>Alameda</span></a>
+                  </div>
+                </div>
+              </div>
+              <p class="review-awards"><strong>The Knot Best of Weddings</strong> &amp; <strong>WeddingWire Couples' Choice Awards</strong> · 2024 · 2025 · 2026</p>
+            </section>
+
             <article>
-<p class="article-meta">Updated <time datetime="2026-11-10">November 10, 2026</time> · Handsome Photobooth · San Leandro, CA</p>
-<p><strong>A photo booth for your San Leandro celebration, brought to your event venue.</strong> Handsome Photobooth rents an open-air DSLR booth for weddings, company events, birthdays, and parties. Our San Leandro location is one of two East Bay locations, alongside <a href="./alameda-photo-booth-rental.html">Alameda</a>.</p>
-<p>Our published three-hour Glam Package is <strong>$899</strong>. Send your date, venue, guest count, and preferred hours so we can confirm availability and provide a final quote for your celebration.</p>
-<div class="article-table-wrap">
+<p class="article-meta">Updated <time datetime="2026-11-21">November 21, 2026</time> · Handsome Photobooth · San Leandro, CA</p>
+<p><strong>A studio-quality photo booth for your San Leandro celebration, delivered and attended at your venue.</strong> Handsome Photobooth rents an open-air DSLR photo booth for weddings, corporate events, milestone birthdays, school celebrations, and private parties. Our San Leandro base on E 14th St is one of two East Bay locations alongside <a href="./alameda-photo-booth-rental.html">Alameda</a>, giving us direct access across San Leandro, Oakland, Castro Valley, San Lorenzo, and Hayward, as well as Tri-Valley venues in <a href="./pleasanton-photo-booth-rental.html">Pleasanton</a>.</p>
+<p>Our published three-hour Glam Package is <strong>$899</strong>. Share your event date, venue address, guest count, and preferred operating hours <a href="#contact">in the quote form below</a> so we can confirm availability and provide a written quote.</p>
+
+<div class="article-table-wrap" id="package-summary">
   <table class="article-table">
     <caption>San Leandro photo booth package and setup summary</caption>
     <thead><tr><th scope="col">Detail</th><th scope="col">Published specification</th></tr></thead>
@@ -289,22 +479,203 @@
     </tbody>
   </table>
 </div>
-<p class="article-cta"><a href="./index.html#contact">Check availability for your San Leandro event</a></p>
-<h2>What comes with the photo booth?</h2><ul><li>Three operating hours with a professional booth attendant</li><li>DSLR photos, studio lighting, and a modern backdrop</li><li>Unlimited instant 2 × 6 strips or 4 × 6 prints</li><li>A personalized print template and a selection of props</li><li>QR downloads and a downloadable digital album</li><li>Setup and breakdown</li></ul>
-<p>An additional hour is listed at $150. Photo album and scrapbook options are available separately. See the <a href="./index.html#pricing">current package and equipment</a> and <a href="./blog/blog_3.html">cost guide</a> before choosing your options. Confirm travel and venue-specific arrangements in your final quote.</p>
-<h2>Planning a San Leandro reception</h2><p>Start with the venue’s room layout and load-in instructions. At a banquet room, community space, or private celebration, the best booth spot is one guests can see without blocking dinner tables or service routes. Share the building entrance, parking arrangements, stairs or elevator details, and the person who can confirm placement on the day.</p><p>Leave a separate waiting area next to the booth. For a larger guest list, discuss whether three operating hours fit the reception schedule or an additional hour would be useful. The right answer depends on when guests are free to participate, rather than guest count alone.</p><h2>Give guests both prints and digital memories</h2><p>Instant prints provide something guests can take home during the celebration. QR downloads and the digital album make it easier to keep and share the photos afterward. Our package offers 2 × 6 strips or 4 × 6 prints; ask about the format that best fits your custom design. The optional album and scrapbook serve different purposes, so discuss how you want to save your own copies.</p>
-<h2>Space, power, and setup</h2><p>Allow roughly 10 ft × 10 ft for the booth, backdrop, and prop table, with extra space for guests waiting. We need one standard power outlet within reach. Venue Wi-Fi is helpful for QR downloads, and a mobile hotspot can be used when venue Wi-Fi is limited; discuss connectivity at the specific venue with us.</p>
-<p>Send your coordinator our <a href="./blog/wedding-photo-booth-setup-checklist.html">setup checklist</a> and review the <a href="./blog/wedding-photo-booth-timeline.html">wedding timeline guide</a> for operating-hour ideas. For weddings, the <a href="./bay-area-wedding-photo-booth.html">wedding package page</a> includes more planning details.</p>
-<h2>Our San Leandro location</h2><p><strong>Handsome Photobooth</strong><br>1415 E 14th St<br>San Leandro, CA 94578</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ_ddK0IenxGMRfHvdMTvcMEM">View our San Leandro Google listing and reviews</a>. Event rentals are coordinated in advance and brought to your venue; contact us to discuss your celebration details.</p>
+
+<h2>What comes with the $899 Glam Package?</h2>
+<ul>
+  <li>Three operating hours with a friendly, on-site booth attendant</li>
+  <li>Professional DSLR camera, studio flash lighting, and a modern backdrop</li>
+  <li>Unlimited instant 2 × 6 photo strips or 4 × 6 prints</li>
+  <li>A custom-designed print template tailored to your wedding or event theme, plus 70+ curated props</li>
+  <li>Instant QR code downloads during the event and a full Google Photos digital album within a few days</li>
+  <li>Full delivery, setup (typically one hour before start time), and breakdown</li>
+</ul>
+<p>Need longer coverage or a physical keepsake? Published add-ons are $150 for an additional operating hour, $49 for a photo album with all pictures, and $99 for on-site guestbook scrapbook service. Compare sample combinations in our <a href="./blog/blog_3.html">Bay Area photo booth cost guide</a> or inspect the full <a href="./index.html#pricing">package and equipment showcase</a>.</p>
+
+<h2>Planning for San Leandro &amp; East Bay venues</h2>
+<p>San Leandro celebrations span shoreline clubhouses, community banquet halls, corporate offices, and private venues along the I-880 and I-580 corridors. Sharing a few venue details when booking makes load-in seamless on event day:</p>
+
+<div class="local-venue-grid">
+  <div class="local-venue-card">
+    <h3>San Leandro Marina, Monarch Bay &amp; Bayside Venues</h3>
+    <p>For weddings and banquets near the <strong>San Leandro Marina</strong>, <strong>Monarch Bay Golf Club</strong>, or <strong>Marina Community Center</strong>, placing the booth indoors near the dance floor or bar lounge keeps backdrops steady and studio lighting consistent.</p>
+    <p>If your floor plan includes a covered shoreline patio, confirm wind protection, level flooring, and an indoor backup spot with your coordinator before event day.</p>
+  </div>
+  <div class="local-venue-card">
+    <h3>Downtown E 14th St, Castro Valley, Oakland &amp; Hayward</h3>
+    <p>From downtown San Leandro venues, the <strong>San Leandro Senior Community Center</strong>, and corporate campuses to nearby receptions in <strong>Castro Valley</strong> (such as Redwood Canyon), <strong>Oakland Hills</strong>, <strong>Lake Merritt</strong>, and <strong>Hayward</strong>, share vendor loading access, stairs or elevator details, and parking instructions.</p>
+    <p>Reserve queue space beside our 10 ft × 10 ft footprint so guests picking props never block catering service or main exits.</p>
+  </div>
+</div>
+
+<h2>Popular San Leandro schedules &amp; package options</h2>
+<p>Match your operating hours to when guests are free to mingle rather than seated for dinner or speeches:</p>
+<div class="article-table-wrap">
+  <table class="article-table">
+    <caption>Common East Bay celebration formats using published pricing</caption>
+    <thead>
+      <tr>
+        <th scope="col">Event type</th>
+        <th scope="col">Recommended setup</th>
+        <th scope="col">Published subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Corporate, Birthday, or School Party</th>
+        <td>3-Hour Glam Package with branded 4 × 6 prints, custom logo/theme border, QR downloads, and 70+ props</td>
+        <td>$899</td>
+      </tr>
+      <tr>
+        <th scope="row">Wedding Reception + Guestbook</th>
+        <td>3-Hour Glam Package (opened post-dinner into dancing) + Scrapbook Service ($99) with duplicate strip &amp; guest signatures</td>
+        <td>$998</td>
+      </tr>
+      <tr>
+        <th scope="row">Extended 150+ Guest Celebration</th>
+        <td>3-Hour Glam Package + 1 Additional Operating Hour ($150) spanning cocktail transition through late-night dancing</td>
+        <td>$1,049</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Prints, custom templates, and real event moments</h2>
+<p>Every booking includes custom template artwork matched to your colors, names, company logo, or celebration theme—tap any sample below to inspect print clarity and layout details:</p>
+
+<div class="local-gallery-grid">
+  <figure>
+    <a data-fslightbox="san-leandro-gallery" href="./assets/images/gallery/sample/2ba.png">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/sample/2ba-480.webp 480w, ./assets/images/thumbnails/gallery/sample/2ba-960.webp 960w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/sample/2ba.png" alt="Wedding reception guests holding printed photo booth strips" width="1800" height="1200" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>Crisp DSLR group portrait with instant printed strip</figcaption>
+  </figure>
+  <figure>
+    <a data-fslightbox="san-leandro-gallery" href="./assets/images/gallery/sample/3.jpeg">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/sample/3-480.webp 480w, ./assets/images/thumbnails/gallery/sample/3-960.webp 960w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/sample/3.jpeg" alt="Group portrait captured with DSLR lighting in an open-air photo booth" width="1800" height="1200" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>Open-air backdrop fits full friend &amp; family groups</figcaption>
+  </figure>
+  <figure>
+    <a data-fslightbox="san-leandro-gallery" href="./assets/images/gallery/wedding/3.png">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/wedding/3-480.webp 480w, ./assets/images/thumbnails/gallery/wedding/3-960.webp 960w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/wedding/3.png" alt="Custom modern wedding photo booth strip template sample" width="1398" height="936" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>Custom 2 × 6 &amp; 4 × 6 wedding template design</figcaption>
+  </figure>
+  <figure>
+    <a data-fslightbox="san-leandro-gallery" href="./assets/images/gallery/other/7.png">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/gallery/other/7-480.webp 480w, ./assets/images/thumbnails/gallery/other/7-879.webp 879w" sizes="(max-width: 900px) 46vw, 210px" />
+        <img src="./assets/images/gallery/other/7.png" alt="Branded corporate event photo booth print layout" width="879" height="613" loading="lazy" decoding="async" />
+      </picture>
+    </a>
+    <figcaption>Branded company party &amp; corporate event layout</figcaption>
+  </figure>
+</div>
+
+<div class="local-quote-card">
+  <blockquote>
+    “On the day of the event Leo and his team arrived on time and got the photobooth set up quickly and let me tell you it was an INSTANT HIT! So many guests came to tell me compliments they had about Leo and his assistant from helping them choose props and coaching them on how to do poses.”
+  </blockquote>
+  <cite>— Maggie C., Verified 5-Star Client Review</cite>
+</div>
+
+<h2>Space, power, and timeline checklist</h2>
+<p>Allow approximately 10 ft × 10 ft for the booth, backdrop, and prop table, plus separate space for guests waiting in line, and one standard power outlet within reach. Venue Wi-Fi helps speed up live QR downloads, and a mobile hotspot can be used when venue Wi-Fi is limited.</p>
+<p>Send your coordinator our <a href="./blog/wedding-photo-booth-setup-checklist.html">venue setup checklist</a> and review the <a href="./blog/wedding-photo-booth-timeline.html">wedding photo booth timeline guide</a> to pick the best three-hour window around cocktail hour, dinner, and dancing. Planning a wedding reception? Explore our <a href="./bay-area-wedding-photo-booth.html">Bay Area wedding photo booth guide</a> as well.</p>
+
+<h2>Our San Leandro location</h2>
+<p><strong>Handsome Photobooth</strong><br />1415 E 14th St<br />San Leandro, CA 94578</p>
+<p><a href="https://www.google.com/maps/search/?api=1&amp;query=Handsome+Photobooth&amp;query_place_id=ChIJ_ddK0IenxGMRfHvdMTvcMEM">View our San Leandro Google listing and reviews</a>. All rentals are reserved in advance and delivered to your event venue.</p>
+
 <h2>San Leandro Photo Booth Rental FAQs</h2>
 <h3>How much does a photo booth rental cost in San Leandro?</h3>
 <p>Handsome Photobooth's published 3-Hour Glam Package is $899, including DSLR photos, studio lighting, unlimited 2 × 6 or 4 × 6 instant prints, custom templates, over 70 props, an on-site attendant, QR downloads, a digital album, and setup and breakdown.</p>
 <h3>How much space and power does the photo booth need at a San Leandro venue?</h3>
 <p>Plan for approximately 10 ft × 10 ft for the booth, backdrop, and prop table, plus separate space for guests waiting in line, and one standard power outlet within reach.</p>
-<h3>Do you bring the photo booth to San Leandro weddings and company events?</h3>
-<p>Yes. Our team delivers, sets up, attends, and breaks down the booth at your San Leandro or East Bay venue. Share your venue address, parking and load-in instructions, and event schedule when requesting a quote.</p>
-<h2>How to request your quote</h2><ol><li>Share your date, venue address, event type, and approximate guest count.</li><li>Tell us your preferred operating hours, print format, and any optional extras.</li><li>We confirm availability, setup logistics, and the final booking details.</li></ol>
-<p class="article-cta"><a href="./index.html#contact">Request your San Leandro photo booth quote</a> or email <a href="mailto:leo@handsomephotobooth.com">leo@handsomephotobooth.com</a>. We also serve Bay Area events beyond our two locations; tell us where your celebration is taking place.</p></article>
+<h3>Do you bring the photo booth to San Leandro weddings, company events, and nearby East Bay cities?</h3>
+<p>Yes. From our E 14th St location in San Leandro, our team delivers, sets up, attends, and breaks down the booth across San Leandro, Oakland, Castro Valley, San Lorenzo, Hayward, and the wider Bay Area.</p>
+<h3>How far in advance should we book and what deposit is required?</h3>
+<p>Popular spring, summer, and fall weekend dates typically book 4 to 9 months in advance. A 50% deposit with a signed agreement secures your date, and the remaining balance is due 30 days before your event.</p>
+<h3>What if our San Leandro venue has limited Wi-Fi or is near the waterfront?</h3>
+<p>DSLR capture and dye-sublimation printing run locally without internet, and we can use a mobile hotspot for QR downloads when venue Wi-Fi is limited. For bayside or patio spaces near the San Leandro Marina, confirm wind shelter and an indoor backup spot with your coordinator.</p>
+</article>
+          </div>
+        </div>
+      </section>
+
+      <section class="local-contact-section" id="contact">
+        <div class="container">
+          <div class="local-contact-head">
+            <h2 class="gradient">Check Availability for Your San Leandro Event</h2>
+            <p>Share your date, venue, and guest count below—we reply within 12 hours with availability and a custom quote.</p>
+            <p id="booked-notice" class="booked-notice-inline" hidden><strong>Fully booked:</strong> <span data-booked-dates></span></p>
+          </div>
+
+          <div class="local-contact-box">
+            <div class="local-contact-panel">
+              <h3>Quick booking details</h3>
+              <ul class="local-quick-list">
+                <li><strong>$899 3-Hour Glam Package</strong> includes DSLR photos, unlimited prints, custom template, 70+ props, QR gallery, setup, attendant, and breakdown.</li>
+                <li><strong>Optional extras:</strong> Additional hour ($150), Photo album ($49), or Scrapbook service ($99).</li>
+                <li><strong>Venue requirements:</strong> Approximately 10 ft × 10 ft + 1 standard power outlet.</li>
+                <li><strong>Simple reservation:</strong> A 50% deposit and signed agreement secure your date; balance due 30 days before your event.</li>
+                <li>Prefer email? Reach Leo directly at <a href="mailto:leo@handsomephotobooth.com">leo@handsomephotobooth.com</a>.</li>
+              </ul>
+            </div>
+
+            <div class="local-form-column">
+              <div
+                class="form-status"
+                data-form-status
+                role="status"
+                aria-live="polite"
+                tabindex="-1"
+              ></div>
+              <form
+                action="https://formspree.io/f/mgeqkkny"
+                method="POST"
+                id="san-leandro-quote-form"
+                data-ajax-form
+                data-success-title="Thank you!"
+                data-success-message="We received your San Leandro inquiry and will reply within 12 hours."
+              >
+                <input type="hidden" name="Submitted From" value="San Leandro Page" />
+                <input type="text" name="Name" placeholder="First &amp; Last Name*" required />
+                <input type="email" name="Email" placeholder="Email*" required />
+                <select name="Source" required>
+                  <option value="" selected disabled hidden>How did you hear about us?*</option>
+                  <option value="Google">Google</option>
+                  <option value="Knot/WeddingWire">Knot/Wedding Wire</option>
+                  <option value="ChatGPT/Claude">ChatGPT/Claude</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Yelp">Yelp</option>
+                  <option value="Referral">Referral</option>
+                </select>
+                <input type="text" name="Event Type & Location" placeholder="Event Type &amp; Venue (e.g., San Leandro Wedding)*" required />
+                <input type="text" name="Event Date" placeholder="Event Date*" required />
+                <select name="Number of Guest" required>
+                  <option value="" selected disabled hidden>Number of Guests?*</option>
+                  <option value="50 - 100">50 - 100</option>
+                  <option value="101 - 150">101 - 150</option>
+                  <option value="151 - 200">151 - 200</option>
+                  <option value="201 - 250">201 - 250</option>
+                  <option value="251 - 300">251 - 300</option>
+                  <option value="301 - 350">301 - 350</option>
+                  <option value=">350">&gt; 350 (Please Specify Total Below)</option>
+                </select>
+                <textarea name="Info" placeholder="Tell us your estimated booth start time, print preference, or any questions*" required></textarea>
+                <button type="submit" class="city-btn-primary" data-sending-text="Sending...">Request San Leandro Quote</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -313,6 +684,13 @@
     <footer>
       <div class="container">
         <div class="footer-content">
+          <p class="footer-locations">
+            Explore more Bay Area service pages:
+            <a href="./index.html">Bay Area Home</a> ·
+            <a href="./bay-area-wedding-photo-booth.html">Bay Area Weddings</a> ·
+            <a href="./alameda-photo-booth-rental.html">Alameda</a> ·
+            <a href="./pleasanton-photo-booth-rental.html">Pleasanton (Casa Real &amp; Palm Event Center)</a>
+          </p>
           <div class="footer-nav">
             <div>
               <h5 class="gradient">Follow Us!</h5>
@@ -372,6 +750,9 @@
       </div>
     </footer>
 
+    <script src="./assets/js/fslightbox.js"></script>
     <script src="./assets/js/navigation.js"></script>
+    <script src="./assets/js/formspree-ajax.js?v=20261009"></script>
+    <script src="./assets/js/availability.js?v=20261109-notice"></script>
   </body>
 </html>

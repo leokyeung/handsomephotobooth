@@ -8,7 +8,13 @@ const script = fs.readFileSync(path.join(root, 'assets/js/formspree-ajax.js'), '
 const tick = () => new Promise(resolve => setImmediate(resolve));
 
 (async () => {
-  for (const file of ['index.html', 'bay-area-wedding-photo-booth.html']) {
+  for (const file of [
+    'index.html',
+    'bay-area-wedding-photo-booth.html',
+    'alameda-photo-booth-rental.html',
+    'san-leandro-photo-booth-rental.html',
+    'pleasanton-photo-booth-rental.html',
+  ]) {
     for (const result of ['success', 'failure', 'network-failure', 'analytics-failure']) {
       const pagePath = file === 'index.html' ? '/' : '/' + file;
       const dom = new JSDOM(fs.readFileSync(path.join(root, file), 'utf8'), { url: 'https://handsomephotobooth.com' + pagePath, runScripts: 'outside-only', pretendToBeVisual: true });
