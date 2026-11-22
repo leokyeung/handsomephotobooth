@@ -28,6 +28,8 @@
   375px and 1280px.
 - Centered the logo, rating, review count, and links in each review card.
 - Removed the "See the $899 package" hero link; the header nav still links to the package card.
+- Renamed the generic "Plan your booth." heading to "Pleasanton photo booth
+  package & pricing" to strengthen the pricing-section signal.
 
 ## 2026-11-22: Pleasanton page: real photos, venue facts, trimmed copy
 
