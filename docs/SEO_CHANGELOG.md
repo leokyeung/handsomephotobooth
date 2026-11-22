@@ -17,6 +17,10 @@
   (city grid now visible on mobile), cost guide, timeline, checklist, and
   open-air guides. Added the Pleasanton URL to `sitemap.xml` and `llms.txt`.
 - Extended inquiry/availability tests to the three city pages.
+- Follow-up: city page FAQs are now closed-by-default expandable accordions
+  (native `details`/`summary`, answers stay in the HTML and match `FAQPage`
+  schema); removed the duplicate "Quick booking details" panel in favor of a
+  one-line summary above a centered form; form button label is now "Submit".
 - Validation: `python3 scripts/check_seo.py` (12 pages), `npm test`, and
   desktop/mobile browser checks (no horizontal overflow at 1280/768/390/320px,
   intercepted `generate_lead` event, lightbox opens).

@@ -46,6 +46,8 @@ Suggested next topics: prints versus digital sharing; planning a photo booth for
 
 ## Measurement and access
 
+GitHub account: use the `leokyeung` account for all git push, `gh`, PR, and merge operations in this repository. The `lyeung_LinkedIn` account is often the active `gh` login but has no write access (push returns 403). Without changing the active login, run commands with `GH_TOKEN=$(gh auth token --user leokyeung)` and `git -c credential.helper= -c credential.helper='!gh auth git-credential' push ...`.
+
 Track non-branded clicks, relevant query groups, page CTR, and completed inquiries, not article volume alone. Google positions are averages and vary by searcher and location. Establish conversion data once Google Analytics is connected in GSC Wizard. `generate_lead` is emitted only after an accepted Formspree response, with a form identifier and page path; mark it as a key event in GA4 using the owner's Analytics account. The initial session could not read GA4 because Analytics consent was missing.
 
 Google Business Profile management access is separate from public listing URLs. Update the San Leandro website link to HTTPS and consider pointing each profile at its corresponding live location page. Do not claim these updates happened without a successful write and verification. Maintain genuine reviews and current profile information; do not buy reviews, create fake links, or send messages to clients or venues without explicit sending authorization.
