@@ -28,7 +28,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" href="./assets/images/pleasanton-ruby-hill-wedding-photo-booth.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" type="image/webp" imagesrcset="./assets/images/thumbnails/venues/casa-real-ruby-hill-wedding-photo-booth-strip-800.webp 800w, ./assets/images/thumbnails/venues/casa-real-ruby-hill-wedding-photo-booth-strip-1152.webp 1152w" imagesizes="(max-width: 960px) 100vw, 960px" fetchpriority="high" />
     <link rel="apple-touch-icon" href="./assets/images/apple_touch.png" />
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
     <meta name="author" content="Handsome Photobooth" />
@@ -50,11 +50,11 @@
     />
     <meta
       property="og:image"
-      content="https://handsomephotobooth.com/assets/images/pleasanton-ruby-hill-wedding-photo-booth.jpg"
+      content="https://handsomephotobooth.com/assets/images/casa-real-ruby-hill-wedding-photo-booth-strip.jpg"
     />
     <meta
       property="og:image:alt"
-      content="Wedding couple smiling in a four-photo strip from Handsome Photobooth's open-air DSLR photo booth, captured at Ruby Hill in Pleasanton"
+      content="Wedding couple smiling in a four-photo strip from Handsome Photobooth's open-air DSLR photo booth at Casa Real at Ruby Hill Winery in Pleasanton"
     />
     <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -68,13 +68,13 @@
     />
     <meta
       name="twitter:image"
-      content="https://handsomephotobooth.com/assets/images/pleasanton-ruby-hill-wedding-photo-booth.jpg"
+      content="https://handsomephotobooth.com/assets/images/casa-real-ruby-hill-wedding-photo-booth-strip.jpg"
     />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style_blog.css?v=blog-spacing-20261002" />
-    <link rel="stylesheet" href="./assets/css/seo-guides.css?v=20261121e" />
+    <link rel="stylesheet" href="./assets/css/seo-guides.css?v=20261122a" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -111,7 +111,7 @@
             "serviceType": "Wedding and Event Photo Booth Rental",
             "description": "Open-air DSLR photo booth rental serving Pleasanton, Casa Real at Ruby Hill Winery, Palm Event Center in the Vineyard, Livermore Valley wineries, and nearby events.",
             "url": "https://handsomephotobooth.com/pleasanton-photo-booth-rental.html",
-            "image": "https://handsomephotobooth.com/assets/images/pleasanton-ruby-hill-wedding-photo-booth.jpg",
+            "image": "https://handsomephotobooth.com/assets/images/casa-real-ruby-hill-wedding-photo-booth-strip.jpg",
             "provider": {
               "@type": "LocalBusiness",
               "@id": "https://handsomephotobooth.com/#business",
@@ -234,10 +234,10 @@
               },
               {
                 "@type": "Question",
-                "name": "Can you match our Wine Country wedding stationery and handle stone-walled venue Wi-Fi?",
+                "name": "Can you match our wedding stationery and work with limited venue Wi-Fi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Every package includes a custom 2 × 6 strip or 4 × 6 print layout tailored to your colors, florals, and monogram. DSLR capture and instant printing run offline, and we can use a mobile hotspot for QR downloads whenever estate or barrel-room Wi-Fi is limited."
+                  "text": "Yes. Every package includes a custom 2 × 6 strip or 4 × 6 print layout tailored to your colors, florals, and monogram. Venue Wi-Fi is helpful for QR downloads, and we can use a mobile hotspot whenever venue Wi-Fi is limited."
                 }
               }
             ]
@@ -327,14 +327,17 @@
         <div class="container">
           <div class="article-content">
             <figure class="article-img">
-              <img
-                src="./assets/images/pleasanton-ruby-hill-wedding-photo-booth.jpg"
-                alt="Wedding couple smiling in a four-photo strip from Handsome Photobooth's open-air DSLR photo booth, captured at Ruby Hill in Pleasanton"
-                width="1152"
-                height="768"
-                fetchpriority="high"
-                decoding="async"
-              />
+              <picture>
+                <source type="image/webp" srcset="./assets/images/thumbnails/venues/casa-real-ruby-hill-wedding-photo-booth-strip-800.webp 800w, ./assets/images/thumbnails/venues/casa-real-ruby-hill-wedding-photo-booth-strip-1152.webp 1152w" sizes="(max-width: 960px) 100vw, 960px" />
+                <img
+                  src="./assets/images/casa-real-ruby-hill-wedding-photo-booth-strip.jpg"
+                  alt="Wedding couple smiling in a four-photo strip from Handsome Photobooth's open-air DSLR photo booth at Casa Real at Ruby Hill Winery in Pleasanton"
+                  width="1152"
+                  height="768"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </picture>
             </figure>
 
             <section class="city-review-strip" aria-labelledby="pleasanton-reviews-heading">
@@ -418,6 +421,11 @@
 
 <h2 id="venue-experience">Firsthand experience at Palm Event Center &amp; Casa Real</h2>
 <p>We have worked many weddings at both <strong>Palm Event Center in the Vineyard</strong> and <strong>Casa Real at Ruby Hill Winery</strong>. Tell us your venue and date, and we will confirm load-in, booth placement, and power with your venue coordinator ahead of time.</p>
+<p>Where we usually set up the booth:</p>
+<ul>
+  <li><strong>Casa Real at Ruby Hill Winery:</strong> by the door at the entrance, inside the main room.</li>
+  <li><strong>Palm Event Center in the Vineyard:</strong> by the wine barrels, at the far right back of the room.</li>
+</ul>
 
 <p>Celebrating elsewhere in the Tri-Valley? We also serve weddings and events across Pleasanton, Livermore, Dublin, and San Ramon.</p>
 
@@ -428,23 +436,35 @@
 
 <div class="local-gallery-grid">
   <figure>
-    <a data-fslightbox="pleasanton-gallery" href="./assets/images/palm-event-center-wedding-photo-booth-just-married-couple.jpg">
-      <img src="./assets/images/palm-event-center-wedding-photo-booth-just-married-couple.jpg" alt="Bride and groom with a Just Married sign and heart sunglasses in Handsome Photobooth's open-air photo booth at Palm Event Center in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+    <a data-fslightbox="pleasanton-gallery" href="./assets/images/thumbnails/venues/palm-event-center-wedding-photo-booth-just-married-couple-1152.webp">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/venues/palm-event-center-wedding-photo-booth-just-married-couple-480.webp 480w, ./assets/images/thumbnails/venues/palm-event-center-wedding-photo-booth-just-married-couple-720.webp 720w" sizes="(max-width: 600px) 46vw, 420px" />
+        <img src="./assets/images/palm-event-center-wedding-photo-booth-just-married-couple.jpg" alt="Bride and groom with a Just Married sign and heart sunglasses in Handsome Photobooth's open-air photo booth at Palm Event Center in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+      </picture>
     </a>
   </figure>
   <figure>
-    <a data-fslightbox="pleasanton-gallery" href="./assets/images/palm-event-center-wedding-photo-booth-bridesmaids.jpg">
-      <img src="./assets/images/palm-event-center-wedding-photo-booth-bridesmaids.jpg" alt="Bride and bridesmaids blowing kisses in front of a sparkle backdrop at a Handsome Photobooth wedding at Palm Event Center in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+    <a data-fslightbox="pleasanton-gallery" href="./assets/images/thumbnails/venues/palm-event-center-wedding-photo-booth-bridesmaids-1152.webp">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/venues/palm-event-center-wedding-photo-booth-bridesmaids-480.webp 480w, ./assets/images/thumbnails/venues/palm-event-center-wedding-photo-booth-bridesmaids-720.webp 720w" sizes="(max-width: 600px) 46vw, 420px" />
+        <img src="./assets/images/palm-event-center-wedding-photo-booth-bridesmaids.jpg" alt="Bride and bridesmaids blowing kisses in front of a sparkle backdrop at a Handsome Photobooth wedding at Palm Event Center in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+      </picture>
     </a>
   </figure>
   <figure>
-    <a data-fslightbox="pleasanton-gallery" href="./assets/images/casa-real-wedding-photo-booth-guests-with-props.jpg">
-      <img src="./assets/images/casa-real-wedding-photo-booth-guests-with-props.jpg" alt="Wedding guests laughing together with props and signs in a Handsome Photobooth group photo at Casa Real at Ruby Hill Winery in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+    <a data-fslightbox="pleasanton-gallery" href="./assets/images/thumbnails/venues/casa-real-wedding-photo-booth-guests-with-props-1152.webp">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/venues/casa-real-wedding-photo-booth-guests-with-props-480.webp 480w, ./assets/images/thumbnails/venues/casa-real-wedding-photo-booth-guests-with-props-720.webp 720w" sizes="(max-width: 600px) 46vw, 420px" />
+        <img src="./assets/images/casa-real-wedding-photo-booth-guests-with-props.jpg" alt="Wedding guests laughing together with props and signs in a Handsome Photobooth group photo at Casa Real at Ruby Hill Winery in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+      </picture>
     </a>
   </figure>
   <figure>
-    <a data-fslightbox="pleasanton-gallery" href="./assets/images/casa-real-wedding-photo-booth-friends-laughing.jpg">
-      <img src="./assets/images/casa-real-wedding-photo-booth-friends-laughing.jpg" alt="Three wedding guests laughing with a heart sign and prop bottle in a Handsome Photobooth portrait at Casa Real at Ruby Hill Winery in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+    <a data-fslightbox="pleasanton-gallery" href="./assets/images/thumbnails/venues/casa-real-wedding-photo-booth-friends-laughing-1152.webp">
+      <picture>
+        <source type="image/webp" srcset="./assets/images/thumbnails/venues/casa-real-wedding-photo-booth-friends-laughing-480.webp 480w, ./assets/images/thumbnails/venues/casa-real-wedding-photo-booth-friends-laughing-720.webp 720w" sizes="(max-width: 600px) 46vw, 420px" />
+        <img src="./assets/images/casa-real-wedding-photo-booth-friends-laughing.jpg" alt="Three wedding guests laughing with a heart sign and prop bottle in a Handsome Photobooth portrait at Casa Real at Ruby Hill Winery in Pleasanton" width="1152" height="768" loading="lazy" decoding="async" />
+      </picture>
     </a>
   </figure>
 </div>
@@ -458,7 +478,7 @@
 
 <h2>Recommended reception timeline &amp; venue setup</h2>
 <p>For estate and winery weddings in Pleasanton and Livermore, two three-hour schedules work especially well: opening during <strong>cocktail hour into early reception</strong> (great for capturing older relatives and family portraits early) or opening <strong>right after dinner and toasts through peak dancing</strong> (when energy around the dance floor is highest). Read our <a href="./blog/wedding-photo-booth-timeline.html">wedding photo booth timeline guide</a> to compare both options with your planner.</p>
-<p>Setup requires approximately 10 ft × 10 ft for the booth, backdrop, and prop table, plus one standard power outlet within reach. Venue Wi-Fi helps accelerate live QR sharing, and we can use a mobile hotspot whenever vineyard or stone-walled reception connectivity is limited. Share our <a href="./blog/wedding-photo-booth-setup-checklist.html">wedding photo booth setup checklist</a> directly with your venue coordinator.</p>
+<p>Setup requires approximately 10 ft × 10 ft for the booth, backdrop, and prop table, plus one standard power outlet within reach. Venue Wi-Fi helps accelerate live QR sharing, and we can use a mobile hotspot whenever venue connectivity is limited. Share our <a href="./blog/wedding-photo-booth-setup-checklist.html">wedding photo booth setup checklist</a> directly with your venue coordinator.</p>
 
 <h2>Pleasanton Photo Booth Rental FAQs</h2>
 <div class="city-faq">
@@ -479,8 +499,8 @@
     <div class="city-faq-answer"><p>Send your event date, venue, and guest count for a final quote. A 50% deposit with a signed agreement secures your date, and the remaining balance is due 30 days before your event.</p></div>
   </details>
   <details class="city-faq-item">
-    <summary><h3>Can you match our Wine Country wedding stationery and handle stone-walled venue Wi-Fi?</h3></summary>
-    <div class="city-faq-answer"><p>Yes. Every package includes a custom 2 × 6 strip or 4 × 6 print layout tailored to your colors, florals, and monogram. DSLR capture and instant printing run offline, and we can use a mobile hotspot for QR downloads whenever estate or barrel-room Wi-Fi is limited.</p></div>
+    <summary><h3>Can you match our wedding stationery and work with limited venue Wi-Fi?</h3></summary>
+    <div class="city-faq-answer"><p>Yes. Every package includes a custom 2 × 6 strip or 4 × 6 print layout tailored to your colors, florals, and monogram. Venue Wi-Fi is helpful for QR downloads, and we can use a mobile hotspot whenever venue Wi-Fi is limited.</p></div>
   </details>
 </div>
 </article>
@@ -511,7 +531,7 @@
                 id="pleasanton-quote-form"
                 data-ajax-form
                 data-success-title="Thank you!"
-                data-success-message="We received your Pleasanton inquiry and will reply within 12 hours."
+                data-success-message="We received your inquiry and will reply within 12 hours."
               >
                 <input type="hidden" name="Submitted From" value="Pleasanton Page" />
                 <input type="text" name="Name" placeholder="First &amp; Last Name*" required />
@@ -615,9 +635,9 @@
       </div>
     </footer>
 
-    <script src="./assets/js/fslightbox.js"></script>
-    <script src="./assets/js/navigation.js"></script>
-    <script src="./assets/js/formspree-ajax.js?v=20261009"></script>
-    <script src="./assets/js/availability.js?v=20261109-notice"></script>
+    <script src="./assets/js/fslightbox.js" defer></script>
+    <script src="./assets/js/navigation.js" defer></script>
+    <script src="./assets/js/formspree-ajax.js?v=20261009" defer></script>
+    <script src="./assets/js/availability.js?v=20261109-notice" defer></script>
   </body>
 </html>

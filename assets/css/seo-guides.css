@@ -750,6 +750,7 @@
   font-size: 0.98rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: center;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.35s ease, transform 0.35s ease;
