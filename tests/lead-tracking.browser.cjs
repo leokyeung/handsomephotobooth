@@ -6,7 +6,13 @@ const base = process.env.SITE_TEST_URL || 'http://127.0.0.1:8765';
 (async () => {
   const browser = await chromium.launch({ headless: true });
   try {
-    for (const path of ['/', '/bay-area-wedding-photo-booth.html']) {
+    for (const path of [
+      '/',
+      '/bay-area-wedding-photo-booth.html',
+      '/alameda-photo-booth-rental.html',
+      '/san-leandro-photo-booth-rental.html',
+      '/pleasanton-photo-booth-rental.html',
+    ]) {
       for (const result of ['success', 'failure', 'analytics-failure']) {
         const page = await browser.newPage();
         await page.route('https://**/*', route => {

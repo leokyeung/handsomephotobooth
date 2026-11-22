@@ -10,6 +10,7 @@ Grow qualified Bay Area wedding and event inquiries through organic search. Use 
 - `/bay-area-wedding-photo-booth.html`: primary Bay Area wedding service and quote page.
 - `/alameda-photo-booth-rental.html`: actual Alameda location and local event planning.
 - `/san-leandro-photo-booth-rental.html`: actual San Leandro location and local event planning.
+- `/pleasanton-photo-booth-rental.html`: Tri-Valley and Livermore Wine Country service page featuring owner-confirmed wedding experience at Casa Real at Ruby Hill Winery and Palm Event Center in the Vineyard.
 - `/blog/blog_3.html`: existing cost guide. Improve this URL rather than creating a competing cost article.
 - `/blog/wedding-photo-booth-timeline.html`: scheduling and placement.
 - `/blog/open-air-vs-enclosed-photo-booth.html`: booth-style comparison.

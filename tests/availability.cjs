@@ -24,7 +24,13 @@ render(el, null, noon);
 assert.equal(el.hidden, true);
 
 const root = path.join(__dirname, '..');
-for (const file of ['index.html', 'bay-area-wedding-photo-booth.html']) {
+for (const file of [
+  'index.html',
+  'bay-area-wedding-photo-booth.html',
+  'alameda-photo-booth-rental.html',
+  'san-leandro-photo-booth-rental.html',
+  'pleasanton-photo-booth-rental.html',
+]) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   assert.match(html, /id="booked-notice"/, file);
   assert.match(html, /assets\/js\/availability\.js/, file);

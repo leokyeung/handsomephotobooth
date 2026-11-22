@@ -1,5 +1,28 @@
 # SEO change log
 
+## 2026-11-21: Pleasanton venue page and East Bay landing-page upgrades
+
+- Added [Pleasanton](https://handsomephotobooth.com/pleasanton-photo-booth-rental.html)
+  page targeting Casa Real at Ruby Hill Winery and Palm Event Center in the
+  Vineyard (owner-confirmed repeat experience) with Service, BreadcrumbList,
+  and 5-question FAQPage JSON-LD and no invented street address.
+- Upgraded [Alameda](https://handsomephotobooth.com/alameda-photo-booth-rental.html)
+  and [San Leandro](https://handsomephotobooth.com/san-leandro-photo-booth-rental.html)
+  into landing pages: review strip, captioned lightbox gallery, package
+  combination table, named local venue guidance, inline quote form, WebPage and
+  LocalBusiness `sameAs` schema, Twitter/geo metadata, and 5 FAQs.
+- Removed the discontinued Facebook Customer Chat SDK from the three city pages
+  and preloaded each hero image.
+- Linked the city pages from the homepage (visible link bar), wedding page
+  (city grid now visible on mobile), cost guide, timeline, checklist, and
+  open-air guides. Added the Pleasanton URL to `sitemap.xml` and `llms.txt`.
+- Extended inquiry/availability tests to the three city pages.
+- Validation: `python3 scripts/check_seo.py` (12 pages), `npm test`, and
+  desktop/mobile browser checks (no horizontal overflow at 1280/768/390/320px,
+  intercepted `generate_lead` event, lightbox opens).
+- Owner follow-up: provide approved venue photos to replace generic hero
+  images; update Google Business Profile website links to the city pages.
+
 ## 2026-11-11: Simplified homepage and wedding page footers
 
 - Removed the footer Contact details from https://handsomephotobooth.com/
