@@ -8,6 +8,9 @@
   Pricing & Add-On Guide), so homepage internal links to the city pages remain.
 - Validation: `python3 scripts/check_seo.py`, `npm test`, and footer layout
   checks at 375px and 1280px with no horizontal overflow.
+- PR: https://github.com/leokyeung/handsomephotobooth/pull/87.
+- Follow-up: moved the "Areas we serve" row below the Instagram icon, above
+  the copyright line.
 
 ## 2026-11-22: Pleasanton page modern redesign
 
