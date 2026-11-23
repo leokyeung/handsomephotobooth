@@ -1,5 +1,14 @@
 # SEO change log
 
+## 2026-11-23: Homepage local links moved to footer
+
+- Replaced the mid-page "Planning by city or venue?" pill box on
+  https://handsomephotobooth.com/ with an "Areas we serve" link row in the
+  footer. Same five links (Bay Area Weddings, Alameda, San Leandro, Pleasanton,
+  Pricing & Add-On Guide), so homepage internal links to the city pages remain.
+- Validation: `python3 scripts/check_seo.py`, `npm test`, and footer layout
+  checks at 375px and 1280px with no horizontal overflow.
+
 ## 2026-11-22: Pleasanton page modern redesign
 
 - Redesigned https://handsomephotobooth.com/pleasanton-photo-booth-rental.html
