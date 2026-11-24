@@ -1,5 +1,18 @@
 # SEO change log
 
+## 2026-11-24: September 2027 unavailability in the booked-date notice
+
+- The "Fully booked" line on all five inquiry forms (home, wedding, Alameda,
+  San Leandro, Pleasanton) now ends with "Sept 2027", and date groups are
+  separated by commas ("Dec 4-5, 12-13, 19, Sept 2027").
+- Long-term blocks live in `blocked-dates.json` (`label`, `from`, `until`),
+  separate from `availability.json`, which the Google Sheet sync rewrites. A
+  block shows until its `until` date; booked dates inside a block are folded
+  into its label.
+- Validation: `npm test` (new block cases, plus 3,000 generated date lists
+  matching the previous output apart from the separator), `check_seo.py`, and
+  browser checks of all five pages, including either JSON file failing to load.
+
 ## 2026-11-23: Homepage local links moved to footer
 
 - Replaced the mid-page "Planning by city or venue?" pill box on

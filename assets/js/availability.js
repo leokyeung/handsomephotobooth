@@ -49,30 +49,57 @@
         return r[0] === r[1] ? String(r[0]) : r[0] + '-' + r[1];
       });
       return MONTHS[g.month] + ' ' + days.join(', ');
-    }).join('; ');
+    }).join(', ');
+  }
+
+  // Long-term blocks, e.g. { "label": "Sept 2027", "from": "2027-09-01", "until": "2027-09-30" }, shown until their last day.
+  function activeBlocks(blocked, today) {
+    var start = dayNumber(today);
+    return (Array.isArray(blocked) ? blocked : []).filter(function (b) {
+      return b && typeof b.label === 'string' && b.label && dayNumber(b.until) >= start;
+    });
   }
 
   function render(el, data, now) {
+    var today = todayIso(now || new Date());
     var dates = data && Array.isArray(data.dates) ? data.dates : [];
-    var list = upcoming(dates, todayIso(now || new Date()));
-    if (!list.length) {
+    var blocks = activeBlocks(data && data.blocked, today);
+    // A booked date inside a block is already covered by the block's label.
+    var list = upcoming(dates, today).filter(function (iso) {
+      var n = dayNumber(iso);
+      return !blocks.some(function (b) { return n >= dayNumber(b.from) && n <= dayNumber(b.until); });
+    });
+    var parts = list.length ? [label(list)] : [];
+    parts = parts.concat(blocks.map(function (b) { return b.label; }));
+    if (!parts.length) {
       el.hidden = true;
       return;
     }
+    var text = parts.join(', ');
     var dateTarget = el.querySelector('[data-booked-dates]');
-    if (dateTarget) dateTarget.textContent = label(list);
-    else el.textContent = '\u26D4\uFE0F Fully booked on ' + label(list) + ' \u26D4\uFE0F';
+    if (dateTarget) dateTarget.textContent = text;
+    else el.textContent = '\u26D4\uFE0F Fully booked on ' + text + ' \u26D4\uFE0F';
     el.hidden = false;
   }
 
-  var api = { upcoming: upcoming, label: label, render: render, todayIso: todayIso };
+  var api = { upcoming: upcoming, label: label, activeBlocks: activeBlocks, render: render, todayIso: todayIso };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (!root.document) return;
 
   var el = root.document.getElementById('booked-notice');
   if (!el || !root.fetch) return;
-  root.fetch('./availability.json', { cache: 'no-cache' })
-    .then(function (res) { return res.ok ? res.json() : null; })
-    .then(function (data) { render(el, data); })
+  // availability.json is rewritten by the Google Sheet sync; blocked-dates.json is edited by hand.
+  var load = function (url) {
+    return root.fetch(url, { cache: 'no-cache' })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .catch(function () { return null; });
+  };
+  Promise.all([load('./availability.json'), load('./blocked-dates.json')])
+    .then(function (files) {
+      render(el, {
+        dates: files[0] && files[0].dates,
+        blocked: files[1] && files[1].blocked
+      });
+    })
     .catch(function () {});
 })(typeof window !== 'undefined' ? window : globalThis);
