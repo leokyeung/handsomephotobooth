@@ -19,8 +19,9 @@
 
   function upcoming(dates, today) {
     var start = dayNumber(today);
-    // Last day of next month.
-    var end = Date.UTC(+today.slice(0, 4), +today.slice(5, 7) + 1, 0) / 86400000;
+    // Last day of next month; from the 15th on, last day of the month after next.
+    var ahead = +today.slice(8, 10) >= 15 ? 2 : 1;
+    var end = Date.UTC(+today.slice(0, 4), +today.slice(5, 7) + ahead, 0) / 86400000;
     var seen = {};
     return dates.filter(function (iso) {
       var n = dayNumber(iso);

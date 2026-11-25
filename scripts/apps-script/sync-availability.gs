@@ -58,9 +58,10 @@ function upcomingDates_() {
 
   var fmt = function (d) { return Utilities.formatDate(d, tz, 'yyyy-MM-dd'); };
   var today = fmt(new Date());
-  // Keeps today through the last day of next month.
+  // Keeps today through the last day of next month; from the 15th on, through the month after next.
   var t = today.split('-');
-  var end = new Date(Date.UTC(+t[0], +t[1] + 1, 0)).toISOString().slice(0, 10);
+  var ahead = +t[2] >= 15 ? 2 : 1;
+  var end = new Date(Date.UTC(+t[0], +t[1] + ahead, 0)).toISOString().slice(0, 10);
   var seen = {};
 
   ss.getSheets().forEach(function (sheet) {
